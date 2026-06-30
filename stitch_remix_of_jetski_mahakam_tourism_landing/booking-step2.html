@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+
+<html lang="id"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700&amp;family=Inter:wght@400;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .hide-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+        .hide-scrollbar {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+    </style>
+<script id="tailwind-config">
+        tailwind.config = {
+          darkMode: "class",
+          theme: {
+            extend: {
+              "colors": {
+                      "secondary-fixed-dim": "#bec6e0",
+                      "on-tertiary-fixed-variant": "#004c6d",
+                      "primary-fixed": "#ffdcc4",
+                      "on-tertiary": "#ffffff",
+                      "on-surface": "#241912",
+                      "surface-container-lowest": "#ffffff",
+                      "secondary-fixed": "#dae2fd",
+                      "inverse-surface": "#3a2e25",
+                      "tertiary": "#006590",
+                      "surface-bright": "#fff8f5",
+                      "surface-tint": "#914c00",
+                      "secondary": "#565e74",
+                      "primary": "#914c00",
+                      "on-background": "#241912",
+                      "error": "#ba1a1a",
+                      "on-primary-container": "#613100",
+                      "on-primary-fixed": "#2f1500",
+                      "background": "#fff8f5",
+                      "tertiary-container": "#00b3fc",
+                      "outline-variant": "#ddc1ae",
+                      "tertiary-fixed-dim": "#88ceff",
+                      "tertiary-fixed": "#c8e6ff",
+                      "surface-variant": "#f3dfd1",
+                      "surface-dim": "#ebd6c9",
+                      "on-secondary-container": "#5c647a",
+                      "on-tertiary-fixed": "#001e2e",
+                      "inverse-on-surface": "#ffede3",
+                      "surface": "#fff8f5",
+                      "on-surface-variant": "#564334",
+                      "on-secondary-fixed-variant": "#3f465c",
+                      "secondary-container": "#dae2fd",
+                      "outline": "#8a7362",
+                      "on-tertiary-container": "#004260",
+                      "surface-container-highest": "#f3dfd1",
+                      "on-primary-fixed-variant": "#6f3900",
+                      "on-secondary": "#ffffff",
+                      "on-error-container": "#93000a",
+                      "surface-container-high": "#f9e4d7",
+                      "primary-container": "#ff8a00",
+                      "on-error": "#ffffff",
+                      "error-container": "#ffdad6",
+                      "on-primary": "#ffffff",
+                      "surface-container": "#ffeadd",
+                      "primary-fixed-dim": "#ffb77f",
+                      "inverse-primary": "#ffb77f",
+                      "on-secondary-fixed": "#131b2e",
+                      "surface-container-low": "#fff1e9"
+              },
+              "borderRadius": {
+                      "DEFAULT": "0.25rem",
+                      "lg": "0.5rem",
+                      "xl": "0.75rem",
+                      "full": "9999px"
+              },
+              "spacing": {
+                      "margin-desktop": "64px",
+                      "gutter": "24px",
+                      "container-max": "1280px",
+                      "margin-mobile": "20px",
+                      "stack-unit": "8px"
+              },
+              "fontFamily": {
+                      "body-lg": ["Inter"],
+                      "body-md": ["Inter"],
+                      "headline-lg": ["Montserrat"],
+                      "label-md": ["Inter"],
+                      "headline-lg-mobile": ["Montserrat"],
+                      "headline-sm": ["Montserrat"],
+                      "headline-md": ["Montserrat"],
+                      "display-lg": ["Montserrat"]
+              },
+              "fontSize": {
+                      "body-lg": ["18px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                      "body-md": ["16px", {"lineHeight": "1.5", "fontWeight": "400"}],
+                      "headline-lg": ["48px", {"lineHeight": "1.2", "fontWeight": "700"}],
+                      "label-md": ["14px", {"lineHeight": "1", "letterSpacing": "0.05em", "fontWeight": "600"}],
+                      "headline-lg-mobile": ["32px", {"lineHeight": "1.2", "fontWeight": "700"}],
+                      "headline-sm": ["24px", {"lineHeight": "1.4", "fontWeight": "600"}],
+                      "headline-md": ["32px", {"lineHeight": "1.3", "fontWeight": "600"}],
+                      "display-lg": ["64px", {"lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "700"}]
+              }
+            },
+          },
+        }
+    </script>
+</head>
+<body class="bg-background text-on-background min-h-screen flex flex-col font-body-md">
+<!-- Top Navigation Bar -->
+<header class="bg-surface shadow-sm sticky top-0 z-50">
+<nav class="flex justify-between items-center px-4 md:px-margin-desktop py-4 w-full max-w-container-max mx-auto">
+<div class="font-headline-sm text-headline-sm font-bold text-primary">Mahakam Jet Ski</div>
+<div class="hidden md:flex items-center gap-8">
+<a class="text-on-surface-variant hover:text-primary transition-colors font-body-md" href="catalog.html">Packages</a>
+<a class="text-on-surface-variant hover:text-primary transition-colors font-body-md" href="#">Safety</a>
+<a class="text-on-surface-variant hover:text-primary transition-colors font-body-md" href="gallery.html">Gallery</a>
+<a class="text-on-surface-variant hover:text-primary transition-colors font-body-md" href="index.html#kontak">Contact</a>
+<button class="bg-primary text-on-primary px-6 py-2 rounded-full font-label-md hover:scale-105 active:scale-95 transition-transform">
+                    Book Now
+                </button>
+</div>
+<button class="md:hidden text-primary">
+<span class="material-symbols-outlined">menu</span>
+</button>
+</nav>
+</header>
+<main class="flex-grow w-full max-w-container-max mx-auto px-4 md:px-margin-desktop py-8">
+<!-- Progress Indicator -->
+<div class="mb-10 max-w-2xl mx-auto">
+<div class="flex justify-between items-center mb-4">
+<span class="text-primary font-label-md">Step 2 of 4</span>
+<span class="text-on-surface-variant font-label-md">Konfirmasi Jadwal</span>
+</div>
+<div class="h-2 w-full bg-surface-container-highest rounded-full overflow-hidden">
+<div class="h-full bg-primary w-2/4 rounded-full transition-all duration-500"></div>
+</div>
+</div>
+<div class="max-w-4xl mx-auto">
+<h1 class="font-headline-md text-headline-md md:text-headline-lg text-on-surface mb-8">Pilih Jadwal Bermain</h1>
+<section class="space-y-12">
+<!-- Date Selection -->
+<div>
+<h2 class="font-headline-sm text-headline-sm text-on-surface mb-4 flex items-center gap-2">
+<span class="material-symbols-outlined text-primary">calendar_today</span>
+                        Pilih Tanggal
+                    </h2>
+<div class="flex gap-4 overflow-x-auto pb-4 hide-scrollbar">
+<!-- Date Cards -->
+<button class="flex-shrink-0 w-24 h-32 rounded-xl bg-primary text-on-primary flex flex-col items-center justify-center shadow-lg transform transition-transform hover:scale-105">
+<span class="font-label-md opacity-80">Sen</span>
+<span class="font-headline-md text-headline-md my-1">22</span>
+<span class="font-label-md">Okt</span>
+</button>
+<button class="flex-shrink-0 w-24 h-32 rounded-xl bg-surface border border-outline-variant flex flex-col items-center justify-center hover:bg-surface-container-high transition-colors">
+<span class="font-label-md text-on-surface-variant">Sel</span>
+<span class="font-headline-md text-headline-md text-on-surface my-1">23</span>
+<span class="font-label-md text-on-surface-variant">Okt</span>
+</button>
+<button class="flex-shrink-0 w-24 h-32 rounded-xl bg-surface border border-outline-variant flex flex-col items-center justify-center hover:bg-surface-container-high transition-colors">
+<span class="font-label-md text-on-surface-variant">Rab</span>
+<span class="font-headline-md text-headline-md text-on-surface my-1">24</span>
+<span class="font-label-md text-on-surface-variant">Okt</span>
+</button>
+<button class="flex-shrink-0 w-24 h-32 rounded-xl bg-surface border border-outline-variant flex flex-col items-center justify-center hover:bg-surface-container-high transition-colors">
+<span class="font-label-md text-on-surface-variant">Kam</span>
+<span class="font-headline-md text-headline-md text-on-surface my-1">25</span>
+<span class="font-label-md text-on-surface-variant">Okt</span>
+</button>
+<button class="flex-shrink-0 w-24 h-32 rounded-xl bg-surface border border-outline-variant flex flex-col items-center justify-center hover:bg-surface-container-high transition-colors">
+<span class="font-label-md text-on-surface-variant">Jum</span>
+<span class="font-headline-md text-headline-md text-on-surface my-1">26</span>
+<span class="font-label-md text-on-surface-variant">Okt</span>
+</button>
+<button class="flex-shrink-0 w-24 h-32 rounded-xl bg-surface border border-outline-variant flex flex-col items-center justify-center hover:bg-surface-container-high transition-colors">
+<span class="font-label-md text-on-surface-variant">Sab</span>
+<span class="font-headline-md text-headline-md text-on-surface my-1">27</span>
+<span class="font-label-md text-on-surface-variant">Okt</span>
+</button>
+<button class="flex-shrink-0 w-24 h-32 rounded-xl bg-surface border border-outline-variant flex flex-col items-center justify-center hover:bg-surface-container-high transition-colors">
+<span class="font-label-md text-on-surface-variant">Min</span>
+<span class="font-headline-md text-headline-md text-on-surface my-1">28</span>
+<span class="font-label-md text-on-surface-variant">Okt</span>
+</button>
+</div>
+</div>
+<!-- Time Selection -->
+<div>
+<h2 class="font-headline-sm text-headline-sm text-on-surface mb-6 flex items-center gap-2">
+<span class="material-symbols-outlined text-primary">schedule</span>
+                        Pilih Jam
+                    </h2>
+<div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+<!-- Available -->
+<button class="group p-4 rounded-xl bg-surface border-2 border-transparent shadow-sm hover:shadow-md hover:border-primary transition-all text-center">
+<span class="block font-headline-sm text-headline-sm text-on-surface group-hover:text-primary">09.00</span>
+<span class="text-label-md text-tertiary">Tersedia</span>
+</button>
+<!-- Unavailable -->
+<div class="p-4 rounded-xl bg-surface-container-low opacity-60 border border-outline-variant text-center cursor-not-allowed">
+<span class="block font-headline-sm text-headline-sm text-on-surface-variant">10.00</span>
+<span class="text-label-md text-error">Tidak Tersedia</span>
+</div>
+<!-- Selected -->
+<button class="p-4 rounded-xl bg-primary-container border-2 border-primary shadow-md text-center transform scale-105">
+<span class="block font-headline-sm text-headline-sm text-on-primary-container">11.00</span>
+<span class="text-label-md text-on-primary-fixed-variant">Dipilih</span>
+</button>
+<!-- Available -->
+<button class="group p-4 rounded-xl bg-surface border-2 border-transparent shadow-sm hover:shadow-md hover:border-primary transition-all text-center">
+<span class="block font-headline-sm text-headline-sm text-on-surface group-hover:text-primary">12.00</span>
+<span class="text-label-md text-tertiary">Tersedia</span>
+</button>
+<!-- Available -->
+<button class="group p-4 rounded-xl bg-surface border-2 border-transparent shadow-sm hover:shadow-md hover:border-primary transition-all text-center">
+<span class="block font-headline-sm text-headline-sm text-on-surface group-hover:text-primary">13.00</span>
+<span class="text-label-md text-tertiary">Tersedia</span>
+</button>
+<!-- Unavailable -->
+<div class="p-4 rounded-xl bg-surface-container-low opacity-60 border border-outline-variant text-center cursor-not-allowed">
+<span class="block font-headline-sm text-headline-sm text-on-surface-variant">14.00</span>
+<span class="text-label-md text-error">Tidak Tersedia</span>
+</div>
+<!-- Available -->
+<button class="group p-4 rounded-xl bg-surface border-2 border-transparent shadow-sm hover:shadow-md hover:border-primary transition-all text-center">
+<span class="block font-headline-sm text-headline-sm text-on-surface group-hover:text-primary">15.00</span>
+<span class="text-label-md text-tertiary">Tersedia</span>
+</button>
+<!-- Available -->
+<button class="group p-4 rounded-xl bg-surface border-2 border-transparent shadow-sm hover:shadow-md hover:border-primary transition-all text-center">
+<span class="block font-headline-sm text-headline-sm text-on-surface group-hover:text-primary">16.00</span>
+<span class="text-label-md text-tertiary">Tersedia</span>
+</button>
+</div>
+</div>
+<!-- Action Buttons -->
+<div class="flex flex-col-reverse md:flex-row gap-4 pt-12">
+<button onclick="window.location.href='booking-step1.html'" class="w-full md:w-1/3 py-4 border-2 border-primary text-primary rounded-full font-label-md hover:bg-primary-fixed transition-colors flex items-center justify-center gap-2">
+<span class="material-symbols-outlined">arrow_back</span>
+                        Kembali
+                    </button>
+<button onclick="window.location.href='booking-step3.html'" class="w-full md:w-2/3 py-4 bg-primary text-on-primary rounded-full font-label-md hover:scale-[1.02] active:scale-95 transition-all shadow-lg flex items-center justify-center gap-2">
+                        Lanjutkan
+                        <span class="material-symbols-outlined">arrow_forward</span>
+</button>
+</div>
+</section>
+</div>
+</main>
+<!-- Visual Polish: Decorative Element -->
+<div class="fixed bottom-0 left-0 w-full h-1/3 pointer-events-none -z-10 overflow-hidden opacity-20">
+<svg class="absolute bottom-0 w-full" viewbox="0 0 1440 320">
+<path d="M0,224L48,213.3C96,203,192,181,288,186.7C384,192,480,224,576,218.7C672,213,768,171,864,149.3C960,128,1056,128,1152,144C1248,160,1344,192,1392,208L1440,224L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z" fill="#914c00" fill-opacity="0.1"></path>
+</svg>
+</div>
+<!-- Footer -->
+<footer class="bg-surface-container-highest mt-20">
+<div class="flex flex-col md:flex-row justify-between items-center px-4 md:px-margin-desktop py-8 w-full max-w-container-max mx-auto">
+<div class="font-headline-sm text-headline-sm font-bold text-primary mb-4 md:mb-0">Mahakam Jet Ski</div>
+<div class="flex gap-6 mb-4 md:mb-0">
+<a class="font-label-md text-on-surface-variant hover:text-primary transition-colors" href="#">Privacy Policy</a>
+<a class="font-label-md text-on-surface-variant hover:text-primary transition-colors" href="#">Terms of Service</a>
+<a class="font-label-md text-on-surface-variant hover:text-primary transition-colors" href="#">Safety Manual</a>
+<a class="font-label-md text-on-surface-variant hover:text-primary transition-colors" href="#">Refund Policy</a>
+</div>
+<div class="font-label-md text-on-surface-variant opacity-80 text-center md:text-right">
+                © 2024 Mahakam Jet Ski. All rights reserved. Safety First.
+            </div>
+</div>
+</footer>
+<script>
+        // Simple Interaction logic for active states
+        document.querySelectorAll('button').forEach(btn => {
+            btn.addEventListener('click', function() {
+                if(this.parentElement.classList.contains('overflow-x-auto')) {
+                    this.parentElement.querySelectorAll('button').forEach(b => {
+                        b.classList.remove('bg-primary', 'text-on-primary', 'shadow-lg');
+                        b.classList.add('bg-surface', 'border', 'border-outline-variant');
+                        b.querySelector('.text-on-surface-variant')?.classList.remove('text-on-primary');
+                    });
+                    this.classList.add('bg-primary', 'text-on-primary', 'shadow-lg');
+                    this.classList.remove('bg-surface', 'border', 'border-outline-variant');
+                }
+            });
+        });
+    </script>
+</body></html>

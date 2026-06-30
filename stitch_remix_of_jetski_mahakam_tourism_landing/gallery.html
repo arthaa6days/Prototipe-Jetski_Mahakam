@@ -1,0 +1,426 @@
+<!DOCTYPE html>
+<html class="scroll-smooth" lang="id">
+<head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<title>Galeri Pengalaman | Mahakam Wave Riding</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700;800&amp;family=Inter:wght@400;500;600&amp;family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&amp;family=Montserrat:wght@100..900&amp;display=swap" rel="stylesheet">
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "on-tertiary-container": "#004260",
+                        "surface-tint": "#914c00",
+                        "on-surface": "#241912",
+                        "on-background": "#241912",
+                        "primary-container": "#ff8a00",
+                        "surface-container": "#ffeadd",
+                        "secondary": "#565e74",
+                        "error": "#ba1a1a",
+                        "on-secondary-container": "#5c647a",
+                        "tertiary-container": "#00b3fc",
+                        "surface-container-high": "#f9e4d7",
+                        "surface-variant": "#f3dfd1",
+                        "inverse-surface": "#3a2e25",
+                        "on-primary-fixed-variant": "#6f3900",
+                        "surface-dim": "#ebd6c9",
+                        "on-error": "#ffffff",
+                        "inverse-on-surface": "#ffede3",
+                        "secondary-fixed-dim": "#bec6e0",
+                        "outline": "#8a7362",
+                        "surface-bright": "#fff8f5",
+                        "secondary-fixed": "#dae2fd",
+                        "secondary-container": "#dae2fd",
+                        "background": "#fff8f5",
+                        "surface-container-lowest": "#ffffff",
+                        "outline-variant": "#ddc1ae",
+                        "on-error-container": "#93000a",
+                        "on-secondary-fixed": "#131b2e",
+                        "tertiary": "#006590",
+                        "on-secondary-fixed-variant": "#3f465c",
+                        "on-primary-container": "#613100",
+                        "primary-fixed-dim": "#ffb77f",
+                        "on-primary": "#ffffff",
+                        "on-tertiary-fixed-variant": "#004c6d",
+                        "on-tertiary": "#ffffff",
+                        "inverse-primary": "#ffb77f",
+                        "tertiary-fixed-dim": "#88ceff",
+                        "on-secondary": "#ffffff",
+                        "on-primary-fixed": "#2f1500",
+                        "surface-container-low": "#fff1e9",
+                        "tertiary-fixed": "#c8e6ff",
+                        "on-tertiary-fixed": "#001e2e",
+                        "on-surface-variant": "#564334",
+                        "error-container": "#ffdad6",
+                        "primary": "#914c00",
+                        "surface-container-highest": "#f3dfd1",
+                        "primary-fixed": "#ffdcc4",
+                        "surface": "#fff8f5"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "margin-mobile": "20px",
+                        "gutter": "24px",
+                        "margin-desktop": "64px",
+                        "stack-unit": "8px",
+                        "container-max": "1280px"
+                    },
+                    "fontFamily": {
+                        "headline-lg": ["Montserrat"],
+                        "headline-md": ["Montserrat"],
+                        "body-lg": ["Inter"],
+                        "headline-lg-mobile": ["Montserrat"],
+                        "body-md": ["Inter"],
+                        "headline-sm": ["Montserrat"],
+                        "display-lg": ["Montserrat"],
+                        "label-md": ["Inter"]
+                    },
+                    "fontSize": {
+                        "headline-lg": ["48px", {"lineHeight": "1.2", "fontWeight": "700"}],
+                        "headline-md": ["32px", {"lineHeight": "1.3", "fontWeight": "600"}],
+                        "body-lg": ["18px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                        "headline-lg-mobile": ["32px", {"lineHeight": "1.2", "fontWeight": "700"}],
+                        "body-md": ["16px", {"lineHeight": "1.5", "fontWeight": "400"}],
+                        "headline-sm": ["24px", {"lineHeight": "1.4", "fontWeight": "600"}],
+                        "display-lg": ["64px", {"lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                        "label-md": ["14px", {"lineHeight": "1", "letterSpacing": "0.05em", "fontWeight": "600"}]
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .bento-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            grid-auto-rows: 240px;
+            gap: 24px;
+        }
+        @media (max-width: 1024px) {
+            .bento-grid { grid-template-columns: repeat(2, 1fr); }
+        }
+        @media (max-width: 640px) {
+            .bento-grid { grid-template-columns: 1fr; grid-auto-rows: auto; }
+        }
+        .glass-card {
+            background: rgba(255, 255, 255, 0.8);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.3);
+        }
+        .adventure-gradient {
+            background: linear-gradient(180deg, rgba(0,0,0,0) 0%, rgba(15, 23, 42, 0.8) 100%);
+        }
+    </style>
+</head>
+<body class="bg-background text-on-surface font-body-md selection:bg-primary-container selection:text-on-primary-container">
+<!-- TopNavBar -->
+<nav class="docked full-width top-0 sticky z-50 bg-surface/90 dark:bg-surface-container-lowest/90 backdrop-blur-md shadow-sm">
+<div class="flex justify-between items-center w-full px-margin-desktop py-4 max-w-container-max mx-auto">
+<div class="font-headline-sm text-headline-sm font-bold text-on-surface dark:text-on-surface">
+                Mahakam Wave Riding
+            </div>
+<div class="hidden md:flex items-center gap-8">
+<a class="text-on-surface-variant dark:text-on-surface-variant/80 hover:text-primary transition-colors font-label-md text-label-md" href="index.html">Beranda</a>
+<a class="text-on-surface-variant dark:text-on-surface-variant/80 hover:text-primary transition-colors font-label-md text-label-md" href="catalog.html">Paket</a>
+<a class="text-primary dark:text-primary font-bold border-b-2 border-primary pb-1 font-label-md text-label-md" href="gallery.html">Galeri</a>
+</div>
+<div class="flex items-center gap-4">
+<button onclick="window.location.href='login.html'" class="hidden lg:block text-on-surface-variant font-label-md text-label-md hover:text-primary px-4 py-2">Login</button>
+<button class="bg-primary-container text-on-primary-container px-6 py-3 rounded-full font-label-md text-label-md scale-95 duration-200 ease-in-out hover:opacity-90 flex items-center gap-2" onclick="window.open('https://wa.me/6281234567890', '_blank')"><span class="material-symbols-outlined text-[20px]">chat</span> WhatsApp CTA</button>
+</div>
+</div>
+</nav>
+<main>
+<!-- Gallery Hero -->
+<section class="relative h-[819px] min-h-[600px] flex items-center overflow-hidden">
+<div class="absolute inset-0 z-0">
+<div class="w-full h-full bg-cover bg-center scale-105" data-alt="A cinematic, wide-angle shot of a group of vibrant orange jet skis cutting through the glistening blue-gold waters of the Mahakam River at golden hour. The mist from the wake creates a dynamic spray against the backdrop of the iconic Mahakam Bridge. Sunlight flares softly across the scene, evoking a premium and adventurous atmosphere with rich navy blue shadows and bright, energetic orange highlights." style="background-image: url(&quot;https://lh3.googleusercontent.com/aida-public/AB6AXuBdnykJREAyT317d5cJ1Ga3mEUwRTInNP_aHWnUjcfd4FOvGBeSgiUsd4bNvmb6RDUxEK_4Ylxz7-E6pbN-ZmIkxJttCzXx4V5PMyGskOY5ZPQlh2hvxIFYMskNQ1Bdle-sN8wCLmNdt1C3rZ2uDDCnpZhQpACu2oUJ-WKHUdqSNcOmWGRR9qNV6S1bTNjHAIai5lVJhcDvOLTyjcWWht4YCL7DDyUy9OOSvMXYLvQTMKsSQBfKV5HNT0a69KRnNBe15jIfMzXjn1cf&quot;);"></div>
+<div class="absolute inset-0 bg-black/40"></div>
+</div>
+<div class="relative z-10 w-full px-margin-desktop max-w-container-max mx-auto text-white">
+<div class="max-w-2xl">
+<h1 class="font-headline-lg text-headline-lg mb-6 leading-tight">Galeri Pengalaman</h1>
+<p class="font-body-lg text-body-lg text-white/90 mb-8">
+                        Lihat momen nyata pelanggan menjelajahi Sungai Mahakam bersama JetSki Mahakam Wave Riding. Rasakan adrenalin melalui lensa mereka.
+                    </p>
+<div class="flex gap-4">
+<a class="bg-primary-container text-on-primary-container px-8 py-4 rounded-full font-headline-sm text-label-md hover:scale-105 transition-transform flex items-center gap-2" href="#main-gallery">
+                            Mulai Menjelajah <span class="material-symbols-outlined">arrow_downward</span>
+</a>
+</div>
+</div>
+</div>
+</section>
+<!-- Filter Section -->
+<section class="py-12 bg-surface-container-low sticky top-[72px] z-40 shadow-sm border-b border-outline-variant/30">
+<div class="px-margin-desktop max-w-container-max mx-auto">
+<div class="flex flex-wrap items-center gap-3">
+<span class="text-on-surface-variant font-label-md text-label-md mr-4 uppercase tracking-wider">Filter:</span>
+<button class="filter-btn px-6 py-2 rounded-full bg-primary-container text-on-primary-container font-label-md text-label-md shadow-sm">Semua</button>
+<button class="filter-btn px-6 py-2 rounded-full bg-surface-container-lowest text-on-surface-variant hover:bg-primary-fixed-dim transition-colors font-label-md text-label-md border border-outline-variant/30">Foto</button>
+<button class="filter-btn px-6 py-2 rounded-full bg-surface-container-lowest text-on-surface-variant hover:bg-primary-fixed-dim transition-colors font-label-md text-label-md border border-outline-variant/30">Video</button>
+<button class="filter-btn px-6 py-2 rounded-full bg-surface-container-lowest text-on-surface-variant hover:bg-primary-fixed-dim transition-colors font-label-md text-label-md border border-outline-variant/30">Jembatan Mahakam</button>
+<button class="filter-btn px-6 py-2 rounded-full bg-surface-container-lowest text-on-surface-variant hover:bg-primary-fixed-dim transition-colors font-label-md text-label-md border border-outline-variant/30">Sunset</button>
+<button class="filter-btn px-6 py-2 rounded-full bg-surface-container-lowest text-on-surface-variant hover:bg-primary-fixed-dim transition-colors font-label-md text-label-md border border-outline-variant/30">Event</button>
+</div>
+</div>
+</section>
+<!-- Featured Experience -->
+<section class="py-16 px-margin-desktop max-w-container-max mx-auto">
+<div class="mb-10 flex items-end justify-between">
+<div>
+<h2 class="font-headline-md text-headline-md text-primary mb-2">Momen Pilihan Minggu Ini</h2>
+<p class="text-on-surface-variant font-body-md">Kisah petualangan paling berkesan yang kami kurasi spesial untuk Anda.</p>
+</div>
+</div>
+<div class="group relative rounded-3xl overflow-hidden aspect-[21/9] shadow-xl transition-all duration-500 hover:shadow-2xl">
+<div class="w-full h-full bg-cover bg-center transition-transform duration-700 group-hover:scale-105" data-alt="A professional high-resolution photograph capturing a high-speed jet ski maneuver directly under the towering steel arches of the Mahakam Bridge during a spectacular fiery sunset. The water is churned into a white pearlescent spray that catches the orange light. The rider wears high-quality safety gear, emphasizing professionalism and safety. The composition uses a low-angle perspective to make the scene feel heroic and grand." style="background-image: url(&quot;https://lh3.googleusercontent.com/aida-public/AB6AXuCnUCXjsWw0jtGk9ADQmHpD4_B87RwhYulKqGCAfFd1To0OPMN7dLL_KJVUMeT4GEaBcWbzvNMqlF_qxvmQHygO25vWIcBUYj5sNJpVbwZ8aAN0gc0TSkp2fLIrrEwx5TdIhpGpHmtkfz8mZxcOkeKooTw0wSwvAgh2fQ8f_rLjqmujgP4N8dl2hxvrSwiVhYS-fDfh-3hObwgR5n76u_QJhgaUwMmciFV7prLmMW8RGAAZt2C-x2pP2LkpGqj7NUug-Mqkv5HC2uTe&quot;);"></div>
+<div class="absolute inset-0 adventure-gradient opacity-90"></div>
+<div class="absolute bottom-0 left-0 p-12 text-white max-w-2xl">
+<div class="flex items-center gap-2 mb-4">
+<span class="bg-primary-container text-on-primary-container px-3 py-1 rounded-full text-xs font-bold uppercase tracking-widest">Sunset Ride</span>
+<span class="text-white/80 text-sm flex items-center gap-1"><span class="material-symbols-outlined text-[16px]">location_on</span> Mahakam Bridge, Samarinda</span>
+</div>
+<h3 class="font-headline-lg text-headline-lg mb-4">Senja Emas di Bawah Jembatan Mahakam</h3>
+<p class="font-body-lg text-white/90 leading-relaxed mb-6">
+                        "Pengalaman luar biasa melihat matahari terbenam tepat di antara pilar jembatan ikonik sambil memacu kecepatan tinggi. Sangat aman dan dipandu dengan profesional!" — Budi S., Pelanggan Setia.
+                    </p>
+<button class="text-primary-fixed-dim font-label-md flex items-center gap-2 group-hover:gap-4 transition-all">
+                        LIHAT SELENGKAPNYA <span class="material-symbols-outlined">arrow_forward</span>
+</button>
+</div>
+</div>
+</section>
+<!-- Gallery Grid (Bento/Masonry) -->
+<section class="py-16 px-margin-desktop max-w-container-max mx-auto" id="main-gallery">
+<div class="bento-grid">
+<!-- Large Vertical -->
+<div class="md:row-span-2 relative group rounded-2xl overflow-hidden shadow-sm">
+<img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" data-alt="A vertical portrait of a group of friends laughing on their parked jet skis near a lush riverbank. The water is calm, reflecting the deep green of the tropical foliage. The group is diverse and energetic, wearing stylish life jackets. The lighting is bright and natural, highlighting the premium quality of the equipment and the joyful social atmosphere." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAUlWBsJIN-Gw0t15xMtIgeWfCCXFqZgiVvfQIud8voyNdwjmJK5co-8gRimTt0jgBqeiqIrZH4PoLrxL0CFyXpkwTUccUoMBKF8jYGk_veQtysjmE5Y8JsaX9t9-VjMgqN8IxzTEdy2bLck3oRqxE4UBT_7kfwnzfCuGEaUU6hNltpkYGdzQU8efGlD2IGNBWrfsV2BfFRp2GYv3R6e2FHiZe0xz00jDZTlVSS-5CBt3pP3mWurxaRl3jH6JeeS9i1JpRrDfGomDVZ">
+<div class="absolute inset-0 bg-black/20 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+<span class="material-symbols-outlined text-white text-4xl">zoom_in</span>
+</div>
+</div>
+<!-- Small -->
+<div class="relative group rounded-2xl overflow-hidden shadow-sm">
+<img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" data-alt="Close-up action shot of water spraying from the back of a high-performance jet ski engine. The crystal-clear droplets are frozen in mid-air by a fast shutter speed. The deep navy blue of the river contrasts with the brilliant white foam and the bright orange hull of the jet ski. Extreme detail and high-end photographic style." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBZgB-S0jttMeJKyIv7R_6T9gXT7HksBI8-a-yXs2-T-mNEkJnYTpc7Wi6Zh5tD9oa41iZl1uBrEuH9KaJIAPMnqxqo0y-KqZyNPP59Vd5N7S0eArNOfRry7uMLNxzCOd1Tq9TWvwxk4zVZ9P4JxifHy4-H45hWjncTwzUt_t07v7am8q6u5kjSPSxePGD1T7n-MmQ5Y4-pn9lBN1aaJrIKW2jMEH7MbXc51GIIKZ1X2pOpTCOfuLULaNU3LgKOe9Zlz3amD58emxx8">
+</div>
+<!-- Horizontal Wide -->
+<div class="md:col-span-2 relative group rounded-2xl overflow-hidden shadow-sm">
+<img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" data-alt="A wide drone shot showing three jet skis in a perfect V-formation cruising down the wide Mahakam River. The expansive water surface is textured with gentle ripples. In the distance, the city skyline of Samarinda is visible under a clear blue sky. The image conveys a sense of scale, freedom, and professional organization." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCcRqx6n2y-xMCy1hjJ9G7Pm6sNvKLpbyFKyBsXgMFlL29Km9sB2DLDbD8YnbKYAdwgM65kvv0bspByhuFeWlzkTR3yladSe2y3idF9zgOAJYCMzJ1Au1AhLQU7_L6APuUOxWgL0uz7PQgCrrC86Xr6IdhxZvbB9nZZJoDAhizbmgeCgwZHsj5WXsCxV354w1jqk8-lAawQ_7vMNAhjmCQ3ApDyJhJBVB1641xKuQfvn_DPCQCoWhxMbYfJjKemO5TVmhQK95-0f6N_">
+</div>
+<!-- Large Square -->
+<div class="md:col-span-2 md:row-span-2 relative group rounded-2xl overflow-hidden shadow-sm">
+<img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" data-alt="A dramatic shot of a jet ski rider making a sharp turn, creating a massive arc of water. The rider's focus and concentration are visible through their goggles. The sunset behind them creates a powerful silhouette effect with orange light bleeding through the edges of the water spray. Professional action sports photography." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCvNf--VkB4y6KqrYcVX5H80ft6qqS0tdsZZR2YP-L3Wnnq6b0T7-wBBapJ0Ev9xW01qXiBIAZIzzqlLgXlVkvnLq5IJzGYkHD_fK8MpEs_hAULUIj3AXJ7ARlQL6tLbxVr5RHNp2MEMAyuStcUjjUEt9YL5t9bi8dnjjVIUFurNMjmCl4lFCfTAvfK1LMUSOkpv5HLoXRyyE1P5CT7UyJHHv85jK-f32k6uqypFDaEAW3a9kYCH87oalTmRhMCLanqBbDXbNKjf4xk">
+</div>
+<!-- Small -->
+<div class="relative group rounded-2xl overflow-hidden shadow-sm">
+<img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" data-alt="Static shot of a row of premium jet skis perfectly lined up at a modern floating dock. The equipment is pristine and gleaming under the morning sun. The background shows a safety station and professional instructors preparing for the day. This emphasizes the safe, organized, and high-end nature of the service." src="https://lh3.googleusercontent.com/aida-public/AB6AXuD1dqyfLJITk7urGfgcag6jKtWbf9BMxCH9-eg0Gbe_PBTUum0mceBipahoz4nOPdVv8ea7McSyXwRULGVaakM_z1PFqO_jm9kHjQB3HLeBD2RH_JRqR0wRZ6N-YPhXuCUaJhbKRZcl-AEuXoYbaUVi-RHTGa0pGN1ij54OW2sQy1Egxudr8JLnNWfW6Ftnc5axmUB5jDPmtRHgszbWQCvLyGqeHufO6ABUMSUg0BFIfh5zJeVahP8gQdIkZVPgEbSDSuBsfzt6WiUB">
+</div>
+<!-- Small -->
+<div class="relative group rounded-2xl overflow-hidden shadow-sm">
+<img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" data-alt="A candid photo of a family, including a teenager, having a safety briefing from a professional instructor. The instructor is pointing towards the river map. Everyone is smiling and looks confident. The mood is educational, safe, and family-friendly, set in a comfortable, modern briefing area with wooden textures." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAuP73Rabfa4YHKVDHtv0-LXNWYWsyXiZcJAVRupwq0z6LZkpSehBCAleua6wHa4NgTkqcGlZHQxU0yTa5fQklSBOKg0-aYp_g4u7LNq_C62w_8kU_RvUfeEHpFChwWCd1pPHxzsnJo7bq9nu6XXKeKYj2G2E9joxZPgE2pguNime-FaspL4co9Gsi_2XMbBMIxrYXimoQX8KZeh6sawcaUXBenXngyOtZWFUPQOpipfcDtWEavL5pA6rQNQTmmMwP5kd86eCAMRFP6">
+</div>
+</div>
+<div class="mt-12 text-center">
+<button class="border-2 border-primary text-primary px-10 py-4 rounded-full font-label-md text-label-md hover:bg-primary hover:text-white transition-all">Muat Lebih Banyak Foto</button>
+</div>
+</section>
+<!-- Video Experience Section -->
+<section class="py-24 bg-on-surface text-white">
+<div class="px-margin-desktop max-w-container-max mx-auto">
+<div class="flex items-end justify-between mb-12">
+<div>
+<h2 class="font-headline-md text-headline-md text-primary-container mb-4">Video Pengalaman</h2>
+<p class="text-surface-variant/70 font-body-md max-w-xl">Lihat rekaman asli dari aksi para penjelajah sungai kami. Dari kecepatan tinggi hingga momen santai di atas air.</p>
+</div>
+<button class="hidden md:flex items-center gap-2 text-primary-container font-label-md">
+                        LIHAT SEMUA VIDEO <span class="material-symbols-outlined">play_circle</span>
+</button>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+<!-- Video Card 1 -->
+<div class="group relative aspect-video rounded-2xl overflow-hidden cursor-pointer">
+<img class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" data-alt="A cinematic video thumbnail showing a first-person view (POV) from a jet ski handlebar. The camera is low, catching the water splashing up. The Mahakam Bridge looms large in the distance as the jet ski accelerates. High-energy, immersive feel." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAEr_6EfbgMlK8BF9S4S05B1g0Zm9o6ZNd14V6DX4j6Apv0qyRnQPsl3FPU15w2vFUx7WenKBX3av3vG_0pMzHjCb7L2arXhydHU1TE5v10OfM-XgRdwqIMTEVwIkvH5962YPmi_unLPmuPOhm6EIM3deXuz55uEcXAhpM05O9lMtBoFcjJY-PUmWMZRMkiBLS7oUCll_UVnFkTq8vK84ZayPDpEtJ5joQnFLa0wJxFBHyOg5IlFdZP7PmfdFn9K1n9Smg0cEmoYrRy">
+<div class="absolute inset-0 bg-black/30 group-hover:bg-black/10 transition-colors flex items-center justify-center">
+<div class="w-16 h-16 rounded-full bg-primary-container text-on-primary-container flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined text-4xl" data-weight="fill">play_arrow</span>
+</div>
+</div>
+<div class="absolute bottom-0 left-0 p-6">
+<p class="font-label-md text-label-md">POV: Mahakam Bridge Run</p>
+<p class="text-white/60 text-xs uppercase tracking-widest mt-1">02:15</p>
+</div>
+</div>
+<!-- Video Card 2 -->
+<div class="group relative aspect-video rounded-2xl overflow-hidden cursor-pointer">
+<img class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" data-alt="A video thumbnail featuring a slow-motion cinematic drone orbit around a couple on a jet ski as they stop to watch the sunset. The sky is a gradient of deep purple and orange. The atmosphere is romantic and peaceful. The water is calm like a mirror." src="https://lh3.googleusercontent.com/aida-public/AB6AXuA0jZQe1BMMMabuETGLOJQj-WfJmVKZ2yXy7uYdr3Yaxu67eOTgYeAI_xb9okOv6-gqp3B4-znU7vrV7_gY17DaUKCI2moSRyQae8eeq609a1B97VcyZpMfjtGpPJYDhdJe-94gwBwb_lYE-EjngfiGQIjgR2QZpYwHX4gJWx2fPWGO9EjYggKgTjmT6lOAnqe4RmVf3VXnC5ypyGmqxJIkMpy9AipSU0u2FCcbspkV8rmCAvYkqTGxTQZaKyac9exE8ckLhRjkhASc">
+<div class="absolute inset-0 bg-black/30 group-hover:bg-black/10 transition-colors flex items-center justify-center">
+<div class="w-16 h-16 rounded-full bg-primary-container text-on-primary-container flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined text-4xl" data-weight="fill">play_arrow</span>
+</div>
+</div>
+<div class="absolute bottom-0 left-0 p-6">
+<p class="font-label-md text-label-md">Sunset Serenity Session</p>
+<p class="text-white/60 text-xs uppercase tracking-widest mt-1">01:45</p>
+</div>
+</div>
+<!-- Video Card 3 -->
+<div class="group relative aspect-video rounded-2xl overflow-hidden cursor-pointer">
+<img class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" data-alt="A montage video thumbnail showing multiple customers giving high-fives and smiling after their ride. It shows the safety gear being removed and the group laughing together on the dock. It captures the authentic joy and post-adventure high of the experience." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCqfCyJgCGutoBPB3ABpJ6O_QUfgeOPnqhl-1QaY4kuFzG_y1uIVVa6OviGZXLHYH-w3XhhoiNcNhvaKMXIvfJQOwA5Nir18nq5hpPjiOp_Wtf5Qwg5gG9c223oU7Y8HItnI2kZFKxWd6YrjNMP-kwLO0NdojZ7dPSzvrg-cK35eKeB8xNvXEBzQxC3L440MW4FpFEFePKVi4hL9slM-gQVWxiOT9Y-EspSAUtkOHqXpJHA65wm6VO0RivNZdPcHHRy1eyPPQ-fy2je">
+<div class="absolute inset-0 bg-black/30 group-hover:bg-black/10 transition-colors flex items-center justify-center">
+<div class="w-16 h-16 rounded-full bg-primary-container text-on-primary-container flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined text-4xl" data-weight="fill">play_arrow</span>
+</div>
+</div>
+<div class="absolute bottom-0 left-0 p-6">
+<p class="font-label-md text-label-md">Customer Testimonials &amp; Joy</p>
+<p class="text-white/60 text-xs uppercase tracking-widest mt-1">03:20</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- CTA Banner -->
+<section class="relative py-32 overflow-hidden">
+<div class="absolute inset-0 z-0">
+<div class="w-full h-full bg-cover bg-center" data-alt="A breathtaking sunset scene on the Mahakam River with the silhouettes of two jet skis riding into the golden horizon. The water sparkles with thousands of tiny orange highlights. The overall mood is aspirational, high-end, and deeply atmospheric. The composition is clean with plenty of space for text, using a rich palette of deep navy and vibrant sunset orange." style="background-image: url(&quot;https://lh3.googleusercontent.com/aida-public/AB6AXuCL7pOn4uYh4iQwSyPfmV5fV1B5HZlRdUDvtFBL8j2AYrtmLgbyOBMiLvZWLrqnygxPhgQbsiKQAdeAEsbPrzsGBqE4_vK7AZNGCiXBZZtft-orxZrvFA-VN8g_byKcmTaKpYKJbDpuW4MtKCYD7VOzG5eQi42PtvitA3aK3PpQ0laNJ4rG-eEr3ERa4M54Yt7N1e5RQFh2R7vmdHSr22JAuYLeip9S_o8Xq8XlX6PCCgUaFhM_Yv3_TsfajEZ5GFjhg647Fm9xqSy5&quot;);"></div>
+<div class="absolute inset-0 bg-primary/20 mix-blend-multiply"></div>
+<div class="absolute inset-0 bg-gradient-to-r from-on-surface via-on-surface/60 to-transparent"></div>
+</div>
+<div class="relative z-10 px-margin-desktop max-w-container-max mx-auto text-white">
+<div class="max-w-2xl">
+<h2 class="font-display-lg text-headline-lg mb-6 leading-tight">Siap Membuat Pengalaman Anda Sendiri?</h2>
+<p class="font-body-lg text-body-lg text-white/80 mb-10">
+                        Temukan paket terbaik dan jelajahi Sungai Mahakam bersama JetSki Mahakam Wave Riding. Bergabunglah dengan ratusan penjelajah lainnya hari ini.
+                    </p>
+<div class="flex flex-col sm:flex-row gap-4">
+<button onclick="window.location.href='catalog.html'" class="bg-primary-container text-on-primary-container px-10 py-5 rounded-full font-headline-sm text-label-md hover:scale-105 transition-transform shadow-lg">Lihat Paket</button>
+<button onclick="window.open('https://wa.me/6281155590000', '_blank')" class="border-2 border-white/50 text-white backdrop-blur-sm px-10 py-5 rounded-full font-headline-sm text-label-md hover:bg-white hover:text-on-surface transition-all" onclick="window.open('https://wa.me/6281234567890', '_blank')">Hubungi WhatsApp</button>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-on-surface dark:bg-inverse-surface py-16">
+<div class="grid grid-cols-1 md:grid-cols-3 gap-gutter px-margin-desktop py-16 max-w-container-max mx-auto">
+<div class="space-y-6">
+<div class="font-headline-sm text-headline-sm font-bold text-primary-fixed">Mahakam Wave Riding</div>
+<p class="text-surface-variant/70 font-body-md">
+                    Penyedia pengalaman jet ski premium nomor satu di Kalimantan Timur. Keamanan, kenyamanan, dan adrenalin dalam satu paket eksklusif.
+                </p>
+<div class="flex gap-4">
+<a class="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-primary-container transition-colors" href="#"><span class="material-symbols-outlined text-white text-lg">public</span></a>
+<a class="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-primary-container transition-colors" href="#"><span class="material-symbols-outlined text-white text-lg">play_circle</span></a>
+<a class="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-primary-container transition-colors" href="#"><span class="material-symbols-outlined text-white text-lg">share</span></a>
+</div>
+</div>
+<div class="grid grid-cols-2 gap-8">
+<div class="space-y-4">
+<h4 class="text-white font-headline-sm text-label-md uppercase tracking-widest">Navigasi</h4>
+<ul class="space-y-2">
+<li class=""><a class="text-surface-variant/70 hover:text-primary-fixed transition-colors font-body-md text-body-md" href="index.html">Beranda</a></li>
+<li class=""><a class="text-surface-variant/70 hover:text-primary-fixed transition-colors font-body-md text-body-md" href="catalog.html">Paket</a></li>
+<li class=""><a class="text-primary-fixed font-bold font-body-md text-body-md" href="gallery.html">Galeri</a></li>
+<li class=""><a class="text-surface-variant/70 hover:text-primary-fixed transition-colors font-body-md text-body-md" href="catalog.html#faq">FAQ</a></li>
+</ul>
+</div>
+<div class="space-y-4">
+<h4 class="text-white font-headline-sm text-label-md uppercase tracking-widest">Legal</h4>
+<ul class="space-y-2">
+<li class=""><a class="text-surface-variant/70 hover:text-primary-fixed transition-colors font-body-md text-body-md" href="#">Terms of Service</a></li>
+<li class=""><a class="text-surface-variant/70 hover:text-primary-fixed transition-colors font-body-md text-body-md" href="#">Privacy Policy</a></li>
+</ul>
+</div>
+</div>
+<div class="space-y-6">
+  <h4 class="text-white font-headline-sm text-label-md uppercase tracking-widest">Ikuti Kami</h4>
+  <p class="text-surface-variant/70 text-sm">Dapatkan update galeri foto & video terbaru dari petualangan kami.</p>
+  <form class="space-y-3" onsubmit="event.preventDefault(); alert('Terima kasih telah berlangganan!');">
+    <input type="email" placeholder="Email kamu..." required class="w-full px-4 py-3 rounded-xl bg-white/10 text-white placeholder-white/40 border border-white/20 focus:outline-none focus:border-primary-fixed text-sm">
+    <button type="submit" class="w-full bg-primary-container text-on-primary-container py-3 rounded-xl font-bold text-sm hover:opacity-90 transition-opacity">Berlangganan</button>
+  </form>
+</div>
+</div>
+<div class="px-margin-desktop max-w-container-max mx-auto pt-8 border-t border-white/10 text-center">
+<p class="text-surface-variant/50 font-label-md text-label-md">© 2024 JetSki Mahakam Wave Riding. Premium Adventure Experiences.</p>
+</div>
+</footer>
+<script>
+        // Filter button active state
+        const filterBtns = document.querySelectorAll('.filter-btn');
+        filterBtns.forEach(btn => {
+            btn.addEventListener('click', () => {
+                filterBtns.forEach(b => {
+                    b.classList.remove('bg-primary-container', 'text-on-primary-container', 'shadow-sm');
+                    b.classList.add('bg-surface-container-lowest', 'text-on-surface-variant', 'border', 'border-outline-variant/30');
+                });
+                btn.classList.add('bg-primary-container', 'text-on-primary-container', 'shadow-sm');
+                btn.classList.remove('bg-surface-container-lowest', 'text-on-surface-variant', 'border', 'border-outline-variant/30');
+            });
+        });
+
+        // Sticky Navbar effect
+        window.addEventListener('scroll', () => {
+            const nav = document.querySelector('nav');
+            if (window.scrollY > 50) {
+                nav.classList.add('shadow-md');
+            } else {
+                nav.classList.remove('shadow-md');
+            }
+        });
+
+        // Dynamic session check for customer
+        document.addEventListener('DOMContentLoaded', () => {
+            const user = JSON.parse(localStorage.getItem('loggedInUser'));
+            if (user && user.role === 'pelanggan') {
+                // Change Beranda href to dashboard.html
+                const berandaLink = document.querySelector('nav a[href="index.html"]');
+                if (berandaLink) {
+                    berandaLink.href = 'dashboard.html';
+                }
+                const brandLogo = document.querySelector('nav div.font-headline-sm');
+                if (brandLogo) {
+                    brandLogo.classList.add('cursor-pointer');
+                    brandLogo.addEventListener('click', () => {
+                        window.location.href = 'dashboard.html';
+                    });
+                }
+                
+                // Replace Login button with user profile widget
+                const loginBtn = document.querySelector('button[onclick*="login.html"]');
+                if (loginBtn) {
+                    const profileContainer = document.createElement('div');
+                    profileContainer.className = 'flex items-center gap-4';
+                    profileContainer.innerHTML = `
+                        <button class="p-2 text-on-surface-variant hover:text-primary transition-all active:scale-95">
+                            <span class="material-symbols-outlined">notifications</span>
+                        </button>
+                        <div class="h-10 w-10 rounded-full bg-primary-fixed overflow-hidden border-2 border-primary cursor-pointer" onclick="window.location.href='profile.html'">
+                            <img class="w-full h-full object-cover" src="${user.avatar || 'https://lh3.googleusercontent.com/aida-public/AB6AXuDaaQ0e89Lzbi1fnocVWutRs8xxirv_beAkpdvpZq5RuL7wwTn5nDvXf9nUdKRP6_V3w6H8X3FC6idh8YTFNExcDcc5MeBHBIQ22aBc-hIfQzjrnSXCwyLBW8snAtekBDYZdVWI5harP5oNr9C7ZUXyn7ozw8t015X31WZpW-7c0CvmxsqlMJhGx7iHBCeiGdVn1WS2KcJi14116CMr0WtAUubEb--3nXTxSNp24nFApq_MC-J5geWrqyfCwXzrXJWdQGLxeav9-gBk'}" alt="Profile">
+                        </div>
+                        <a class="hidden md:block bg-primary text-on-primary px-6 py-2 rounded-full font-label-md hover:bg-primary-container hover:text-on-primary-container transition-all active:scale-95" href="my-reservations.html">
+                            Reservasi Saya
+                        </a>
+                    `;
+                    loginBtn.parentNode.replaceChild(profileContainer, loginBtn);
+                }
+            }
+        });
+    </script>
+</body>
+</html>

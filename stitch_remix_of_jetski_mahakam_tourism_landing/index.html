@@ -1,0 +1,683 @@
+<!DOCTYPE html>
+<html class="scroll-smooth" lang="id">
+
+<head>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <title>JetSki Mahakam Wave Riding - Wisata Sungai Premium Samarinda</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&amp;family=Inter:wght@400;500;600&amp;display=swap"
+        rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet">
+    <script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "primary": "#914c00",
+                        "tertiary": "#006590",
+                        "inverse-on-surface": "#ffede3",
+                        "secondary-container": "#dae2fd",
+                        "on-error": "#ffffff",
+                        "surface-variant": "#f3dfd1",
+                        "on-surface": "#241912",
+                        "tertiary-container": "#00b3fc",
+                        "secondary": "#565e74",
+                        "surface-bright": "#fff8f5",
+                        "tertiary-fixed": "#c8e6ff",
+                        "on-secondary-fixed-variant": "#3f465c",
+                        "on-primary-fixed": "#2f1500",
+                        "primary-container": "#ff8a00",
+                        "surface-container-low": "#fff1e9",
+                        "on-background": "#241912",
+                        "outline-variant": "#ddc1ae",
+                        "on-secondary-fixed": "#131b2e",
+                        "surface-dim": "#ebd6c9",
+                        "secondary-fixed": "#dae2fd",
+                        "surface-container": "#ffeadd",
+                        "surface-container-high": "#f9e4d7",
+                        "on-secondary": "#ffffff",
+                        "on-secondary-container": "#5c647a",
+                        "on-primary-fixed-variant": "#6f3900",
+                        "on-primary-container": "#613100",
+                        "surface-tint": "#914c00",
+                        "inverse-surface": "#3a2e25",
+                        "tertiary-fixed-dim": "#88ceff",
+                        "background": "#fff8f5",
+                        "on-tertiary-fixed": "#001e2e",
+                        "primary-fixed-dim": "#ffb77f",
+                        "inverse-primary": "#ffb77f",
+                        "surface": "#fff8f5",
+                        "secondary-fixed-dim": "#bec6e0",
+                        "error-container": "#ffdad6",
+                        "outline": "#8a7362",
+                        "on-error-container": "#93000a",
+                        "on-primary": "#ffffff",
+                        "on-tertiary": "#ffffff",
+                        "error": "#ba1a1a",
+                        "on-tertiary-fixed-variant": "#004c6d",
+                        "surface-container-lowest": "#ffffff",
+                        "on-surface-variant": "#564334",
+                        "primary-fixed": "#ffdcc4",
+                        "surface-container-highest": "#f3dfd1",
+                        "on-tertiary-container": "#004260"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "margin-mobile": "20px",
+                        "margin-desktop": "64px",
+                        "container-max": "1280px",
+                        "gutter": "24px",
+                        "stack-unit": "8px"
+                    },
+                    "fontFamily": {
+                        "headline-sm": ["Montserrat"],
+                        "headline-lg": ["Montserrat"],
+                        "display-lg": ["Montserrat"],
+                        "headline-md": ["Montserrat"],
+                        "label-md": ["Inter"],
+                        "headline-lg-mobile": ["Montserrat"],
+                        "body-md": ["Inter"],
+                        "body-lg": ["Inter"]
+                    },
+                    "fontSize": {
+                        "headline-sm": ["24px", { "lineHeight": "1.4", "fontWeight": "600" }],
+                        "headline-lg": ["48px", { "lineHeight": "1.2", "fontWeight": "700" }],
+                        "display-lg": ["64px", { "lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "700" }],
+                        "headline-md": ["32px", { "lineHeight": "1.3", "fontWeight": "600" }],
+                        "label-md": ["14px", { "lineHeight": "1", "letterSpacing": "0.05em", "fontWeight": "600" }],
+                        "headline-lg-mobile": ["32px", { "lineHeight": "1.2", "fontWeight": "700" }],
+                        "body-md": ["16px", { "lineHeight": "1.5", "fontWeight": "400" }],
+                        "body-lg": ["18px", { "lineHeight": "1.6", "fontWeight": "400" }]
+                    }
+                },
+            },
+        }
+    </script>
+    <style>
+        .glass-card {
+            background: rgba(255, 255, 255, 0.7);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+        }
+
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+
+        .shadow-ambient {
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.04);
+        }
+
+        .card-hover:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 20px 40px rgba(145, 76, 0, 0.08);
+        }
+    </style>
+</head>
+
+<body class="bg-background text-on-surface selection:bg-primary-fixed selection:text-on-primary-fixed">
+    <!-- TopNavBar -->
+    <header
+        class="bg-surface/90 dark:bg-surface-container/90 backdrop-blur-md shadow-sm fixed top-0 left-0 right-0 z-50 transition-all duration-300">
+        <div
+            class="flex justify-between items-center px-margin-mobile md:px-margin-desktop py-4 max-w-container-max mx-auto">
+            <div
+                class="font-headline-sm text-headline-sm font-bold text-primary dark:text-primary-fixed-dim tracking-tight">
+                JetSki Mahakam Wave Riding
+            </div>
+            <nav class="hidden md:flex items-center space-x-8">
+                <a class="font-label-md text-label-md text-primary border-b-2 border-primary pb-1"
+                    href="index.html">Beranda</a>
+                <a class="font-label-md text-label-md text-on-surface-variant hover:text-primary transition-colors"
+                    href="catalog.html">Paket</a>
+                <a class="font-label-md text-label-md text-on-surface-variant hover:text-primary transition-colors"
+                    href="gallery.html">Galeri</a>
+
+            </nav>
+            <div class="flex items-center gap-4">
+                <button
+                    class="hidden md:block font-label-md text-label-md text-primary font-bold hover:opacity-80 transition-opacity">WhatsApp</button>
+                <button onclick="window.location.href='login.html'"
+                    class="bg-primary text-on-primary px-6 py-2 rounded-xl font-label-md text-label-md font-bold hover:scale-95 transition-all duration-150 shadow-md">
+                    Login</button>
+            </div>
+        </div>
+    </header>
+    <main class="pt-20">
+        <!-- Hero Section -->
+        <section class="relative min-h-[921px] flex items-center overflow-hidden">
+            <div class="absolute inset-0 z-0">
+                <div class="absolute inset-0 bg-gradient-to-r from-on-surface/60 to-transparent z-10"></div>
+                <img class="w-full h-full object-cover"
+                    data-alt="A cinematic wide-angle shot of the iconic Mahakam Bridge in Samarinda during golden hour. In the foreground, professional jet ski riders are carving through the water, creating dramatic white splashes. The lighting is warm and golden, casting long shadows and highlighting the texture of the river. The style is premium travel photography with high contrast and vibrant oranges and blues."
+                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuBMPusGXCmhHuE-IZmgum4sAGmQeQEr8JpOV853tlhe2BCcMVdOtYVwtrjm7_xWlYRi0uLNbUWZJcMZn8nGhHI-nCYMrA6vHdpgZ2uSfJJx9lrjeeKrT2_J0gWr86UowBu6v6K5nSB4Mc-stkXSDVIWnwyjTrjV3Oa-VzGUY7pN7Rxsw6aL2GiWZLFJDwIZnGBUA4iSfJ6rsSP4MkezSW7MZtr8G-NRqbZmyAeGBneZYRwgwPoGLkN_HkCbOM5YbB3LgNYdE21W5BgA">
+            </div>
+            <div class="relative z-20 max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop w-full">
+                <div class="max-w-2xl text-white">
+                    <div class="flex items-center gap-2 mb-6 animate-fade-in">
+                        <span
+                            class="bg-primary-container text-on-primary-container px-3 py-1 rounded-full font-label-md text-label-md flex items-center gap-1">
+                            <span class="material-symbols-outlined text-[18px]">verified</span> Terverifikasi
+                        </span>
+                        <span
+                            class="bg-surface-bright/20 backdrop-blur-md px-3 py-1 rounded-full font-label-md text-label-md flex items-center gap-1">
+                            <span class="material-symbols-outlined text-[18px]">security</span> Safety First
+                        </span>
+                    </div>
+                    <h1
+                        class="font-headline-lg-mobile md:font-display-lg text-headline-lg-mobile md:text-display-lg mb-6 leading-tight">
+                        Rasakan Sensasi Wisata Sungai Mahakam dari Atas JetSki
+                    </h1>
+                    <p class="font-body-lg text-body-lg mb-10 opacity-90 leading-relaxed">
+                        Nikmati pemandangan kota Samarinda dari perspektif berbeda. Layanan jet ski premium pertama dan
+                        terbaik di Kalimantan Timur dengan standar keselamatan internasional.
+                    </p>
+                    <div class="flex flex-wrap gap-4">
+                        <button onclick="window.location.href='catalog.html'"
+                            class="bg-primary-container text-on-primary-container px-8 py-4 rounded-xl font-headline-sm text-[18px] font-bold hover:scale-105 transition-transform shadow-lg">
+                            Lihat Paket
+                        </button>
+                        <button
+                            class="bg-white/10 backdrop-blur-md border-2 border-white text-white px-8 py-4 rounded-xl font-headline-sm text-[18px] font-bold hover:bg-white hover:text-primary transition-all"
+                            onclick="window.open('https://wa.me/6281234567890', '_blank')">Hubungi Kami</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Why Choose Us -->
+        <section class="py-24 bg-surface-bright" id="kontak">
+            <div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop">
+                <div class="text-center mb-16">
+                    <h2 class="font-headline-md text-headline-md text-on-surface mb-4">Mengapa Memilih Kami?</h2>
+                    <p class="font-body-md text-body-md text-on-surface-variant max-w-xl mx-auto">Keunggulan layanan
+                        yang membuat pengalaman berpetualang Anda di Sungai Mahakam tak terlupakan.</p>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-4 gap-gutter">
+                    <!-- Card 1 -->
+                    <div class="bg-white p-8 rounded-2xl shadow-ambient card-hover transition-all">
+                        <div
+                            class="w-16 h-16 bg-primary-container/10 rounded-2xl flex items-center justify-center mb-6">
+                            <span class="material-symbols-outlined text-primary text-4xl">sailing</span>
+                        </div>
+                        <h3 class="font-headline-sm text-[20px] mb-3">Armada JetSki Premium</h3>
+                        <p class="font-body-md text-body-md text-on-surface-variant">Unit terbaru dengan performa tinggi
+                            dan perawatan rutin harian.</p>
+                    </div>
+                    <!-- Card 2 -->
+                    <div class="bg-white p-8 rounded-2xl shadow-ambient card-hover transition-all">
+                        <div
+                            class="w-16 h-16 bg-primary-container/10 rounded-2xl flex items-center justify-center mb-6">
+                            <span class="material-symbols-outlined text-primary text-4xl">workspace_premium</span>
+                        </div>
+                        <h3 class="font-headline-sm text-[20px] mb-3">5+ Tahun Pengalaman</h3>
+                        <p class="font-body-md text-body-md text-on-surface-variant">Pemandu profesional yang mengenal
+                            setiap jengkal arus Sungai Mahakam.</p>
+                    </div>
+                    <!-- Card 3 -->
+                    <div class="bg-white p-8 rounded-2xl shadow-ambient card-hover transition-all">
+                        <div
+                            class="w-16 h-16 bg-primary-container/10 rounded-2xl flex items-center justify-center mb-6">
+                            <span class="material-symbols-outlined text-primary text-4xl">gpp_good</span>
+                        </div>
+                        <h3 class="font-headline-sm text-[20px] mb-3">Keselamatan Terjamin</h3>
+                        <p class="font-body-md text-body-md text-on-surface-variant">Peralatan safety lengkap dan
+                            asuransi untuk setiap perjalanan.</p>
+                    </div>
+                    <!-- Card 4 -->
+                    <div class="bg-white p-8 rounded-2xl shadow-ambient card-hover transition-all">
+                        <div
+                            class="w-16 h-16 bg-primary-container/10 rounded-2xl flex items-center justify-center mb-6">
+                            <span class="material-symbols-outlined text-primary text-4xl">map</span>
+                        </div>
+                        <h3 class="font-headline-sm text-[20px] mb-3">Rute Ikonik Samarinda</h3>
+                        <p class="font-body-md text-body-md text-on-surface-variant">Melewati spot terbaik mulai dari
+                            Jembatan Mahakam hingga tepian kota.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Weather Forecast -->
+        <section class="py-16 bg-surface-container-low">
+            <div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop">
+                <div
+                    class="bg-white rounded-[32px] p-8 md:p-12 shadow-ambient flex flex-col md:flex-row items-center gap-12">
+                    <div class="md:w-1/3">
+                        <h2 class="font-headline-md text-headline-md mb-4">Kondisi Cuaca Samarinda</h2>
+                        <p class="font-body-md text-body-md text-on-surface-variant mb-6">Periksa kondisi cuaca untuk
+                            merencanakan waktu riding terbaik Anda hari ini.</p>
+                        <div class="flex items-center gap-4 text-primary">
+                            <span class="material-symbols-outlined text-5xl">sunny</span>
+                            <div>
+                                <div class="text-4xl font-bold">31°C</div>
+                                <div class="font-label-md text-label-md">Cerah Berawan</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="md:w-2/3 grid grid-cols-2 md:grid-cols-5 gap-4 w-full">
+                        <div class="bg-surface-bright p-4 rounded-2xl text-center border border-outline-variant/30">
+                            <div class="font-label-md text-label-md mb-2">Senin</div>
+                            <span class="material-symbols-outlined text-primary mb-2">partly_cloudy_day</span>
+                            <div class="font-bold">29°C</div>
+                        </div>
+                        <div class="bg-surface-bright p-4 rounded-2xl text-center border border-outline-variant/30">
+                            <div class="font-label-md text-label-md mb-2">Selasa</div>
+                            <span class="material-symbols-outlined text-primary mb-2">sunny</span>
+                            <div class="font-bold">32°C</div>
+                        </div>
+                        <div class="bg-surface-bright p-4 rounded-2xl text-center border border-outline-variant/30">
+                            <div class="font-label-md text-label-md mb-2">Rabu</div>
+                            <span class="material-symbols-outlined text-primary mb-2">cloudy_snowing</span>
+                            <div class="font-bold">28°C</div>
+                        </div>
+                        <div class="bg-surface-bright p-4 rounded-2xl text-center border border-outline-variant/30">
+                            <div class="font-label-md text-label-md mb-2">Kamis</div>
+                            <span class="material-symbols-outlined text-primary mb-2">partly_cloudy_day</span>
+                            <div class="font-bold">30°C</div>
+                        </div>
+                        <div class="bg-primary text-on-primary p-4 rounded-2xl text-center shadow-lg">
+                            <div class="font-label-md text-label-md mb-2">Jumat</div>
+                            <span class="material-symbols-outlined mb-2">sunny</span>
+                            <div class="font-bold">33°C</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Safety First -->
+        <section class="py-24">
+            <div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop">
+                <div class="flex flex-col md:flex-row gap-16 items-center">
+                    <div class="md:w-1/2 order-2 md:order-1">
+                        <div class="grid grid-cols-2 gap-4">
+                            <div class="rounded-2xl overflow-hidden shadow-lg h-64">
+                                <img class="w-full h-full object-cover"
+                                    data-alt="A detailed close-up shot of a high-quality, professional-grade orange life jacket being secured with sturdy buckles. The lighting is crisp and clear, emphasizing the durable textile material and safety stitching. The aesthetic is professional and focused on safety, using a clean corporate-modern style."
+                                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuCdkT3x9sRtyJv7iYuemmmHnmTU0cemTIPqBxqxs7m3vSAg166P-_V6PzN9ART-ypciTaIGyioNr_nTpX-eWgXZRwgE_s3voL4YGT4LK9c1pmJ0evuQXCQ0_nGG2sSoziy4qf46D4WAJz6Dj2RCVR7jdGPmrQaOfxPR_Pfe71bMd4ovUbcueqMOzEfDBfAF1uHKDyh997xlTk_Ocgu4tZkzx_h32xtUqetIwrET1b4sduDgr-TxsB-o84zRsXw1et2bBkqto3ou_aRv">
+                            </div>
+                            <div class="rounded-2xl overflow-hidden shadow-lg h-64 mt-8">
+                                <img class="w-full h-full object-cover"
+                                    data-alt="A professional instructor conducting a safety briefing to a group of eager tourists by the Mahakam riverfront. The instructor is pointing to a jet ski, explaining operation procedures. The scene is bright and organized, conveying trust and professionalism in a premium tourism setting."
+                                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuDFv-G-N9no8UPa0vOmhudmbS6swsZkeNuWuFym8f9B9Nb6s0stvr-IT8BlMhp-qNrpqIv7XYCntoxGihJEfwHithxAGXYDTTMtdrZ-Vpi8_kM1m1fhDXvYfqaUogEgRz2YEYYxhLCWGf_8qoCx96wAHo_1QCEYrADOy5UIJVWkJG71RonhE8ksN3pbpufTMZlS7zyQDeKHv43jwvb4gJZGTv0PmrP0dYTHwd4rNyyhSi5EFrjpK6hdEIGTfvadxOMDQjsHa9j7kYq5">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="md:w-1/2 order-1 md:order-2">
+                        <h2 class="font-headline-md text-headline-md mb-6">Keamanan Adalah Prioritas Utama Kami</h2>
+                        <div class="space-y-6">
+                            <div class="flex gap-4">
+                                <div
+                                    class="shrink-0 w-12 h-12 bg-tertiary-container rounded-full flex items-center justify-center text-on-tertiary-container">
+                                    <span class="material-symbols-outlined">gif_box</span>
+                                </div>
+                                <div>
+                                    <h4 class="font-headline-sm text-[18px] mb-2">Life Jacket Standar Internasional</h4>
+                                    <p class="font-body-md text-on-surface-variant">Semua peserta wajib mengenakan jaket
+                                        pelampung berkualitas tinggi yang nyaman dan aman selama perjalanan.</p>
+                                </div>
+                            </div>
+                            <div class="flex gap-4">
+                                <div
+                                    class="shrink-0 w-12 h-12 bg-tertiary-container rounded-full flex items-center justify-center text-on-tertiary-container">
+                                    <span class="material-symbols-outlined">record_voice_over</span>
+                                </div>
+                                <div>
+                                    <h4 class="font-headline-sm text-[18px] mb-2">Briefing Sebelum Riding</h4>
+                                    <p class="font-body-md text-on-surface-variant">Penjelasan detail mengenai cara
+                                        operasional jet ski, tanda komunikasi di air, dan prosedur keadaan darurat.</p>
+                                </div>
+                            </div>
+                            <div class="flex gap-4">
+                                <div
+                                    class="shrink-0 w-12 h-12 bg-tertiary-container rounded-full flex items-center justify-center text-on-tertiary-container">
+                                    <span class="material-symbols-outlined">support_agent</span>
+                                </div>
+                                <div>
+                                    <h4 class="font-headline-sm text-[18px] mb-2">Escort Boat &amp; Rescue</h4>
+                                    <p class="font-body-md text-on-surface-variant">Tim penyelamat kami selalu siaga
+                                        dengan kapal pengawal untuk memastikan rute tetap aman.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Explore Mahakam (Bento Grid) -->
+        <section class="py-24 bg-surface-container-high" id="paket">
+            <div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop">
+                <div class="flex justify-between items-end mb-16">
+                    <div>
+                        <h2 class="font-headline-md text-headline-md mb-2">Jelajahi Pesona Mahakam</h2>
+                        <p class="font-body-md text-on-surface-variant">Pilih rute petualangan yang paling sesuai dengan
+                            keinginan Anda.</p>
+                    </div>
+                    <button onclick="window.location.href='catalog.html'"
+                        class="hidden md:block text-primary font-bold border-b-2 border-primary">Lihat Semua
+                        Paket</button>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-12 gap-gutter h-auto md:h-[600px]">
+                    <div class="md:col-span-8 relative group overflow-hidden rounded-3xl shadow-lg cursor-pointer"
+                        onclick="window.location.href='package-detail.html'">
+                        <img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+                            data-alt="A wide panoramic view of the Mahakam Bridge at sunset, with the sky painted in deep hues of purple and orange. A jet ski is visible in the middle distance, leaving a white wake on the dark river water. The atmosphere is serene yet adventurous, capturing the 'Sunset Mahakam' experience in a luxury tourism style."
+                            src="https://lh3.googleusercontent.com/aida-public/AB6AXuDNyz_Bjq9txQJIEKw5fId1IYRhdoLuWcI4N65oFYM8UlHrcKzUYIbcKpgbBs8WTlTLxeovJtPZ9sxwEUxqMvBL92aJYXkIjFdHG2abJbSSR8bdiKJGtd6RTbIeW-ejoFPInBZD1xRQNflH3OHAlXQUasi5Gif4Jy9jxgqR5km3tFjW9bEPrqZSGcjhVpofv12oi1AHs7S3tx0Tvv48TV-MTxcm6EJJnj0h8n5LWjqrsB2LJK84pbk0hrSfbE81ceFS3S-rG2bBTLjD">
+                        <div
+                            class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent p-8 flex flex-col justify-end">
+                            <span
+                                class="bg-primary text-on-primary w-fit px-3 py-1 rounded-full text-xs font-bold mb-3 uppercase tracking-wider">Paling
+                                Populer</span>
+                            <h3 class="text-white font-headline-md text-headline-md mb-2">Sunset Mahakam Expedition</h3>
+                            <p class="text-white/80 font-body-md mb-4 max-w-md">Nikmati momen magis matahari terbenam
+                                tepat di bawah kemegahan Jembatan Mahakam.</p>
+                            <div class="flex items-center gap-4">
+                                <span class="text-white font-bold text-xl">Rp 750k <span
+                                        class="text-sm font-normal opacity-70">/ Sesi</span></span>
+                                <span class="text-white/60 text-sm flex items-center gap-1"><span
+                                        class="material-symbols-outlined text-sm">schedule</span> 60 Menit</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="md:col-span-4 grid grid-rows-2 gap-gutter">
+                        <div class="relative group overflow-hidden rounded-3xl shadow-lg cursor-pointer"
+                            onclick="window.location.href='package-detail.html'">
+                            <img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+                                data-alt="Close-up of a jet ski engine and sleek bodywork, focusing on the high-tech dashboard and the word 'Premium' or a brand logo. The setting is a clean Samarinda river dock in the morning light. The image emphasizes the quality and luxury of the fleet."
+                                src="https://lh3.googleusercontent.com/aida-public/AB6AXuAZuH-cN2Sm3W1fvxR_2p0mTjXebKBbW_20kxNuutvV47O5PZ4vnDF6NAsLsrxyv9foMiIRrh2g48q8ZY79HCLfwbrodDW-RF_0jBM0391EAZVYJoo2wR_u_iYZtLvnOmc1UEGzUjnILF077vCuBPj9T3pRmNQYQ70prvB2d8sTbIbOax5w5K1pGjlMXRtzrRO1b0tH4ZNR3ymNcDZLPMi6EaUN-bXTWvkH1R7avishnEiOycblsOgTusdsjNkAXTsv50wHMqcq5VR-">
+                            <div
+                                class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent p-6 flex flex-col justify-end text-white">
+                                <h4 class="font-headline-sm text-[20px] mb-1">City River Tour</h4>
+                                <p class="text-sm opacity-80">Jelajahi sisi modern kota Samarinda.</p>
+                            </div>
+                        </div>
+                        <div class="relative group overflow-hidden rounded-3xl shadow-lg cursor-pointer"
+                            onclick="window.location.href='package-detail.html'">
+                            <img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+                                data-alt="A festive corporate gathering on the Mahakam riverfront, with several jet skis lined up and a catering setup in the background. The atmosphere is professional and celebratory, showcasing 'Special Events' services. The lighting is bright day-light, clean and inviting."
+                                src="https://lh3.googleusercontent.com/aida-public/AB6AXuC_sWgDSC89YS5i_XhrsfSzIokqLfkvgGLf2j1gYZxBJnS7jEBpifz7bQG4b4ssER0FPu0oCEXC9hS-SBbZBjRUXzD7elxu9mFbSkvDKqSBQ3kE8AGpTYeslWQ_86z31YU5aNEc3j95EuPiB4zEI8h7yIZV-ROL7FY21xtuoVQ-QPraf7-xzyT-hKiFkEV3ELXaHkJtwd5SAWbVVHvFyMP8JNpuwLX2AehXagq8kKVi3GSIM6QXRwXFWUquVqhTIRfUmTTOhj3moUUv">
+                            <div
+                                class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent p-6 flex flex-col justify-end text-white">
+                                <h4 class="font-headline-sm text-[20px] mb-1">Special Events</h4>
+                                <p class="text-sm opacity-80">Paket khusus gathering dan ulang tahun.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Reservation Process -->
+        <section class="py-24 bg-white overflow-hidden">
+            <div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop">
+                <div class="text-center mb-20">
+                    <h2 class="font-headline-md text-headline-md mb-4">Cara Pemesanan</h2>
+                    <p class="font-body-md text-on-surface-variant">Langkah mudah untuk memulai petualangan Anda.</p>
+                </div>
+                <div class="relative">
+                    <!-- Line -->
+                    <div class="hidden md:block absolute top-10 left-0 w-full h-1 bg-surface-container-high z-0">
+                        <div class="bg-primary h-full transition-all duration-1000 w-1/4" id="progress-line"></div>
+                    </div>
+                    <div class="grid grid-cols-1 md:grid-cols-5 gap-8 relative z-10">
+                        <!-- Step 1 -->
+                        <div class="text-center group">
+                            <div
+                                class="w-20 h-20 bg-primary text-on-primary rounded-2xl flex items-center justify-center mx-auto mb-6 shadow-lg transform group-hover:scale-110 transition-transform">
+                                <span class="material-symbols-outlined text-3xl">login</span>
+                            </div>
+                            <h5 class="font-headline-sm text-[18px] mb-2">Login</h5>
+                            <p class="text-sm text-on-surface-variant">Masuk ke akun atau daftar baru.</p>
+                        </div>
+                        <!-- Step 2 -->
+                        <div class="text-center group">
+                            <div
+                                class="w-20 h-20 bg-white border-2 border-primary text-primary rounded-2xl flex items-center justify-center mx-auto mb-6 shadow-md transform group-hover:scale-110 transition-transform">
+                                <span class="material-symbols-outlined text-3xl">checklist</span>
+                            </div>
+                            <h5 class="font-headline-sm text-[18px] mb-2">Pilih Paket</h5>
+                            <p class="text-sm text-on-surface-variant">Tentukan rute dan durasi riding.</p>
+                        </div>
+                        <!-- Step 3 -->
+                        <div class="text-center group">
+                            <div
+                                class="w-20 h-20 bg-white border-2 border-primary text-primary rounded-2xl flex items-center justify-center mx-auto mb-6 shadow-md transform group-hover:scale-110 transition-transform">
+                                <span class="material-symbols-outlined text-3xl">edit_note</span>
+                            </div>
+                            <h5 class="font-headline-sm text-[18px] mb-2">Isi Form</h5>
+                            <p class="text-sm text-on-surface-variant">Lengkapi data diri dan jadwal.</p>
+                        </div>
+                        <!-- Step 4 -->
+                        <div class="text-center group">
+                            <div
+                                class="w-20 h-20 bg-white border-2 border-primary text-primary rounded-2xl flex items-center justify-center mx-auto mb-6 shadow-md transform group-hover:scale-110 transition-transform">
+                                <span class="material-symbols-outlined text-3xl">payments</span>
+                            </div>
+                            <h5 class="font-headline-sm text-[18px] mb-2">Pembayaran</h5>
+                            <p class="text-sm text-on-surface-variant">Konfirmasi melalui berbagai metode.</p>
+                        </div>
+                        <!-- Step 5 -->
+                        <div class="text-center group">
+                            <div
+                                class="w-20 h-20 bg-white border-2 border-primary text-primary rounded-2xl flex items-center justify-center mx-auto mb-6 shadow-md transform group-hover:scale-110 transition-transform">
+                                <span class="material-symbols-outlined text-3xl">verified</span>
+                            </div>
+                            <h5 class="font-headline-sm text-[18px] mb-2">Berhasil</h5>
+                            <p class="text-sm text-on-surface-variant">Tiket digital siap digunakan.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Location Section -->
+        <section class="py-24 bg-surface-bright">
+            <div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop">
+                <div class="flex flex-col lg:flex-row gap-gutter">
+                    <div class="lg:w-1/2">
+                        <h2 class="font-headline-md text-headline-md mb-6">Kunjungi Basecamp Kami</h2>
+                        <div class="bg-white p-8 rounded-3xl shadow-ambient mb-8">
+                            <div class="flex gap-4 mb-6">
+                                <span class="material-symbols-outlined text-primary">location_on</span>
+                                <div>
+                                    <h4 class="font-bold mb-1">Alamat Utama</h4>
+                                    <p class="text-on-surface-variant">Jl. Gajah Mada, Dermaga Wisata Samarinda,
+                                        Kalimantan Timur 75123</p>
+                                </div>
+                            </div>
+                            <div class="flex gap-4 mb-6">
+                                <span class="material-symbols-outlined text-primary">call</span>
+                                <div>
+                                    <h4 class="font-bold mb-1">Telepon / WhatsApp</h4>
+                                    <p class="text-on-surface-variant">+62 811-555-9000</p>
+                                </div>
+                            </div>
+                            <div class="flex gap-4">
+                                <span class="material-symbols-outlined text-primary">mail</span>
+                                <div>
+                                    <h4 class="font-bold mb-1">Email</h4>
+                                    <p class="text-on-surface-variant">info@jetskimahakam.com</p>
+                                </div>
+                            </div>
+                        </div>
+                        <button
+                            class="w-full bg-tertiary text-on-tertiary py-4 rounded-2xl font-bold flex items-center justify-center gap-2 hover:bg-tertiary/90 transition-all">
+                            <span class="material-symbols-outlined">directions</span> Buka di Google Maps
+                        </button>
+                    </div>
+                    <div class="lg:w-1/2 h-[450px] rounded-3xl overflow-hidden shadow-lg border-4 border-white">
+                        <img class="w-full h-full object-cover"
+                            data-alt="A clean, minimalist digital map rendering showing the riverfront of Samarinda, specifically highlighting the Mahakam Bridge and the tourism docks. The map uses a premium dark-mode or soft-light style with branded orange pin markers. This provides a clear spatial context for the business location."
+                            data-location="Samarinda, Indonesia"
+                            src="https://lh3.googleusercontent.com/aida-public/AB6AXuDUoHCNWE3F4cH3pM0RQZUyxsa9gtI3Sw0weNHOlqz1Zr9H7rouXGyozee4FfLYzcJmeUft8Tv465gGSX7yZUQ0kz-WMEMlGIpB5GKTRs8ALA5HhQGkvZlU8pTTqAU7y8VuDdbEqNdD7XNq7J4ky2Vt1u63YUn4hwzli391SJyRCJjd79BQX6Ht6oAAc3ym1aX-Ka5s4BkTaBRyyjODPpP-VyWa2gGQT76Admp7O0zcGc6J3ALyPhlFQfjUntDD8Xy64AQjRZxfpRoZ">
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Final CTA -->
+        <section class="py-24 bg-primary overflow-hidden relative">
+            <div class="absolute top-0 right-0 w-1/2 h-full opacity-10 pointer-events-none">
+                <span class="material-symbols-outlined text-[400px] absolute -right-20 -top-20">waves</span>
+            </div>
+            <div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop text-center relative z-10">
+                <h2 class="font-headline-lg text-headline-lg text-white mb-8">Siap Untuk Berpetualang di Sungai Mahakam?
+                </h2>
+                <p class="font-body-lg text-body-lg text-white/80 max-w-2xl mx-auto mb-12">Dapatkan pengalaman riding
+                    tak terlupakan dengan pemandangan sunset terbaik di Samarinda. Slot terbatas setiap harinya!</p>
+                <div class="flex flex-wrap justify-center gap-6">
+                    <button
+                        class="bg-white text-primary px-10 py-5 rounded-2xl font-headline-sm text-[20px] font-extrabold hover:scale-105 transition-all shadow-2xl"
+                        onclick="window.location.href='catalog.html'">Pesan Sekarang
+                    </button>
+                    <button
+                        class="bg-primary-container text-on-primary-container px-10 py-5 rounded-2xl font-headline-sm text-[20px] font-extrabold hover:bg-white transition-all shadow-2xl"
+                        onclick="window.open('https://wa.me/6281234567890', '_blank')">Hubungi via WhatsApp</button>
+                </div>
+            </div>
+        </section>
+    </main>
+    <!-- Footer -->
+    <footer class="bg-inverse-surface dark:bg-surface-container-lowest text-white">
+        <div
+            class="grid grid-cols-1 md:grid-cols-4 gap-gutter px-margin-mobile md:px-margin-desktop py-16 max-w-container-max mx-auto">
+            <div class="md:col-span-1">
+                <div class="font-headline-sm text-headline-sm text-surface-bright mb-6 font-bold">Mahakam Wave Riding
+                </div>
+                <p class="text-surface-variant/80 text-sm leading-relaxed mb-6">Penyedia layanan wisata jet ski premium
+                    di Samarinda. Kami menghadirkan standar baru dalam pariwisata sungai yang aman dan berkelas.</p>
+                <div class="flex gap-4">
+                    <a class="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-primary transition-colors"
+                        href="#">
+                        <span class="material-symbols-outlined text-[20px]">public</span>
+                    </a>
+                    <a class="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-primary transition-colors"
+                        href="#">
+                        <span class="material-symbols-outlined text-[20px]">chat</span>
+                    </a>
+                </div>
+            </div>
+            <div>
+                <h4 class="font-bold text-lg mb-6">Navigasi</h4>
+                <ul class="space-y-4">
+                    <li><a class="text-surface-variant/80 hover:text-primary-fixed transition-colors"
+                            href="index.html">Beranda</a></li>
+                    <li><a class="text-surface-variant/80 hover:text-primary-fixed transition-colors"
+                            href="catalog.html">Paket Wisata</a></li>
+                    <li><a class="text-surface-variant/80 hover:text-primary-fixed transition-colors"
+                            href="gallery.html">Galeri Foto</a></li>
+                    <li><a class="text-surface-variant/80 hover:text-primary-fixed transition-colors"
+                            href="login.html">Login / Daftar</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4 class="font-bold text-lg mb-6">Bantuan</h4>
+                <ul class="space-y-4">
+                    <li class=""><a class="text-surface-variant/80 hover:text-primary-fixed transition-colors"
+                            href="#">Syarat &amp; Ketentuan</a></li>
+                    <li class=""><a class="text-surface-variant/80 hover:text-primary-fixed transition-colors"
+                            href="#">Kebijakan Privasi</a></li>
+                    <li class=""><a class="text-surface-variant/80 hover:text-primary-fixed transition-colors"
+                            href="catalog.html#faq">FAQ</a></li>
+                    <li class=""><a class="text-surface-variant/80 hover:text-primary-fixed transition-colors"
+                            href="index.html#kontak">Kontak Kami</a></li>
+                </ul>
+            </div>
+            <div>
+
+
+                <h4 class="font-bold text-lg mb-6">Tetap Terhubung</h4>
+                <p class="text-surface-variant/80 text-sm mb-4">Dapatkan info promo terbaru dan tips wisata Sungai
+                    Mahakam.</p>
+                <form class="space-y-3" onsubmit="event.preventDefault(); alert('Terima kasih telah berlangganan!');">
+                    <input type="email" placeholder="Email kamu..."
+                        class="w-full px-4 py-3 rounded-xl bg-white/10 text-white placeholder-white/40 border border-white/20 focus:outline-none focus:border-primary-fixed text-sm"
+                        required>
+                    <button type="submit"
+                        class="w-full bg-primary hover:bg-primary/90 text-white py-3 rounded-xl font-bold text-sm transition-colors">Berlangganan</button>
+                </form>
+            </div>
+        </div>
+        <div class="border-t border-white/5 py-8 text-center text-surface-variant/60 text-sm">
+            © 2024 JetSki Mahakam Wave Riding. All rights reserved.
+        </div>
+    </footer>
+    <script>
+        // Progress line animation for Reservation Process
+        window.addEventListener('scroll', () => {
+            const line = document.getElementById('progress-line');
+            if (line) {
+                const rect = line.getBoundingClientRect();
+                if (rect.top < window.innerHeight) {
+                    line.style.width = '100%';
+                }
+            }
+        });
+
+        // Sticky header background shift on scroll
+        const header = document.querySelector('header');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 50) {
+                header.classList.add('py-2', 'shadow-md');
+                header.classList.remove('py-4', 'shadow-sm');
+            } else {
+                header.classList.add('py-4', 'shadow-sm');
+                header.classList.remove('py-2', 'shadow-md');
+            }
+        });
+
+        // Dynamic session check for customer
+        document.addEventListener('DOMContentLoaded', () => {
+            const user = JSON.parse(localStorage.getItem('loggedInUser'));
+            if (user && user.role === 'pelanggan') {
+                // Change Beranda href to dashboard.html
+                const berandaLink = document.querySelector('nav a[href="index.html"]');
+                if (berandaLink) {
+                    berandaLink.href = 'dashboard.html';
+                }
+                const brandLogo = document.querySelector('header div.font-headline-sm');
+                if (brandLogo) {
+                    brandLogo.classList.add('cursor-pointer');
+                    brandLogo.addEventListener('click', () => {
+                        window.location.href = 'dashboard.html';
+                    });
+                }
+
+                // Replace Login button with user profile widget
+                const loginBtn = document.querySelector('button[onclick*="login.html"]');
+                if (loginBtn) {
+                    const profileContainer = document.createElement('div');
+                    profileContainer.className = 'flex items-center gap-4';
+                    profileContainer.innerHTML = `
+                        <button class="p-2 text-on-surface-variant hover:text-primary transition-all active:scale-95">
+                            <span class="material-symbols-outlined">notifications</span>
+                        </button>
+                        <div class="h-10 w-10 rounded-full bg-primary-fixed overflow-hidden border-2 border-primary cursor-pointer" onclick="window.location.href='profile.html'">
+                            <img class="w-full h-full object-cover" src="${user.avatar || 'https://lh3.googleusercontent.com/aida-public/AB6AXuDaaQ0e89Lzbi1fnocVWutRs8xxirv_beAkpdvpZq5RuL7wwTn5nDvXf9nUdKRP6_V3w6H8X3FC6idh8YTFNExcDcc5MeBHBIQ22aBc-hIfQzjrnSXCwyLBW8snAtekBDYZdVWI5harP5oNr9C7ZUXyn7ozw8t015X31WZpW-7c0CvmxsqlMJhGx7iHBCeiGdVn1WS2KcJi14116CMr0WtAUubEb--3nXTxSNp24nFApq_MC-J5geWrqyfCwXzrXJWdQGLxeav9-gBk'}" alt="Profile">
+                        </div>
+                        <a class="hidden md:block bg-primary text-on-primary px-6 py-2 rounded-full font-label-md hover:bg-primary-container hover:text-on-primary-container transition-all active:scale-95" href="my-reservations.html">
+                            Reservasi Saya
+                        </a>
+                    `;
+                    loginBtn.parentNode.replaceChild(profileContainer, loginBtn);
+                }
+            }
+        });
+    </script>
+
+
+
+
+
+
+</body>
+
+</html>

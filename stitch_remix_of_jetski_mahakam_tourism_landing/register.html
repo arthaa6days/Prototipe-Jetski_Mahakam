@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html class="scroll-smooth" lang="id">
+<head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<title>Daftar - Mahakam Wave Riding</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700;800&amp;family=Inter:wght@400;500;600&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "surface": "#fff8f5",
+                    "surface-container-highest": "#f3dfd1",
+                    "on-surface": "#241912",
+                    "surface-container": "#ffeadd",
+                    "surface-container-high": "#f9e4d7",
+                    "primary-container": "#ff8a00",
+                    "on-tertiary-fixed": "#001e2e",
+                    "on-error": "#ffffff",
+                    "on-background": "#241912",
+                    "inverse-surface": "#3a2e25",
+                    "surface-tint": "#914c00",
+                    "outline": "#8a7362",
+                    "secondary-fixed-dim": "#bec6e0",
+                    "on-secondary-fixed": "#131b2e",
+                    "outline-variant": "#ddc1ae",
+                    "on-secondary-container": "#5c647a",
+                    "surface-container-low": "#fff1e9",
+                    "on-primary-fixed": "#2f1500",
+                    "primary": "#914c00",
+                    "surface-dim": "#ebd6c9",
+                    "secondary": "#565e74",
+                    "tertiary-container": "#00b3fc",
+                    "surface-bright": "#fff8f5",
+                    "on-primary-container": "#613100",
+                    "on-error-container": "#93000a",
+                    "inverse-primary": "#ffb77f",
+                    "error-container": "#ffdad6",
+                    "on-tertiary-container": "#004260",
+                    "on-surface-variant": "#564334",
+                    "on-secondary-fixed-variant": "#3f465c",
+                    "surface-variant": "#f3dfd1",
+                    "surface-container-lowest": "#ffffff",
+                    "inverse-on-surface": "#ffede3",
+                    "secondary-fixed": "#dae2fd",
+                    "on-tertiary": "#ffffff",
+                    "on-primary-fixed-variant": "#6f3900",
+                    "primary-fixed": "#ffdcc4",
+                    "on-secondary": "#ffffff",
+                    "primary-fixed-dim": "#ffb77f",
+                    "on-primary": "#ffffff",
+                    "error": "#ba1a1a",
+                    "background": "#fff8f5",
+                    "tertiary-fixed-dim": "#88ceff",
+                    "secondary-container": "#dae2fd",
+                    "tertiary": "#006590",
+                    "tertiary-fixed": "#c8e6ff",
+                    "on-tertiary-fixed-variant": "#004c6d"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.25rem",
+                    "lg": "0.5rem",
+                    "xl": "0.75rem",
+                    "full": "9999px"
+            },
+            "spacing": {
+                    "gutter": "24px",
+                    "margin-desktop": "64px",
+                    "margin-mobile": "20px",
+                    "stack-unit": "8px",
+                    "container-max": "1280px"
+            },
+            "fontFamily": {
+                    "body-md": ["Inter"],
+                    "body-lg": ["Inter"],
+                    "headline-md": ["Montserrat"],
+                    "headline-lg": ["Montserrat"],
+                    "label-md": ["Inter"],
+                    "headline-sm": ["Montserrat"],
+                    "display-lg": ["Montserrat"],
+                    "headline-lg-mobile": ["Montserrat"]
+            },
+            "fontSize": {
+                    "body-md": ["16px", {"lineHeight": "1.5", "fontWeight": "400"}],
+                    "body-lg": ["18px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                    "headline-md": ["32px", {"lineHeight": "1.3", "fontWeight": "600"}],
+                    "headline-lg": ["48px", {"lineHeight": "1.2", "fontWeight": "700"}],
+                    "label-md": ["14px", {"lineHeight": "1", "letterSpacing": "0.05em", "fontWeight": "600"}],
+                    "headline-sm": ["24px", {"lineHeight": "1.4", "fontWeight": "600"}],
+                    "display-lg": ["64px", {"lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                    "headline-lg-mobile": ["32px", {"lineHeight": "1.2", "fontWeight": "700"}]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .registration-card-shadow {
+            box-shadow: 0 10px 30px -5px rgba(36, 25, 18, 0.04), 0 20px 25px -5px rgba(36, 25, 18, 0.02);
+        }
+        .text-glow:hover {
+            text-shadow: 0 0 8px rgba(255, 138, 0, 0.3);
+        }
+    </style>
+</head>
+<body class="bg-surface text-on-surface font-body-md overflow-x-hidden">
+<!-- TopNavBar -->
+<nav class="fixed top-0 w-full z-50 bg-surface/80 dark:bg-surface/80 backdrop-blur-md shadow-sm">
+<div class="flex justify-between items-center px-margin-mobile md:px-margin-desktop py-4 max-w-container-max mx-auto transition-all duration-300 ease-in-out">
+<div class="font-headline-sm text-headline-sm font-bold text-primary dark:text-primary-fixed">
+                Mahakam Wave Riding
+            </div>
+<div class="hidden md:flex items-center gap-8 font-body-md text-body-md">
+<a class="text-on-surface-variant dark:text-surface-variant hover:text-primary-container transition-colors" href="index.html">Beranda</a>
+<a class="text-on-surface-variant dark:text-surface-variant hover:text-primary-container transition-colors" href="catalog.html">Paket</a>
+<a class="text-on-surface-variant dark:text-surface-variant hover:text-primary-container transition-colors" href="gallery.html">Galeri</a>
+<a class="text-primary font-bold border-b-2 border-primary pb-1 transition-all duration-300 ease-in-out" href="#">Daftar</a>
+</div>
+<!-- Mobile Menu Icon (Placeholder) -->
+<button class="md:hidden text-primary">
+<span class="material-symbols-outlined">menu</span>
+</button>
+</div>
+</nav>
+<main class="min-h-screen pt-[72px] flex flex-col md:flex-row">
+<!-- Left Side: Immersive Photography -->
+<div class="relative w-full md:w-1/2 min-h-[400px] md:min-h-screen overflow-hidden group">
+<div class="absolute inset-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-105" data-alt="A cinematic, high-speed photograph of a premium jet ski speeding across the Mahakam River in East Kalimantan. In the background, the iconic yellow arches of the Mahakam Bridge are visible under a clear, bright blue sky. The water spray creates a dynamic, energetic atmosphere with vibrant orange and deep navy tones reflecting the sunlight. The lighting is crisp and professional, emphasizing the luxurious adventure experience." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDY07ejjc7_BO4nouoH6irh19aLi_yBbBIPX_UTRRv3vaCaCGi82skQP0OOoJPJ09V-u64dKxho8_HxGL4ujbHjPgRyfPtHmN_HTXaTYj15PlIiIBWBt_zameYe_5FodZWwaKInIydk4KIi3_2n86XerqSJlGUN3gcwrPwD7vsPWxad0x-_zJuvwPK2PWyglQ4wFy7ERtDOSPIi9cDpdPyggG6qj3qhEOTf_l1iCvMUHM7GsbQviIDSKoWtK6Y0-sPWeeJHBBm5rGDd')"></div>
+<div class="absolute inset-0 bg-gradient-to-t from-on-surface/80 via-on-surface/20 to-transparent"></div>
+<div class="absolute bottom-0 left-0 p-margin-mobile md:p-margin-desktop max-w-xl">
+<h1 class="font-headline-lg-mobile md:font-headline-lg text-headline-lg-mobile md:text-headline-lg text-white mb-4">
+                    Buat Akun dan Mulai Petualangan Anda
+                </h1>
+<p class="font-body-lg text-body-lg text-surface-container-low opacity-90">
+                    Daftar untuk melakukan reservasi dan menikmati pengalaman terbaik di Sungai Mahakam.
+                </p>
+</div>
+</div>
+<!-- Right Side: Registration Card -->
+<div class="w-full md:w-1/2 bg-surface flex items-center justify-center p-gutter md:p-margin-desktop">
+<div class="w-full max-w-md registration-card-shadow bg-surface-container-lowest p-8 md:p-10 rounded-xl border border-surface-variant/50">
+<div class="mb-8">
+<h2 class="font-headline-md text-headline-md text-on-surface mb-2">Registrasi</h2>
+<p class="font-body-md text-on-surface-variant">Lengkapi data diri Anda untuk memulai perjalanan.</p>
+</div>
+<form class="space-y-6" onsubmit="event.preventDefault(); window.location.href='login.html';">
+<!-- Name -->
+<div class="space-y-2">
+<label class="font-label-md text-label-md text-on-surface-variant" for="name">Nama Lengkap</label>
+<div class="relative">
+
+<input class="w-full pl-12 pr-4 py-3 bg-surface border-outline-variant focus:border-primary-container focus:ring-1 focus:ring-primary-container rounded-xl transition-all font-body-md text-body-md" id="name" placeholder="Masukkan nama lengkap" type="text">
+</div>
+</div>
+<!-- Phone Number -->
+<div class="space-y-2">
+<label class="font-label-md text-label-md text-on-surface-variant" for="phone">Nomor HP</label>
+<div class="relative">
+
+<input class="w-full pl-12 pr-4 py-3 bg-surface border-outline-variant focus:border-primary-container focus:ring-1 focus:ring-primary-container rounded-xl transition-all font-body-md text-body-md" id="phone" placeholder="0812xxxxxxx" type="tel">
+</div>
+</div>
+<!-- Email -->
+<div class="space-y-2">
+<label class="font-label-md text-label-md text-on-surface-variant" for="email">Email</label>
+<div class="relative">
+<span class="material-symbols-outlined absolute left-4 top-1/2 -translate-y-1/2 text-outline text-body-md">mail</span>
+<input class="w-full pl-12 pr-4 py-3 bg-surface border-outline-variant focus:border-primary-container focus:ring-1 focus:ring-primary-container rounded-xl transition-all font-body-md text-body-md" id="email" placeholder="nama@email.com" type="email">
+</div>
+</div>
+<!-- Passwords Grid -->
+<div class="grid grid-cols-1 gap-6">
+<div class="space-y-2">
+<label class="font-label-md text-label-md text-on-surface-variant" for="password">Password</label>
+<div class="relative">
+<span class="material-symbols-outlined absolute left-4 top-1/2 -translate-y-1/2 text-outline text-body-md">lock</span>
+<input class="w-full pl-12 pr-4 py-3 bg-surface border-outline-variant focus:border-primary-container focus:ring-1 focus:ring-primary-container rounded-xl transition-all font-body-md text-body-md" id="password" placeholder="••••••••" type="password">
+</div>
+</div>
+<div class="space-y-2">
+<label class="font-label-md text-label-md text-on-surface-variant" for="confirm-password">Konfirmasi Password</label>
+<div class="relative">
+<span class="material-symbols-outlined absolute left-4 top-1/2 -translate-y-1/2 text-outline text-body-md">lock_reset</span>
+<input class="w-full pl-12 pr-4 py-3 bg-surface border-outline-variant focus:border-primary-container focus:ring-1 focus:ring-primary-container rounded-xl transition-all font-body-md text-body-md" id="confirm-password" placeholder="••••••••" type="password">
+</div>
+</div>
+</div>
+<!-- Information Box -->
+<div class="p-4 bg-tertiary-fixed rounded-xl border border-tertiary-fixed-dim/30 flex gap-4 items-start">
+<span class="material-symbols-outlined text-tertiary mt-0.5">info</span>
+<p class="font-label-md text-on-tertiary-container leading-relaxed">
+                            Akun Anda akan langsung aktif setelah pendaftaran. Anda dapat segera melanjutkan proses reservasi paket JetSki.
+                        </p>
+</div>
+<button class="w-full py-4 bg-primary-container text-white font-headline-sm text-headline-sm rounded-xl hover:shadow-lg hover:shadow-primary-container/20 transition-all duration-300 active:scale-[0.98]">
+                        Daftar Sekarang
+                    </button>
+<p class="text-center font-body-md text-on-surface-variant">
+                        Sudah punya akun? <a class="text-primary font-semibold hover:underline transition-all" href="login.html">Masuk</a>
+</p>
+</form>
+</div>
+</div>
+</main>
+<!-- Simplified Footer -->
+<footer class="w-full py-8 bg-surface dark:bg-inverse-surface">
+<div class="flex flex-col md:flex-row justify-between items-center px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto gap-4">
+<div class="font-headline-sm text-headline-sm font-bold text-primary">
+                Mahakam Wave Riding
+            </div>
+<div class="flex gap-6 font-label-md text-label-md text-on-surface-variant dark:text-surface-variant">
+<a class="hover:text-primary transition-colors" href="#">Privasi</a>
+<a class="hover:text-primary transition-colors" href="#">Syarat &amp; Ketentuan</a>
+<a class="hover:text-primary transition-colors" href="index.html#kontak">Kontak</a>
+</div>
+<div class="font-label-md text-label-md text-on-surface-variant/60 dark:text-surface-variant/60">
+                © 2024 JetSki Mahakam Wave Riding. All rights reserved.
+            </div>
+</div>
+</footer>
+<script>
+        // Micro-interactions for input focus
+        const inputs = document.querySelectorAll('input');
+        inputs.forEach(input => {
+            input.addEventListener('focus', () => {
+                input.parentElement.querySelector('.material-symbols-outlined').style.color = '#ff8a00';
+            });
+            input.addEventListener('blur', () => {
+                input.parentElement.querySelector('.material-symbols-outlined').style.color = '#8a7362';
+            });
+        });
+    </script>
+</body>
+</html>

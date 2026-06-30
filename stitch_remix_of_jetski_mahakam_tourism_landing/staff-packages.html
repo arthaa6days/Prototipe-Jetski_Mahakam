@@ -1,0 +1,453 @@
+<!DOCTYPE html><html class="light" lang="id"><head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<title>Mahakam Ops - Paket &amp; Event</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700;800&amp;family=Inter:wght@400;500;600&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "tertiary-fixed-dim": "#88ceff",
+                    "primary": "#914c00",
+                    "on-tertiary-fixed-variant": "#004c6d",
+                    "surface-container-lowest": "#ffffff",
+                    "outline": "#8a7362",
+                    "on-primary": "#ffffff",
+                    "on-secondary-fixed-variant": "#3f465c",
+                    "error-container": "#ffdad6",
+                    "surface-dim": "#ebd6c9",
+                    "surface": "#fff8f5",
+                    "primary-fixed": "#ffdcc4",
+                    "secondary-container": "#dae2fd",
+                    "primary-container": "#ff8a00",
+                    "on-surface-variant": "#564334",
+                    "on-secondary-fixed": "#131b2e",
+                    "on-primary-container": "#613100",
+                    "tertiary-fixed": "#c8e6ff",
+                    "secondary": "#565e74",
+                    "surface-container-low": "#fff1e9",
+                    "outline-variant": "#ddc1ae",
+                    "on-primary-fixed": "#2f1500",
+                    "secondary-fixed-dim": "#bec6e0",
+                    "on-tertiary-container": "#004260",
+                    "on-error-container": "#93000a",
+                    "surface-container": "#ffeadd",
+                    "surface-container-highest": "#f3dfd1",
+                    "surface-container-high": "#f9e4d7",
+                    "on-secondary": "#ffffff",
+                    "on-tertiary": "#ffffff",
+                    "inverse-surface": "#3a2e25",
+                    "on-tertiary-fixed": "#001e2e",
+                    "on-secondary-container": "#5c647a",
+                    "error": "#ba1a1a",
+                    "surface-bright": "#fff8f5",
+                    "secondary-fixed": "#dae2fd",
+                    "on-error": "#ffffff",
+                    "inverse-primary": "#ffb77f",
+                    "background": "#fff8f5",
+                    "surface-tint": "#914c00",
+                    "on-primary-fixed-variant": "#6f3900",
+                    "surface-variant": "#f3dfd1",
+                    "primary-fixed-dim": "#ffb77f",
+                    "on-surface": "#241912",
+                    "tertiary-container": "#00b3fc",
+                    "on-background": "#241912",
+                    "inverse-on-surface": "#ffede3",
+                    "tertiary": "#006590"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.25rem",
+                    "lg": "0.5rem",
+                    "xl": "0.75rem",
+                    "full": "9999px"
+            },
+            "spacing": {
+                    "margin-desktop": "64px",
+                    "container-max": "1280px",
+                    "gutter": "24px",
+                    "stack-unit": "8px",
+                    "margin-mobile": "20px"
+            },
+            "fontFamily": {
+                    "body-lg": ["Inter"],
+                    "headline-sm": ["Montserrat"],
+                    "headline-md": ["Montserrat"],
+                    "headline-lg-mobile": ["Montserrat"],
+                    "body-md": ["Inter"],
+                    "headline-lg": ["Montserrat"],
+                    "label-md": ["Inter"],
+                    "display-lg": ["Montserrat"]
+            },
+            "fontSize": {
+                    "body-lg": ["18px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                    "headline-sm": ["24px", {"lineHeight": "1.4", "fontWeight": "600"}],
+                    "headline-md": ["32px", {"lineHeight": "1.3", "fontWeight": "600"}],
+                    "headline-lg-mobile": ["32px", {"lineHeight": "1.2", "fontWeight": "700"}],
+                    "body-md": ["16px", {"lineHeight": "1.5", "fontWeight": "400"}],
+                    "headline-lg": ["48px", {"lineHeight": "1.2", "fontWeight": "700"}],
+                    "label-md": ["14px", {"lineHeight": "1", "letterSpacing": "0.05em", "fontWeight": "600"}],
+                    "display-lg": ["64px", {"lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "700"}]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .active-nav-glow {
+            box-shadow: 0 0 15px rgba(255, 138, 0, 0.3);
+        }
+        ::-webkit-scrollbar {
+            width: 6px;
+        }
+        ::-webkit-scrollbar-track {
+            background: transparent;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #564334;
+            border-radius: 10px;
+        }
+        .bento-card {
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+        }
+        .bento-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 12px 24px rgba(0,0,0,0.06);
+        }
+    </style>
+</head>
+<<body class="bg-background text-on-background font-body-md overflow-hidden">
+<!-- Navigation Shell -->
+<aside class="bg-surface-container-lowest h-screen w-64 fixed left-0 top-0 shadow-sm flex flex-col py-8 px-4 z-50">
+<div class="mb-10 px-2">
+<h1 class="font-headline-sm text-headline-sm font-bold text-primary">Mahakam Wave</h1>
+<p class="font-label-md text-label-md text-on-surface-variant opacity-70">Staff Portal</p>
+</div>
+<nav class="flex-1 space-y-1">
+<a class="flex items-center gap-3 px-4 py-3 rounded-lg text-on-surface-variant hover:bg-primary-container/10 transition-colors duration-200" href="staff-dashboard.html">
+<span class="material-symbols-outlined">dashboard</span>
+<span class="font-label-md text-label-md">Dashboard</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-3 rounded-lg text-on-surface-variant hover:bg-primary-container/10 transition-colors duration-200" href="staff-reservations.html">
+<span class="material-symbols-outlined">calendar_today</span>
+<span class="font-label-md text-label-md">Reservasi</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-3 rounded-lg text-on-surface-variant hover:bg-primary-container/10 transition-colors duration-200" href="staff-payment-verification.html">
+<span class="material-symbols-outlined">payments</span>
+<span class="font-label-md text-label-md">Pembayaran</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-3 rounded-lg text-on-surface-variant hover:bg-primary-container/10 transition-colors duration-200" href="staff-scheduling.html">
+<span class="material-symbols-outlined">event_note</span>
+<span class="font-label-md text-label-md">Jadwal</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-3 rounded-lg text-on-surface-variant hover:bg-primary-container/10 transition-colors duration-200" href="staff-customers.html">
+<span class="material-symbols-outlined">group</span>
+<span class="font-label-md text-label-md">Pelanggan</span>
+</a>
+<!-- Active Tab: Paket & Event -->
+<a class="flex items-center gap-3 px-4 py-3 rounded-lg text-primary font-bold border-r-4 border-primary bg-primary-container/10" href="staff-packages.html">
+<span class="material-symbols-outlined" style="font-variation-settings: &quot;FILL&quot; 1;">inventory_2</span>
+<span class="font-label-md text-label-md">Paket &amp; Event</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-3 rounded-lg text-on-surface-variant hover:bg-primary-container/10 transition-colors duration-200" href="staff-gallery.html">
+<span class="material-symbols-outlined">photo_library</span>
+<span class="font-label-md text-label-md">Galeri</span>
+</a>
+</nav>
+<div class="mt-auto border-t border-outline-variant/30 pt-4">
+<button onclick="localStorage.removeItem('loggedInUser'); window.location.href='index.html';" class="flex items-center gap-3 px-4 py-3 w-full rounded-lg text-error hover:bg-error-container/20 transition-colors duration-200">
+<span class="material-symbols-outlined">logout</span>
+<span class="font-label-md text-label-md">Logout</span>
+</button>
+</div>
+</aside>
+<!-- Main Content Area -->
+<main class="ml-64 h-screen flex flex-col">
+<!-- Top App Bar -->
+<header class="h-16 flex justify-between items-center px-margin-desktop bg-surface sticky top-0 z-40">
+<div>
+<h2 class="font-headline-sm text-headline-sm font-bold text-primary">Paket &amp; Event</h2>
+<p class="font-label-md text-label-md text-on-surface-variant">Kelola paket wisata dan event yang tampil pada website.</p>
+</div>
+<div class="flex items-center gap-6">
+<div class="relative flex items-center bg-surface-container-low px-4 py-2 rounded-full border border-outline-variant">
+<span class="material-symbols-outlined text-on-surface-variant text-[20px] mr-2">search</span>
+<input class="bg-transparent border-none focus:ring-0 text-label-md w-48" placeholder="Cari paket..." type="text">
+</div>
+<div class="flex items-center gap-3">
+<button class="p-2 rounded-full text-on-surface-variant hover:bg-surface-container transition-colors relative">
+<span class="material-symbols-outlined">notifications</span>
+<span class="absolute top-2 right-2 w-2 h-2 bg-primary rounded-full"></span>
+</button>
+<div class="h-8 w-8 rounded-full overflow-hidden border border-primary/20">
+<img class="w-full h-full object-cover" data-alt="Staff avatar" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD2RTFNHtGqHWNbWGzSK06uj6tFuALaeQ0KSV3wNPM2n7m-0w6wd7G1KkdAPSAIyUz_qrmhSOfiiFjxkfVHe1zgkocZx9nntrLphcJ-ZGZOg6oCjEVEaLunuDpdXf5Hw9_CRGXaGxfBKnlRjmtCi8RbKYib2n4yQZbrGTkzCWdxaLkqulLpaJNgTTcsRs8wsBUaEniU90ovjLWMtJyRqcPD55QEK-Cy-1panMw8agYq9g5YKAhx1i7x2WONT3FDowJhXOjHHtfiLyfU">
+</div>
+</div>
+</div>
+</header>
+<!-- Workspace Area -->
+<div class="flex-1 overflow-y-auto p-8 bg-background">
+<!-- Summary Dashboard Section -->
+<div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-10">
+<div class="bg-surface-container-high p-6 rounded-xl border border-outline-variant/30 flex items-center gap-5">
+<div class="w-14 h-14 rounded-lg bg-primary/10 flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-4xl" data-icon="inventory_2">inventory_2</span>
+</div>
+<div>
+<p class="text-on-surface-variant font-label-md uppercase tracking-wider">Paket Aktif</p>
+<h3 class="text-headline-md font-headline-md text-on-surface">08</h3>
+</div>
+</div>
+<div class="bg-surface-container-high p-6 rounded-xl border border-outline-variant/30 flex items-center gap-5">
+<div class="w-14 h-14 rounded-lg bg-tertiary/10 flex items-center justify-center text-tertiary">
+<span class="material-symbols-outlined text-4xl" data-icon="event_available">event_available</span>
+</div>
+<div>
+<p class="text-on-surface-variant font-label-md uppercase tracking-wider">Event Aktif</p>
+<h3 class="text-headline-md font-headline-md text-on-surface">02</h3>
+</div>
+</div>
+<div class="bg-surface-container-high p-6 rounded-xl border border-outline-variant/30 flex items-center gap-5">
+<div class="w-14 h-14 rounded-lg bg-secondary/10 flex items-center justify-center text-secondary">
+<span class="material-symbols-outlined text-4xl" data-icon="drafts">drafts</span>
+</div>
+<div>
+<p class="text-on-surface-variant font-label-md uppercase tracking-wider">Draft</p>
+<h3 class="text-headline-md font-headline-md text-on-surface">03</h3>
+</div>
+</div>
+</div>
+<!-- Action Bar -->
+<div class="flex justify-between items-center mb-8">
+<div class="flex gap-4">
+<button class="px-6 py-3 bg-primary text-white font-label-md rounded-lg flex items-center gap-2 hover:bg-primary/90 transition-all active:scale-95">
+<span class="material-symbols-outlined" data-icon="add">add</span>
+                    Tambah Paket
+                </button>
+<button class="px-6 py-3 border-2 border-primary text-primary font-label-md rounded-lg flex items-center gap-2 hover:bg-primary/5 transition-all active:scale-95">
+<span class="material-symbols-outlined" data-icon="event">event</span>
+                    Tambah Event
+                </button>
+</div>
+<div class="flex items-center gap-2 text-on-surface-variant">
+<span class="material-symbols-outlined" data-icon="filter_list">filter_list</span>
+<span class="text-label-md font-semibold">Filter Status</span>
+</div>
+</div>
+<!-- PAKET WISATA SECTION -->
+<section class="mb-16">
+<div class="flex items-center gap-3 mb-6">
+<h3 class="font-headline-sm text-headline-sm text-on-surface">PAKET WISATA</h3>
+<span class="px-3 py-1 bg-primary/10 text-primary text-xs font-bold rounded-full">MAIN OFFERS</span>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+<!-- Paket Card 1 -->
+<div class="bento-card bg-surface-container-lowest rounded-xl overflow-hidden border border-outline-variant/20 shadow-sm flex flex-col">
+<div class="relative h-48 overflow-hidden">
+<img class="w-full h-full object-cover" data-alt="A premium high-speed Jet Ski cutting through the calm waters of the Mahakam River at sunset. The golden hour light reflects off the water surface, creating a warm and adventurous atmosphere. The shot is a wide professional photograph capturing the spray of water and the lush green banks of the river in the background. Modern luxury water sports style." src="https://lh3.googleusercontent.com/aida-public/AB6AXuA0xESEprBxTAFbObIohQVemFH79ZcTeAQ9ZaEOCaeJOk_UlyMXiXaw6IedXqBqJYgjlE7r7RVafWEyT67P19J0rKd4ACEzEOdvmTW8LmvQCr8Qwfkg_m8XBy-HRzF0PuSWcBUsSuZxwvP_Ol1ZjSOWMhRZ66cN9gCi14nqpM4kDusSzATLZzeAf7J1K6JHnNMbZAtQmKU1hOW8ujWLfzzAe2DuMwZaRXJDE0bRA39-QfwaCa92q_-eH3G6uyCn4QH4gWCXpqiRP8XK">
+<div class="absolute top-3 left-3 bg-green-500 text-white text-[10px] font-bold px-2 py-1 rounded uppercase tracking-tighter">Aktif</div>
+</div>
+<div class="p-5 flex-1 flex flex-col">
+<h4 class="font-headline-sm text-lg text-on-surface mb-1">Mahakam Sunset Dash</h4>
+<p class="text-xs text-on-surface-variant mb-4 flex items-center gap-1">
+<span class="material-symbols-outlined text-sm" data-icon="route">route</span>
+                            Dermaga A - Jembatan Mahakam
+                        </p>
+<div class="flex justify-between items-end mt-auto">
+<div>
+<p class="text-[10px] text-on-surface-variant uppercase font-bold">Durasi</p>
+<p class="text-label-md font-bold">90 Menit</p>
+</div>
+<div class="text-right">
+<p class="text-primary font-headline-sm text-lg">Rp 1.500k</p>
+</div>
+</div>
+<div class="mt-6 pt-4 border-t border-outline-variant/20 grid grid-cols-2 gap-3">
+<button class="text-label-md text-on-surface-variant hover:text-primary flex items-center justify-center gap-1">
+<span class="material-symbols-outlined text-lg" data-icon="edit">edit</span>
+                                Edit
+                            </button>
+<button class="text-label-md text-error hover:opacity-80 flex items-center justify-center gap-1">
+<span class="material-symbols-outlined text-lg" data-icon="block">block</span>
+                                Nonaktif
+                            </button>
+</div>
+</div>
+</div>
+<!-- Paket Card 2 -->
+<div class="bento-card bg-surface-container-lowest rounded-xl overflow-hidden border border-outline-variant/20 shadow-sm flex flex-col">
+<div class="relative h-48 overflow-hidden">
+<img class="w-full h-full object-cover" data-alt="A group of corporate colleagues on professional jet skis, riding in formation on a wide river. The scene is bright, midday lighting, showcasing safety gear and high-end equipment. Background features a modern riverside skyline with clear blue sky. Professional photography style, clean and focused on premium service." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBkusR_ldZxmeypoMa3zMWX6621X2q1fLqQrI2-xKiWRV9FiCzahZKRBt2XpcPmKxjvMGpFD5l--EBKQeKsmn8DfbBehfxqfjlw7avN4N1aHntcDTv80vcS_j1nId_C3MRoB2cn70Gy7iMnt7-c12i5IL1iCEVifgBKcwDgkbYJwKrdUb4N7QGJ7H1wMKVqA96EjHwKpieR-oV87nVJ4RFFVCzUrXYqXS55rMNTY9D7T8I6zwTd4rd8MXtDSVvwsxCPBWNZMYTc2cgI">
+<div class="absolute top-3 left-3 bg-green-500 text-white text-[10px] font-bold px-2 py-1 rounded uppercase tracking-tighter">Aktif</div>
+</div>
+<div class="p-5 flex-1 flex flex-col">
+<h4 class="font-headline-sm text-lg text-on-surface mb-1">City River Safari</h4>
+<p class="text-xs text-on-surface-variant mb-4 flex items-center gap-1">
+<span class="material-symbols-outlined text-sm" data-icon="route">route</span>
+                            Full City Loop Expedition
+                        </p>
+<div class="flex justify-between items-end mt-auto">
+<div>
+<p class="text-[10px] text-on-surface-variant uppercase font-bold">Durasi</p>
+<p class="text-label-md font-bold">120 Menit</p>
+</div>
+<div class="text-right">
+<p class="text-primary font-headline-sm text-lg">Rp 2.100k</p>
+</div>
+</div>
+<div class="mt-6 pt-4 border-t border-outline-variant/20 grid grid-cols-2 gap-3">
+<button class="text-label-md text-on-surface-variant hover:text-primary flex items-center justify-center gap-1">
+<span class="material-symbols-outlined text-lg" data-icon="edit">edit</span>
+                                Edit
+                            </button>
+<button class="text-label-md text-error hover:opacity-80 flex items-center justify-center gap-1">
+<span class="material-symbols-outlined text-lg" data-icon="block">block</span>
+                                Nonaktif
+                            </button>
+</div>
+</div>
+</div>
+<!-- Paket Card 3 -->
+<div class="bento-card bg-surface-container-lowest rounded-xl overflow-hidden border border-outline-variant/20 shadow-sm flex flex-col">
+<div class="relative h-48 overflow-hidden">
+<img class="w-full h-full object-cover" data-alt="A serene river scene at dawn with a single jet ski rider. The water is glassy and reflects the soft purple and orange of the sunrise. The rider is wearing premium gear. High-end, boutique travel aesthetic with a focus on peace and exclusivity. High-key professional photography." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAlNSzAk5GSoiwl4S88f8NTPbnoCwO8ugtHAq1yF4ObSLXQgeHtfGnwl8ffbB_PCki3N4ZE8rtQuod0m_riTcpqVFT2xiWoKavIoj9InSZp5VbWyZFCqD9FLWi3488i_wTvbT6KM4a9eAHShV2TSZE4_OYGQoAQ4XAx0cXjS80XoqLGWlnTZqz7YTcadrPeAgL39vGua1inA_6FICGFvDRrsZFdbQNkYA3IhEWUshScW_g047qpOUmKoCkr-qTiOC2Y0Q8hmJcKLhr4">
+<div class="absolute top-3 left-3 bg-green-500 text-white text-[10px] font-bold px-2 py-1 rounded uppercase tracking-tighter">Aktif</div>
+</div>
+<div class="p-5 flex-1 flex flex-col">
+<h4 class="font-headline-sm text-lg text-on-surface mb-1">Morning Calm Glide</h4>
+<p class="text-xs text-on-surface-variant mb-4 flex items-center gap-1">
+<span class="material-symbols-outlined text-sm" data-icon="route">route</span>
+                            Hulu Mahakam Eco-Route
+                        </p>
+<div class="flex justify-between items-end mt-auto">
+<div>
+<p class="text-[10px] text-on-surface-variant uppercase font-bold">Durasi</p>
+<p class="text-label-md font-bold">60 Menit</p>
+</div>
+<div class="text-right">
+<p class="text-primary font-headline-sm text-lg">Rp 1.150k</p>
+</div>
+</div>
+<div class="mt-6 pt-4 border-t border-outline-variant/20 grid grid-cols-2 gap-3">
+<button class="text-label-md text-on-surface-variant hover:text-primary flex items-center justify-center gap-1">
+<span class="material-symbols-outlined text-lg" data-icon="edit">edit</span>
+                                Edit
+                            </button>
+<button class="text-label-md text-error hover:opacity-80 flex items-center justify-center gap-1">
+<span class="material-symbols-outlined text-lg" data-icon="block">block</span>
+                                Nonaktif
+                            </button>
+</div>
+</div>
+</div>
+<!-- Empty State/New Slot -->
+<button class="border-2 border-dashed border-outline-variant/40 rounded-xl flex flex-col items-center justify-center p-8 hover:bg-primary/5 transition-all group">
+<span class="material-symbols-outlined text-4xl text-outline-variant group-hover:text-primary mb-2" data-icon="add_circle">add_circle</span>
+<p class="font-label-md text-on-surface-variant group-hover:text-primary">Tambah Paket Baru</p>
+</button>
+</div>
+</section>
+<!-- EVENT KHUSUS SECTION -->
+<section>
+<div class="flex items-center gap-3 mb-6">
+<h3 class="font-headline-sm text-headline-sm text-on-surface">EVENT KHUSUS</h3>
+<span class="px-3 py-1 bg-tertiary/10 text-tertiary text-xs font-bold rounded-full">LIMITED TIME</span>
+</div>
+<div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+<!-- Large Poster Card 1 -->
+<div class="bento-card bg-surface-container-lowest rounded-2xl overflow-hidden border border-outline-variant/20 shadow-md flex flex-col md:flex-row h-full">
+<div class="md:w-2/5 relative h-64 md:h-auto overflow-hidden">
+<img class="w-full h-full object-cover" data-alt="A dramatic high-energy event poster for a jet ski competition. Many riders on vibrant, colorful jet skis racing across the wide river under a bright summer sky. Crowds of people on the river banks. Motion blur and dynamic camera angles. High-contrast, cinematic photography with a vibrant color palette of orange and navy." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBfmsvWNb5YkVVv4q9jI5jUQdL4fML23TjD2bf4Zb8FuV6m7oC-pFbVkQAzVDAbsHG9jdcTU7WYdRQtbjO--O7BRtXzPPmCxQU9LMWj4c6enWfTopjLRGJ_9YrZuJ_OKRFP5tDrZ9BR0B-8MkQpO4euq82zvu488e_AKTMnA9NF4UIyQG5_GW_A_Ho1baz0oUCDAGpSxBifNmEd2mjeafV0oESTq56UiRVbcIyIiHgzAAHltHplaMaP3cTLI4Z-v3Vcz7DVY5hKld5q">
+<div class="absolute top-4 left-4 bg-tertiary text-white text-[10px] font-bold px-3 py-1.5 rounded-full uppercase tracking-widest shadow-lg">PUBLISHED</div>
+</div>
+<div class="md:w-3/5 p-8 flex flex-col">
+<div class="mb-6">
+<span class="text-primary font-bold text-xs uppercase tracking-widest">Tahunan</span>
+<h4 class="font-headline-md text-2xl text-on-surface mt-1">Mahakam River Race 2024</h4>
+</div>
+<div class="space-y-3 mb-8">
+<div class="flex items-center gap-3 text-on-surface-variant">
+<span class="material-symbols-outlined text-primary" data-icon="calendar_month">calendar_month</span>
+<span class="text-label-md">12 - 15 Agustus 2024</span>
+</div>
+<div class="flex items-center gap-3 text-on-surface-variant">
+<span class="material-symbols-outlined text-primary" data-icon="sell">sell</span>
+<span class="text-label-md font-bold">Rp 3.500.000 <span class="font-normal text-xs">/ Registrasi</span></span>
+</div>
+</div>
+<div class="mt-auto flex gap-4 pt-6 border-t border-outline-variant/10">
+<button class="flex-1 py-3 bg-secondary text-white rounded-lg font-label-md flex items-center justify-center gap-2 hover:bg-secondary/90">
+<span class="material-symbols-outlined text-lg" data-icon="edit">edit</span>
+                                Edit Event
+                            </button>
+<button class="flex-1 py-3 border-2 border-outline-variant text-on-surface-variant rounded-lg font-label-md flex items-center justify-center gap-2 hover:bg-surface-container-high">
+<span class="material-symbols-outlined text-lg" data-icon="close">close</span>
+                                Tutup Event
+                            </button>
+</div>
+</div>
+</div>
+<!-- Large Poster Card 2 (Draft) -->
+<div class="bento-card bg-surface-container-lowest rounded-2xl overflow-hidden border border-outline-variant/20 shadow-md flex flex-col md:flex-row h-full opacity-80">
+<div class="md:w-2/5 relative h-64 md:h-auto overflow-hidden">
+<div class="absolute inset-0 bg-inverse-surface/40 z-10"></div>
+<img class="w-full h-full object-cover" data-alt="A professional night-time river scene with illuminated jet skis carrying glowing lights. Soft, atmospheric lighting, moonlight reflection on water. People enjoying a high-end dinner event on a luxury barge in the background. Cinematic, elegant, and exclusive atmosphere." src="https://lh3.googleusercontent.com/aida-public/AB6AXuASnhktb7l7FT6Us-l7CCfj0NahVlfo7nU9C8H0Ss2CBoJuEB96RxVGh1haaRf-vBa-uh--efsP6ZU-qHWHLGKQVuIHXHdTU5Ew5WOUVbtsJ2ns4TvZE3kUCLK8-E5LugNh1iy-scuR0PadqxRxEW1q4-1VmB9YbYBGqrGAce9vAznkWg3mYW7Cil-F7k3xW2gTezhs6RLP2iZrSYNZG336EDkl1owpgLck7q4pEaNXgCuk8e88FVuBF8uv4EcgQqJ-mOzvH946odVt">
+<div class="absolute top-4 left-4 bg-outline-variant text-on-surface-variant text-[10px] font-bold px-3 py-1.5 rounded-full uppercase tracking-widest shadow-lg z-20">DRAFT</div>
+</div>
+<div class="md:w-3/5 p-8 flex flex-col">
+<div class="mb-6">
+<span class="text-primary font-bold text-xs uppercase tracking-widest">Seasonal</span>
+<h4 class="font-headline-md text-2xl text-on-surface mt-1">Gala Night Cruise</h4>
+</div>
+<div class="space-y-3 mb-8">
+<div class="flex items-center gap-3 text-on-surface-variant">
+<span class="material-symbols-outlined text-primary" data-icon="calendar_month">calendar_month</span>
+<span class="text-label-md italic">Belum ditentukan</span>
+</div>
+<div class="flex items-center gap-3 text-on-surface-variant">
+<span class="material-symbols-outlined text-primary" data-icon="sell">sell</span>
+<span class="text-label-md font-bold">Rp 5.000.000 <span class="font-normal text-xs">/ pax</span></span>
+</div>
+</div>
+<div class="mt-auto flex gap-4 pt-6 border-t border-outline-variant/10">
+<button class="flex-1 py-3 bg-secondary text-white rounded-lg font-label-md flex items-center justify-center gap-2">
+<span class="material-symbols-outlined text-lg" data-icon="edit">edit</span>
+                                Edit Event
+                            </button>
+<button class="flex-1 py-3 bg-primary text-white rounded-lg font-label-md flex items-center justify-center gap-2 hover:bg-primary/90 shadow-md shadow-primary/20">
+<span class="material-symbols-outlined text-lg" data-icon="publish">publish</span>
+                                Publish Event
+                            </button>
+</div>
+</div>
+</div>
+</section>
+</div>
+</main>
+<script>
+        // Simple Micro-interactions
+        document.querySelectorAll('button').forEach(btn => {
+            btn.addEventListener('mousedown', () => btn.classList.add('scale-95'));
+            btn.addEventListener('mouseup', () => btn.classList.remove('scale-95'));
+            btn.addEventListener('mouseleave', () => btn.classList.remove('scale-95'));
+        });
+
+        // Search Input focus effect
+        const searchInput = document.querySelector('input[type="text"]');
+        searchInput.addEventListener('focus', () => {
+            searchInput.parentElement.querySelector('.material-symbols-outlined').classList.add('text-primary');
+        });
+        searchInput.addEventListener('blur', () => {
+            searchInput.parentElement.querySelector('.material-symbols-outlined').classList.remove('text-primary');
+        });
+    </script>
+
+
+</body></html>

@@ -1,0 +1,500 @@
+<!DOCTYPE html>
+<html class="light" lang="id"><head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<title>Mahakam Wave - Staff Galeri</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700;800&amp;family=Inter:wght@400;500;600&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<style>
+    .material-symbols-outlined {
+        font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+    }
+    ::-webkit-scrollbar {
+        width: 6px;
+    }
+    ::-webkit-scrollbar-track {
+        background: transparent;
+    }
+    ::-webkit-scrollbar-thumb {
+        background: #e5e7eb;
+        border-radius: 10px;
+    }
+    ::-webkit-scrollbar-thumb:hover {
+        background: #d1d5db;
+    }
+    .bento-shadow {
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.04);
+    }
+</style>
+</head>
+<body class="bg-background text-on-background font-body-md text-body-md overflow-hidden">
+<script id="tailwind-config">
+    tailwind.config = {
+        darkMode: "class",
+        theme: {
+            extend: {
+                "colors": {
+                    "error-container": "#ffdad6",
+                    "on-tertiary-container": "#004260",
+                    "error": "#ba1a1a",
+                    "secondary": "#565e74",
+                    "on-primary-fixed": "#2f1500",
+                    "on-primary-container": "#613100",
+                    "tertiary-container": "#00b3fc",
+                    "on-error": "#ffffff",
+                    "on-tertiary-fixed": "#001e2e",
+                    "outline": "#8a7362",
+                    "inverse-surface": "#3a2e25",
+                    "primary-container": "#ff8a00",
+                    "surface-bright": "#fff8f5",
+                    "tertiary": "#006590",
+                    "on-secondary-fixed": "#131b2e",
+                    "inverse-on-surface": "#ffede3",
+                    "on-tertiary": "#ffffff",
+                    "surface-tint": "#914c00",
+                    "primary": "#914c00",
+                    "background": "#fff8f5",
+                    "surface-container-highest": "#f3dfd1",
+                    "primary-fixed-dim": "#ffb77f",
+                    "surface-variant": "#f3dfd1",
+                    "on-primary-fixed-variant": "#6f3900",
+                    "surface-container-low": "#fff1e9",
+                    "tertiary-fixed-dim": "#88ceff",
+                    "on-background": "#241912",
+                    "secondary-container": "#dae2fd",
+                    "on-secondary": "#ffffff",
+                    "tertiary-fixed": "#c8e6ff",
+                    "surface-container": "#ffeadd",
+                    "secondary-fixed-dim": "#bec6e0",
+                    "on-surface-variant": "#564334",
+                    "surface-dim": "#ebd6c9",
+                    "on-secondary-container": "#5c647a",
+                    "outline-variant": "#ddc1ae",
+                    "on-primary": "#ffffff",
+                    "on-tertiary-fixed-variant": "#004c6d",
+                    "inverse-primary": "#ffb77f",
+                    "primary-fixed": "#ffdcc4",
+                    "surface-container-lowest": "#ffffff",
+                    "surface-container-high": "#f9e4d7",
+                    "secondary-fixed": "#dae2fd",
+                    "on-secondary-fixed-variant": "#3f465c",
+                    "surface": "#fff8f5",
+                    "on-surface": "#241912",
+                    "on-error-container": "#93000a"
+                },
+                "borderRadius": {
+                    "DEFAULT": "0.25rem",
+                    "lg": "0.5rem",
+                    "xl": "16px",
+                    "full": "9999px"
+                },
+                "spacing": {
+                    "container-max": "1280px",
+                    "margin-mobile": "20px",
+                    "margin-desktop": "64px",
+                    "gutter": "24px",
+                    "stack-unit": "8px"
+                },
+                "fontFamily": {
+                    "headline-md": ["Montserrat"],
+                    "headline-lg": ["Montserrat"],
+                    "body-md": ["Inter"],
+                    "body-lg": ["Inter"],
+                    "label-md": ["Inter"],
+                    "display-lg": ["Montserrat"],
+                    "headline-sm": ["Montserrat"]
+                },
+                "fontSize": {
+                    "headline-md": ["32px", {"lineHeight": "1.3", "fontWeight": "600"}],
+                    "headline-lg": ["48px", {"lineHeight": "1.2", "fontWeight": "700"}],
+                    "body-md": ["16px", {"lineHeight": "1.5", "fontWeight": "400"}],
+                    "body-lg": ["18px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                    "label-md": ["14px", {"lineHeight": "1", "letterSpacing": "0.05em", "fontWeight": "600"}],
+                    "display-lg": ["64px", {"lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                    "headline-sm": ["24px", {"lineHeight": "1.4", "fontWeight": "600"}]
+                }
+            }
+        }
+    }
+</script>
+<!-- Navigation Shell -->
+<aside class="bg-surface-container-lowest h-screen w-64 fixed left-0 top-0 shadow-sm flex flex-col py-8 px-4 z-50">
+<div class="mb-10 px-2">
+<h1 class="font-headline-md text-headline-md font-bold text-primary">Mahakam Wave</h1>
+<p class="font-label-md text-label-md text-on-surface-variant opacity-70">Staff Portal</p>
+</div>
+<nav class="flex-1 space-y-1">
+<a class="flex items-center gap-3 px-4 py-3 rounded-lg text-on-surface-variant hover:bg-primary-container/10 transition-colors duration-200" href="staff-dashboard.html">
+<span class="material-symbols-outlined">dashboard</span>
+<span class="font-label-md text-label-md">Dashboard</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-3 rounded-lg text-on-surface-variant hover:bg-primary-container/10 transition-colors duration-200" href="staff-reservations.html">
+<span class="material-symbols-outlined">calendar_today</span>
+<span class="font-label-md text-label-md">Reservasi</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-3 rounded-lg text-on-surface-variant hover:bg-primary-container/10 transition-colors duration-200" href="staff-payment-verification.html">
+<span class="material-symbols-outlined">payments</span>
+<span class="font-label-md text-label-md">Pembayaran</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-3 rounded-lg text-on-surface-variant hover:bg-primary-container/10 transition-colors duration-200" href="staff-scheduling.html">
+<span class="material-symbols-outlined">event_note</span>
+<span class="font-label-md text-label-md">Jadwal</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-3 rounded-lg text-on-surface-variant hover:bg-primary-container/10 transition-colors duration-200" href="staff-customers.html">
+<span class="material-symbols-outlined">group</span>
+<span class="font-label-md text-label-md">Pelanggan</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-3 rounded-lg text-on-surface-variant hover:bg-primary-container/10 transition-colors duration-200" href="staff-packages.html">
+<span class="material-symbols-outlined">inventory_2</span>
+<span class="font-label-md text-label-md">Paket &amp; Event</span>
+</a>
+<!-- Active Tab: Galeri -->
+<a class="flex items-center gap-3 px-4 py-3 rounded-lg text-primary font-bold border-r-4 border-primary bg-primary-container/10" href="staff-gallery.html">
+<span class="material-symbols-outlined" style="font-variation-settings: &quot;FILL&quot; 1;">photo_library</span>
+<span class="font-label-md text-label-md">Galeri</span>
+</a>
+</nav>
+<div class="mt-auto border-t border-outline-variant/30 pt-4">
+<button onclick="localStorage.removeItem('loggedInUser'); window.location.href='index.html';" class="flex items-center gap-3 px-4 py-3 w-full rounded-lg text-error hover:bg-error-container/20 transition-colors duration-200">
+<span class="material-symbols-outlined">logout</span>
+<span class="font-label-md text-label-md">Logout</span>
+</button>
+</div>
+</aside>
+<!-- Main Content Canvas -->
+<main class="ml-64 h-screen flex flex-col">
+<!-- Top App Bar -->
+<header class="h-16 flex justify-between items-center px-margin-desktop bg-surface sticky top-0 z-40">
+<div>
+<h2 class="font-headline-sm text-headline-sm font-bold text-primary">Galeri</h2>
+<p class="font-label-md text-label-md text-on-surface-variant">Kelola foto yang tampil pada website JetSki Mahakam.</p>
+</div>
+<div class="flex items-center gap-6">
+<div class="relative flex items-center bg-surface-container-low px-4 py-2 rounded-full border border-outline-variant">
+<span class="material-symbols-outlined text-on-surface-variant text-[20px] mr-2">search</span>
+<input class="bg-transparent border-none focus:ring-0 text-label-md w-48" placeholder="Cari foto atau kategori..." type="text">
+</div>
+<div class="flex items-center gap-3">
+<button class="p-2 rounded-full text-on-surface-variant hover:bg-surface-container transition-colors relative">
+<span class="material-symbols-outlined">notifications</span>
+<span class="absolute top-2 right-2 w-2 h-2 bg-primary rounded-full"></span>
+</button>
+<div class="h-8 w-8 rounded-full overflow-hidden border border-primary/20">
+<img class="w-full h-full object-cover" data-alt="A professional headshot of a staff member at Mahakam Wave Riding, wearing a branded navy blue polo shirt with orange accents, set against a clean blurred office background. The lighting is natural and bright, conveying a friendly and professional customer service tone." src="https://lh3.googleusercontent.com/aida-public/AB6AXuD2RTFNHtGqHWNbWGzSK06uj6tFuALaeQ0KSV3wNPM2n7m-0w6wd7G1KkdAPSAIyUz_qrmhSOfiiFjxkfVHe1zgkocZx9nntrLphcJ-ZGZOg6oCjEVEaLunuDpdXf5Hw9_CRGXaGxfBKnlRjmtCi8RbKYib2n4yQZbrGTkzCWdxaLkqulLpaJNgTTcsRs8wsBUaEniU90ovjLWMtJyRqcPD55QEK-Cy-1panMw8agYq9g5YKAhx1i7x2WONT3FDowJhXOjHHtfiLyfU">
+</div>
+</div>
+</div>
+</header>
+<!-- Workspace Area -->
+<div class="flex-1 overflow-hidden p-8 gap-gutter flex bg-background">
+<!-- Summary & Filters (Left Column 35%) -->
+<div class="w-[35%] flex flex-col gap-6">
+<!-- Summary Cards -->
+<div class="grid grid-cols-3 gap-3">
+<div class="bg-surface-container-lowest p-4 rounded-xl shadow-sm border border-outline-variant/10">
+<p class="text-on-surface-variant font-label-md mb-1">Total</p>
+<p class="font-headline-sm text-primary">128</p>
+</div>
+<div class="bg-surface-container-lowest p-4 rounded-xl shadow-sm border border-outline-variant/10">
+<p class="text-on-surface-variant font-label-md mb-1">Kategori</p>
+<p class="font-headline-sm text-tertiary">5</p>
+</div>
+<div class="bg-surface-container-lowest p-4 rounded-xl shadow-sm border border-outline-variant/10">
+<p class="text-on-surface-variant font-label-md mb-1">Baru</p>
+<p class="font-headline-sm text-error">24</p>
+</div>
+</div>
+<!-- Photo List -->
+<div class="bg-surface-container-lowest flex-1 rounded-xl shadow-sm border border-outline-variant/10 flex flex-col overflow-hidden">
+<div class="p-4 border-b border-outline-variant/10">
+<div class="relative mb-4">
+<span class="absolute left-3 top-1/2 -translate-y-1/2 material-symbols-outlined text-on-surface-variant/50">search</span>
+<input class="w-full pl-10 pr-4 py-2 bg-surface-container-low border-outline-variant rounded-lg focus:border-primary focus:ring-1 focus:ring-primary text-body-md transition-all" placeholder="Cari nama foto..." type="text">
+</div>
+<div class="flex gap-2 overflow-x-auto pb-1 scrollbar-hide">
+<button class="bg-primary text-on-primary px-4 py-1.5 rounded-full text-label-md whitespace-nowrap">Semua</button>
+<button class="bg-surface-container text-on-surface-variant px-4 py-1.5 rounded-full text-label-md whitespace-nowrap hover:bg-outline-variant/20 transition-colors">Paket Wisata</button>
+<button class="bg-surface-container text-on-surface-variant px-4 py-1.5 rounded-full text-label-md whitespace-nowrap hover:bg-outline-variant/20 transition-colors">Event</button>
+<button class="bg-surface-container text-on-surface-variant px-4 py-1.5 rounded-full text-label-md whitespace-nowrap hover:bg-outline-variant/20 transition-colors">Armada</button>
+</div>
+</div>
+<div class="flex-1 overflow-y-auto">
+<!-- Photo List Item Active -->
+<div class="p-4 border-b border-outline-variant/5 bg-primary-container/5 hover:bg-primary-container/10 cursor-pointer border-l-4 border-primary">
+<div class="flex gap-4 items-start">
+<div class="w-16 h-16 rounded-xl overflow-hidden flex-shrink-0">
+<img class="w-full h-full object-cover" data-alt="Sunset Ride Mahakam" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB3Fe5Js-3_o3vC02vbV4Br_2It51c7gQXBX7KJd_KGyuWQXrJhD6XcgDJUkxbPNzPQYNDAzHP9G3Gbqlw_aL7hMpmd2tmY8vYWjDTbWA5qPPHzDMWj7L452lUZT9ChaGP-9m0SOxujfU9pzi9foYS0Sspwc022QkCJadQtlZ5RY5zTJD3pAB46FCl8lxkF8ALQjoGhbVBUGtnR55djx4zK3icUgb5O12P0yeFDprEUQn5oBDvrz80ktpJpchZ0ojUSAhh4qqBmWpTO">
+</div>
+<div class="flex-1">
+<div class="flex justify-between items-start mb-1">
+<h3 class="font-headline-sm text-[16px] text-on-surface font-bold">Sunset Ride Mahakam</h3>
+<span class="bg-green-100 text-green-700 px-2 py-0.5 rounded-md text-[11px] font-bold uppercase tracking-wider">Tampil</span>
+</div>
+<div class="flex items-center gap-2 text-on-surface-variant text-label-md">
+<span class="material-symbols-outlined text-[16px]">category</span>
+Pemandangan Mahakam
+</div>
+<div class="mt-2 flex items-center gap-2 text-primary font-bold text-label-md">
+<span class="material-symbols-outlined text-[16px]">calendar_today</span>
+28 Juni 2026
+</div>
+</div>
+</div>
+</div>
+<!-- Photo List Item 2 -->
+<div class="p-4 border-b border-outline-variant/5 hover:bg-surface-container-low transition-colors cursor-pointer">
+<div class="flex gap-4 items-start">
+<div class="w-16 h-16 rounded-xl overflow-hidden flex-shrink-0">
+<img class="w-full h-full object-cover" data-alt="Customer Morning Ride" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBmGbvX8dRUEvOBiBQP0YU-fRw_MVKMoAmHKq_Bt_C-D20r2jm2MjUr_R_oQsK7aA1iViXzwkvAMJddKNlZOQ7tk1x8vFfqNsE0soRaZHnknSzLrYVLiqHr2920ObJsSHvr616p8-wyb_kG9A0OkM6uo8am0EduPCvFNTpXkrNu00uby0oQJMiDR5TolJ83ckHb1_vb9CheKGSxpB0IzJJZnaEAtm2MwmK47lrV14qawd7N0cqmbrKIx6xov-Zfa0Mr6Lt0W1cAQaxM">
+</div>
+<div class="flex-1">
+<div class="flex justify-between items-start mb-1">
+<h3 class="font-headline-sm text-[16px] text-on-surface font-bold">Customer Morning Ride</h3>
+<span class="bg-green-100 text-green-700 px-2 py-0.5 rounded-md text-[11px] font-bold uppercase tracking-wider">Tampil</span>
+</div>
+<div class="flex items-center gap-2 text-on-surface-variant text-label-md">
+<span class="material-symbols-outlined text-[16px]">category</span>
+Customer Experience
+</div>
+<div class="mt-2 flex items-center gap-2 text-on-surface-variant text-label-md">
+<span class="material-symbols-outlined text-[16px]">event_available</span>
+27 Juni 2026
+</div>
+</div>
+</div>
+</div>
+<!-- Photo List Item 3 (Hidden) -->
+<div class="p-4 border-b border-outline-variant/5 hover:bg-surface-container-low transition-colors cursor-pointer opacity-70">
+<div class="flex gap-4 items-start">
+<div class="w-16 h-16 rounded-xl overflow-hidden flex-shrink-0 grayscale">
+<img class="w-full h-full object-cover" data-alt="Mahakam Fleet" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAOX467i_thj-4GzyGl_2d30ZfMEFbtp-aZl2QdnR17O_WmBCKa7YepZjh5D00PsWoVk3tPGazkp3Uwd1VK0oSVQG9u2R8zfaBtTbIlICyqLRH2OsdHZnsf_1_eakZjyZe3Van044WJ56WX5OqNOiaFdTHBMFeps_nS1Dk7p438GNG0KfO5o-8Y57tw-EWQPs4WL_aglrgNJWwsekuPl38hrShORpvHlmUe0mYsIe8f8Cv6LL2R8PjT6C_KdSEkim--c_VuNYRNhSyt">
+</div>
+<div class="flex-1">
+<div class="flex justify-between items-start mb-1">
+<h3 class="font-headline-sm text-[16px] text-on-surface font-bold">Mahakam Fleet</h3>
+<span class="bg-surface-container-highest text-on-surface-variant px-2 py-0.5 rounded-md text-[11px] font-bold uppercase tracking-wider">Hidden</span>
+</div>
+<div class="text-on-surface-variant text-label-md">Armada</div>
+</div>
+</div>
+</div>
+<!-- Photo List Item 4 -->
+<div class="p-4 border-b border-outline-variant/5 hover:bg-surface-container-low transition-colors cursor-pointer">
+<div class="flex gap-4 items-start">
+<div class="w-16 h-16 rounded-xl overflow-hidden flex-shrink-0">
+<img class="w-full h-full object-cover" data-alt="River Racing Event" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDVp3ZE2nfaBMCkBrbmcWBurtg_yh_EeacsJzi8It7qIC3UKvvNzHocg2DpCEtaDUX3zPjcS9LujPErM01sVfohbwasSMwr5J8HWa6Cj3xJFTtoVdWiGXfvat1jrjysH-Thb9P_wYMAgHAbHwC8I-V0FZqFKv9ItDsxVlAJ2YyniPkcr1OrnxRXe6iDB-tvTdEoYIt94ZDNF4OOvN1rh8WJQ8_nBh3rrqkcTvj1ax1aUN_PBGAdsHHknQlX2_R7jOstza47AKk239mg">
+</div>
+<div class="flex-1">
+<div class="flex justify-between items-start mb-1">
+<h3 class="font-headline-sm text-[16px] text-on-surface font-bold">River Racing Event</h3>
+<span class="bg-green-100 text-green-700 px-2 py-0.5 rounded-md text-[11px] font-bold uppercase tracking-wider">Tampil</span>
+</div>
+<div class="flex items-center gap-2 text-on-surface-variant text-label-md">
+<span class="material-symbols-outlined text-[16px]">category</span>
+Event
+</div>
+</div>
+</div>
+</div>
+<!-- Photo List Item 5 -->
+<div class="p-4 border-b border-outline-variant/5 hover:bg-surface-container-low transition-colors cursor-pointer">
+<div class="flex gap-4 items-start">
+<div class="w-16 h-16 rounded-xl overflow-hidden flex-shrink-0">
+<img class="w-full h-full object-cover" data-alt="JetSki Detail Pro" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCcYHZGmBiHTB83EW0ytWMYkPSsMTV53sg87t6wRE0vNINPsPOuHd_LTFtqK3-3DLZquqNeGO-UV6pyRGcXWktXncyp7Z8cBJ7did1YUKH2PZN3x0FidpBEIpkqOa4fVlkkbRCMdkjiIEqqiMj92piOuMJhDKDc6L383PeR_768iDGv9_SI6nGVp-66vU81TQe4OVcInt196JG-NF4oqJPj_8BdLESyyoMNvScqm0kLcm5tpQOXW5ZdI77t_UlgE5bY89ZF-QZc6lS3">
+</div>
+<div class="flex-1">
+<div class="flex justify-between items-start mb-1">
+<h3 class="font-headline-sm text-[16px] text-on-surface font-bold">JetSki Detail Pro</h3>
+<span class="bg-green-100 text-green-700 px-2 py-0.5 rounded-md text-[11px] font-bold uppercase tracking-wider">Tampil</span>
+</div>
+<div class="flex items-center gap-2 text-on-surface-variant text-label-md">
+<span class="material-symbols-outlined text-[16px]">category</span>
+Armada
+</div>
+</div>
+</div>
+</div>
+<!-- Photo List Item 6 -->
+<div class="p-4 border-b border-outline-variant/5 hover:bg-surface-container-low transition-colors cursor-pointer">
+<div class="flex gap-4 items-start">
+<div class="w-16 h-16 rounded-xl overflow-hidden flex-shrink-0">
+<img class="w-full h-full object-cover" data-alt="Mahakam Dusk" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDuPSL9e0ndYznCJrPgjx5TYEbz9PI-FugPTEqhhIio8xRv_NQjOYltwns7ASyqKp5tsTZt0iw6X2_8lSgc_lp79-nC80ivveY3dIgyIVVbz2-pobVMOZYctFed6oZU0-jKpk2vMV1x6CVeHmR-kU2PQxBkz4TE5SmafwOqORWAMGMIozXLllhPfdQ89Rj82IW6XcHfAxQHZQ-TsQ3K2rzgFGnO3aq3ORNQiCT3aGDKyq5UxZ05iIt1EOQH4j0WaPvSr01YkpE12YH4">
+</div>
+<div class="flex-1">
+<div class="flex justify-between items-start mb-1">
+<h3 class="font-headline-sm text-[16px] text-on-surface font-bold">Mahakam Dusk</h3>
+<span class="bg-green-100 text-green-700 px-2 py-0.5 rounded-md text-[11px] font-bold uppercase tracking-wider">Tampil</span>
+</div>
+<div class="flex items-center gap-2 text-on-surface-variant text-label-md">
+<span class="material-symbols-outlined text-[16px]">category</span>
+Pemandangan Mahakam
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Detail (Right Column 65%) -->
+<div class="w-[65%] flex flex-col gap-6 overflow-y-auto pr-2">
+<!-- Photo Preview Section -->
+<div class="bg-surface-container-lowest p-8 rounded-xl shadow-sm border border-outline-variant/10">
+<div class="flex items-start justify-between">
+<div class="flex gap-6">
+<div class="w-64 h-48 rounded-2xl overflow-hidden bg-primary-container/20 border-2 border-primary/10">
+<img class="w-full h-full object-cover" data-alt="A breathtaking sunset over the Mahakam River, featuring a professional jet ski rider creating a majestic water arc. The sky is a blend of deep orange, purple, and gold, reflecting perfectly on the calm river surface. The photography style is high-end, cinematic, with vibrant colors and crisp details." src="https://lh3.googleusercontent.com/aida-public/AB6AXuB3Fe5Js-3_o3vC02vbV4Br_2It51c7gQXBX7KJd_KGyuWQXrJhD6XcgDJUkxbPNzPQYNDAzHP9G3Gbqlw_aL7hMpmd2tmY8vYWjDTbWA5qPPHzDMWj7L452lUZT9ChaGP-9m0SOxujfU9pzi9foYS0Sspwc022QkCJadQtlZ5RY5zTJD3pAB46FCl8lxkF8ALQjoGhbVBUGtnR55djx4zK3icUgb5O12P0yeFDprEUQn5oBDvrz80ktpJpchZ0ojUSAhh4qqBmWpTO">
+</div>
+<div>
+<h2 class="font-headline-md text-headline-md text-on-surface mb-2">Sunset Ride Mahakam</h2>
+<div class="flex flex-col gap-2">
+<div class="flex items-center gap-3 text-on-surface-variant">
+<span class="material-symbols-outlined text-primary">category</span>
+<span class="text-body-md">Pemandangan Mahakam</span>
+</div>
+<div class="flex items-center gap-3 text-on-surface-variant">
+<span class="material-symbols-outlined text-primary">calendar_today</span>
+<span class="text-body-md font-medium">28 Juni 2026</span>
+</div>
+<div class="flex items-center gap-3 text-on-surface-variant">
+<span class="material-symbols-outlined text-primary">aspect_ratio</span>
+<span class="text-body-md">1920 × 1080 px (Landscape 16:9)</span>
+</div>
+</div>
+</div>
+</div>
+<div class="flex flex-col gap-3">
+<button class="bg-primary-container text-on-primary-container px-6 py-3 rounded-xl font-bold flex items-center justify-center gap-2 hover:brightness-95 transition-all active:scale-95 shadow-lg shadow-primary-container/20">
+<span class="material-symbols-outlined">upload</span>
+Upload Foto Baru
+</button>
+</div>
+</div>
+</div>
+<!-- Active Photo Details -->
+<div class="bg-primary-container/5 p-8 rounded-xl border border-primary/20 relative overflow-hidden">
+<div class="absolute top-0 right-0 p-4">
+<span class="bg-green-600 text-white px-3 py-1 rounded-full text-label-md font-bold">TAMPIL DI WEBSITE</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-primary mb-6">Detail Foto</h3>
+<div class="grid grid-cols-2 lg:grid-cols-4 gap-8">
+<div>
+<p class="text-on-surface-variant font-label-md uppercase mb-1">File ID</p>
+<p class="text-body-lg font-bold text-on-surface">IMG-2026-0628-001</p>
+</div>
+<div>
+<p class="text-on-surface-variant font-label-md uppercase mb-1">Kategori</p>
+<p class="text-body-lg font-bold text-on-surface">Pemandangan</p>
+</div>
+<div>
+<p class="text-on-surface-variant font-label-md uppercase mb-1">Ukuran File</p>
+<p class="text-body-lg font-bold text-on-surface">2.4 MB</p>
+</div>
+<div>
+<p class="text-on-surface-variant font-label-md uppercase mb-1">Status</p>
+<div class="flex items-center gap-2 text-green-600 font-bold">
+<span class="material-symbols-outlined text-[20px]">visibility</span>
+Tampil
+</div>
+</div>
+</div>
+<div class="mt-8 flex gap-4">
+<button class="bg-primary text-on-primary px-8 py-3 rounded-xl font-bold hover:brightness-110 transition-all shadow-md shadow-primary/20">
+Jadikan Cover Halaman
+</button>
+<button class="bg-white border-2 border-primary text-primary px-8 py-3 rounded-xl font-bold hover:bg-primary/5 transition-all">
+Sembunyikan
+</button>
+</div>
+</div>
+<div class="grid grid-cols-1 lg:grid-cols-2 gap-6 mb-8">
+<!-- Recent Uploads -->
+<div class="bg-surface-container-lowest p-6 rounded-xl shadow-sm border border-outline-variant/10">
+<h3 class="font-headline-sm text-[20px] mb-6 flex items-center gap-2">
+<span class="material-symbols-outlined text-on-surface-variant">history</span>
+Upload Terbaru
+</h3>
+<div class="space-y-4">
+<div class="flex items-center justify-between p-4 bg-surface rounded-lg border border-outline-variant/10">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded-lg overflow-hidden flex-shrink-0">
+<img class="w-full h-full object-cover" data-alt="Safety Gear Set" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC9Wb25bwWYYb-OcQit8moI2AXBmqFpOSPAX3jdWz_UERuz8UtpKJ9Dg01XSiXdKknFRMBk-qEGyvgWowfIsFeLe3pJxyCFcKyNk3m1mpNylLqxnd9xuuHuZL0c-nxbk0NcRaRdW8isD6IYe3RZgFGq7FdH077g0BXBO6pz-_DjsFvO97iHWFjY2lhlQMRh0kBOm6qmulmm7d1zFPEgbtuTRysMEYhMKhlfO0IoBglWKW2SXbCkezsTf3RKYzZhs-s6orqOha_thkDl">
+</div>
+<div>
+<p class="font-bold text-on-surface">Safety Gear Set</p>
+<p class="text-label-md text-on-surface-variant">2 jam lalu</p>
+</div>
+</div>
+<span class="bg-secondary-container/50 text-on-secondary-fixed-variant px-3 py-1 rounded-full text-[12px] font-bold">Armada</span>
+</div>
+<div class="flex items-center justify-between p-4 bg-surface rounded-lg border border-outline-variant/10">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded-lg overflow-hidden flex-shrink-0">
+<img class="w-full h-full object-cover" data-alt="Samarinda Blue Hour" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAuvtwkkKmi9bGEfZLFA-i1ZjlzL-yoDNEpV8xSZV3RfK1qH2tqcuIqfYjPoWgM9q8VBE1fZ8okWcythKWWQ_OlZvetyMYvhKSYqctRrzgxaf1tA6lHhpPpz5xBZTRSVG6rbdiFgQPjIhHGB34r9jiGoxvlGveGzlVEy6EOCXcPk2wdMm0n2VBk5Cta44vsoa0HiVg7KUoGDzl2c9gQcN8EDz47K2BVUKKklnAS_jRDf1k_a4Jst6jOgYMXCugjepPTLhl2htN8ZtZy">
+</div>
+<div>
+<p class="font-bold text-on-surface">Samarinda Blue Hour</p>
+<p class="text-label-md text-on-surface-variant">5 jam lalu</p>
+</div>
+</div>
+<span class="bg-secondary-container/50 text-on-secondary-fixed-variant px-3 py-1 rounded-full text-[12px] font-bold">Pemandangan</span>
+</div>
+</div>
+</div>
+<!-- Caption & Notes -->
+<div class="bg-surface-container-lowest p-6 rounded-xl shadow-sm border border-outline-variant/10 flex flex-col">
+<h3 class="font-headline-sm text-[20px] mb-4 flex items-center gap-2">
+<span class="material-symbols-outlined text-on-surface-variant">note_alt</span>
+Caption & Catatan
+</h3>
+<textarea class="flex-1 w-full bg-surface-container-low border-outline-variant rounded-xl p-4 text-body-md focus:border-primary focus:ring-1 focus:ring-primary mb-4 min-h-[120px]" placeholder="Tambah caption untuk foto ini...">Sunset Ride Mahakam - Menikmati keindahan senja dari atas JetSki premium di Sungai Mahakam.</textarea>
+<button class="bg-primary-container text-on-primary-container px-6 py-2.5 rounded-xl font-bold self-end hover:brightness-95 transition-all">
+Simpan Catatan
+</button>
+</div>
+</div>
+<!-- Footer Action Center -->
+<div class="mt-auto pt-6 border-t border-outline-variant/20 flex justify-end gap-4">
+<button class="flex items-center gap-2 px-6 py-3 rounded-xl font-bold text-error hover:bg-error-container/20 transition-all">
+<span class="material-symbols-outlined">delete</span>
+Hapus Foto
+</button>
+<button class="bg-surface-container-highest text-on-surface px-8 py-3 rounded-xl font-bold hover:bg-surface-variant transition-all">
+Download Original
+</button>
+</div>
+</div>
+</div>
+</main>
+<!-- Micro-interaction Scripts -->
+<script>
+    document.querySelectorAll('aside nav a').forEach(link => {
+        link.addEventListener('click', function(e) {
+            if(this.getAttribute('href') === '#') e.preventDefault();
+            document.querySelectorAll('aside nav a').forEach(l => {
+                l.classList.remove('text-primary', 'font-bold', 'border-r-4', 'border-primary', 'bg-primary-container/10');
+                l.classList.add('text-on-surface-variant');
+                l.querySelector('.material-symbols-outlined').style.fontVariationSettings = "'FILL' 0";
+            });
+            this.classList.add('text-primary', 'font-bold', 'border-r-4', 'border-primary', 'bg-primary-container/10');
+            this.classList.remove('text-on-surface-variant');
+            this.querySelector('.material-symbols-outlined').style.fontVariationSettings = "'FILL' 1";
+        });
+    });
+
+    // Simple tab/filter interaction
+    document.querySelectorAll('.scrollbar-hide button').forEach(btn => {
+        btn.addEventListener('click', function() {
+            document.querySelectorAll('.scrollbar-hide button').forEach(b => {
+                b.classList.remove('bg-primary', 'text-on-primary');
+                b.classList.add('bg-surface-container', 'text-on-surface-variant');
+            });
+            this.classList.add('bg-primary', 'text-on-primary');
+            this.classList.remove('bg-surface-container', 'text-on-surface-variant');
+        });
+    });
+</script>
+
+
+</body></html>

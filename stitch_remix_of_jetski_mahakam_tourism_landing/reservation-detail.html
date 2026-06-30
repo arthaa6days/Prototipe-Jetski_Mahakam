@@ -1,0 +1,372 @@
+<!DOCTYPE html><html lang="id"><head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<title>Detail Reservasi | Mahakam Jet Ski</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700;800&amp;family=Inter:wght@400;500;600&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .fill-icon {
+            font-variation-settings: 'FILL' 1;
+        }
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #fff8f5; /* surface */
+        }
+        h1, h2, h3, .font-headline {
+            font-family: 'Montserrat', sans-serif;
+        }
+        .glass-card {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+        .timeline-line {
+            width: 2px;
+            background: #ddc1ae; /* outline-variant */
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 11px;
+            z-index: 0;
+        }
+    </style>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "surface-variant": "#f3dfd1",
+                    "secondary-fixed": "#dae2fd",
+                    "background": "#fff8f5",
+                    "primary-fixed-dim": "#ffb77f",
+                    "surface-container-highest": "#f3dfd1",
+                    "on-tertiary-container": "#004260",
+                    "on-tertiary-fixed-variant": "#004c6d",
+                    "inverse-primary": "#ffb77f",
+                    "tertiary-container": "#00b3fc",
+                    "on-secondary-fixed-variant": "#3f465c",
+                    "error": "#ba1a1a",
+                    "on-tertiary": "#ffffff",
+                    "on-primary-fixed-variant": "#6f3900",
+                    "tertiary-fixed-dim": "#88ceff",
+                    "surface": "#fff8f5",
+                    "on-secondary-fixed": "#131b2e",
+                    "inverse-surface": "#3a2e25",
+                    "on-surface": "#241912",
+                    "on-primary-container": "#613100",
+                    "on-error": "#ffffff",
+                    "surface-dim": "#ebd6c9",
+                    "secondary": "#565e74",
+                    "outline-variant": "#ddc1ae",
+                    "on-error-container": "#93000a",
+                    "surface-container-low": "#fff1e9",
+                    "on-secondary": "#ffffff",
+                    "outline": "#8a7362",
+                    "on-tertiary-fixed": "#001e2e",
+                    "tertiary-fixed": "#c8e6ff",
+                    "on-secondary-container": "#5c647a",
+                    "error-container": "#ffdad6",
+                    "on-surface-variant": "#564334",
+                    "on-background": "#241912",
+                    "primary-fixed": "#ffdcc4",
+                    "on-primary": "#ffffff",
+                    "surface-tint": "#914c00",
+                    "secondary-container": "#dae2fd",
+                    "surface-container-lowest": "#ffffff",
+                    "surface-bright": "#fff8f5",
+                    "inverse-on-surface": "#ffede3",
+                    "primary": "#914c00",
+                    "tertiary": "#006590",
+                    "secondary-fixed-dim": "#bec6e0",
+                    "primary-container": "#ff8a00",
+                    "surface-container": "#ffeadd",
+                    "on-primary-fixed": "#2f1500",
+                    "surface-container-high": "#f9e4d7"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.25rem",
+                    "lg": "0.5rem",
+                    "xl": "0.75rem",
+                    "full": "9999px"
+            },
+            "spacing": {
+                    "gutter": "24px",
+                    "margin-desktop": "64px",
+                    "margin-mobile": "20px",
+                    "stack-unit": "8px",
+                    "container-max": "1280px"
+            },
+            "fontFamily": {
+                    "headline-lg-mobile": ["Montserrat"],
+                    "headline-md": ["Montserrat"],
+                    "headline-lg": ["Montserrat"],
+                    "label-md": ["Inter"],
+                    "display-lg": ["Montserrat"],
+                    "body-md": ["Inter"],
+                    "headline-sm": ["Montserrat"],
+                    "body-lg": ["Inter"]
+            },
+            "fontSize": {
+                    "headline-lg-mobile": ["32px", {"lineHeight": "1.2", "fontWeight": "700"}],
+                    "headline-md": ["32px", {"lineHeight": "1.3", "fontWeight": "600"}],
+                    "headline-lg": ["48px", {"lineHeight": "1.2", "fontWeight": "700"}],
+                    "label-md": ["14px", {"lineHeight": "1", "letterSpacing": "0.05em", "fontWeight": "600"}],
+                    "display-lg": ["64px", {"lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                    "body-md": ["16px", {"lineHeight": "1.5", "fontWeight": "400"}],
+                    "headline-sm": ["24px", {"lineHeight": "1.4", "fontWeight": "600"}],
+                    "body-lg": ["18px", {"lineHeight": "1.6", "fontWeight": "400"}]
+            }
+          },
+        },
+      }
+    </script>
+</head>
+<body class="bg-surface text-on-surface mb-24 md:mb-0">
+<!-- Top App Bar -->
+<header class="bg-surface dark:bg-surface-dim shadow-sm docked full-width top-0 sticky z-50 flex justify-between items-center w-full px-margin-mobile md:px-margin-desktop py-4">
+<div class="flex items-center gap-4">
+<a class="text-primary hover:bg-surface-container-low transition-colors p-2 rounded-full active:scale-95" href="my-reservations.html">
+<span class="material-symbols-outlined">arrow_back</span>
+</a>
+<div class="font-headline-sm text-headline-sm font-bold text-primary cursor-pointer" onclick="window.location.href='dashboard.html'">Mahakam Jet Ski</div>
+</div>
+<div class="flex items-center gap-4">
+<span class="material-symbols-outlined text-primary cursor-pointer active:scale-95 transition-transform" data-icon="support_agent">support_agent</span>
+<span class="material-symbols-outlined text-primary cursor-pointer active:scale-95 transition-transform" data-icon="account_circle">account_circle</span>
+</div>
+</header>
+<main class="max-w-[800px] mx-auto px-margin-mobile md:px-6 py-8 space-y-8">
+<!-- Page Header -->
+<div class="space-y-1">
+<a class="inline-flex items-center text-primary font-label-md text-label-md hover:underline transition-all" href="my-reservations.html">
+<span class="material-symbols-outlined mr-1 text-[18px]">chevron_left</span>
+                Kembali ke Reservasi Saya
+            </a>
+<h1 class="font-headline-md text-headline-md text-on-surface mt-2">Detail Reservasi</h1>
+<p class="font-body-md text-body-md text-on-surface-variant">Informasi lengkap mengenai reservasi Anda.</p>
+</div>
+<!-- Section 1: Status Card -->
+<section class="bg-surface-container-lowest rounded-xl p-6 shadow-[0_4px_30px_rgba(0,0,0,0.04)] border border-surface-variant/30 overflow-hidden relative" style="transition: 0.4s cubic-bezier(0.165, 0.84, 0.44, 1); transform: translateY(0px); box-shadow: rgba(0, 0, 0, 0.04) 0px 4px 30px;">
+<div class="absolute top-0 right-0 p-4">
+<span class="bg-primary-container text-on-primary-container px-4 py-2 rounded-full font-label-md text-label-md flex items-center gap-2">
+<span class="material-symbols-outlined text-[18px]" data-icon="pending" style="font-variation-settings: &quot;FILL&quot; 1;">pending</span>
+                    Menunggu Konfirmasi
+                </span>
+</div>
+<div class="flex flex-col gap-4 max-w-[80%]">
+<div class="flex items-center gap-3 text-primary">
+<span class="material-symbols-outlined text-[32px]">info</span>
+<h3 class="font-headline-sm text-headline-sm">Status Reservasi</h3>
+</div>
+<p class="font-body-md text-body-md text-on-surface">Reservasi Anda berhasil dibuat. Silakan hubungi admin melalui WhatsApp untuk melanjutkan proses pembayaran.</p>
+</div>
+</section>
+<!-- Section 2: Reservation Token Card -->
+<section class="bg-surface-container-lowest rounded-xl p-6 shadow-[0_4px_30px_rgba(0,0,0,0.04)] border border-surface-variant/30" style="transition: 0.4s cubic-bezier(0.165, 0.84, 0.44, 1); transform: translateY(0px); box-shadow: rgba(0, 0, 0, 0.04) 0px 4px 30px;">
+<div class="flex items-center justify-between">
+<div>
+<span class="font-label-md text-label-md text-on-surface-variant uppercase tracking-wider">Token Reservasi</span>
+<div class="font-headline-sm text-headline-sm font-bold text-primary mt-1 tracking-widest">JM-20260620-001</div>
+</div>
+<button class="flex items-center gap-2 bg-surface-container-low hover:bg-surface-container-high text-primary px-4 py-2 rounded-lg transition-colors active:scale-95 group" onclick="copyToken()">
+<span class="material-symbols-outlined" id="copy-icon">content_copy</span>
+<span class="font-label-md text-label-md">Salin Token</span>
+</button>
+</div>
+</section>
+<!-- Bento Grid for Details -->
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+<!-- Section 3: Informasi Reservasi Card -->
+<section class="bg-surface-container-lowest rounded-xl p-6 shadow-[0_4px_30px_rgba(0,0,0,0.04)] border border-surface-variant/30 flex flex-col gap-6" style="transition: 0.4s cubic-bezier(0.165, 0.84, 0.44, 1); transform: translateY(0px); box-shadow: rgba(0, 0, 0, 0.04) 0px 4px 30px;">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-primary" data-icon="sailing">sailing</span>
+<h3 class="font-headline-sm text-headline-sm">Informasi Reservasi</h3>
+</div>
+<div class="space-y-4">
+<div class="flex justify-between items-center border-b border-surface-variant/20 pb-2">
+<span class="font-body-md text-on-surface-variant">Paket</span>
+<span class="font-label-md text-on-surface">Kota Raja</span>
+</div>
+<div class="flex justify-between items-center border-b border-surface-variant/20 pb-2">
+<span class="font-body-md text-on-surface-variant">Tipe Rider</span>
+<span class="font-label-md text-on-surface">Couple Rider</span>
+</div>
+<div class="flex justify-between items-center border-b border-surface-variant/20 pb-2">
+<span class="font-body-md text-on-surface-variant">Jumlah JetSki</span>
+<span class="font-label-md text-on-surface">2 Unit</span>
+</div>
+<div class="flex justify-between items-center border-b border-surface-variant/20 pb-2">
+<span class="font-body-md text-on-surface-variant">Tanggal Bermain</span>
+<span class="font-label-md text-on-surface">28 Juni 2026</span>
+</div>
+<div class="flex justify-between items-center border-b border-surface-variant/20 pb-2">
+<span class="font-body-md text-on-surface-variant">Jam Bermain</span>
+<span class="font-label-md text-on-surface">10.00 WIB</span>
+</div>
+<div class="flex justify-between items-center">
+<span class="font-body-md text-on-surface-variant">Durasi</span>
+<span class="font-label-md text-on-surface">90 Menit</span>
+</div>
+</div>
+</section>
+<!-- Section 4: Informasi Customer Card -->
+<section class="bg-surface-container-lowest rounded-xl p-6 shadow-[0_4px_30px_rgba(0,0,0,0.04)] border border-surface-variant/30 flex flex-col justify-between" style="transition: 0.4s cubic-bezier(0.165, 0.84, 0.44, 1); transform: translateY(0px); box-shadow: rgba(0, 0, 0, 0.04) 0px 4px 30px;">
+<div class="space-y-6">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-primary" data-icon="person">person</span>
+<h3 class="font-headline-sm text-headline-sm">Informasi Customer</h3>
+</div>
+<div class="space-y-4">
+<div class="space-y-1">
+<span class="font-label-md text-on-surface-variant block uppercase text-[11px]">Nama Lengkap</span>
+<span class="font-body-lg text-body-lg text-on-surface font-semibold">Paros</span>
+</div>
+<div class="space-y-1">
+<span class="font-label-md text-on-surface-variant block uppercase text-[11px]">Nomor WhatsApp</span>
+<span class="font-body-lg text-body-lg text-on-surface">+62 812-3456-7890</span>
+</div>
+<div class="space-y-1">
+<span class="font-label-md text-on-surface-variant block uppercase text-[11px]">Email</span>
+<span class="font-body-lg text-body-lg text-on-surface">paros@email.com</span>
+</div>
+</div>
+</div>
+
+</section>
+</div>
+<!-- Section 5: Status Pembayaran Card -->
+<section class="bg-surface-container-lowest rounded-xl p-6 shadow-[0_4px_30px_rgba(0,0,0,0.04)] border border-surface-variant/30 flex items-center gap-6" style="transition: 0.4s cubic-bezier(0.165, 0.84, 0.44, 1); transform: translateY(0px); box-shadow: rgba(0, 0, 0, 0.04) 0px 4px 30px;">
+<div class="bg-surface-container-low p-4 rounded-full">
+<span class="material-symbols-outlined text-primary text-[32px]" data-icon="payments">payments</span>
+</div>
+<div class="flex-1">
+<div class="flex items-center gap-3 mb-1">
+<h3 class="font-headline-sm text-headline-sm">Status Pembayaran</h3>
+<span class="bg-surface-container-high text-on-surface-variant px-3 py-1 rounded-full font-label-md text-[12px]">Menunggu Pembayaran</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant">Admin akan mengirimkan instruksi pembayaran setelah reservasi dikonfirmasi.</p>
+</div>
+</section>
+<!-- Section 6: Timeline Reservasi -->
+<section class="bg-surface-container-lowest rounded-xl p-6 shadow-[0_4px_30px_rgba(0,0,0,0.04)] border border-surface-variant/30" style="transition: 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);">
+<div class="flex items-center gap-3 mb-8">
+<span class="material-symbols-outlined text-primary" data-icon="history">history</span>
+<h3 class="font-headline-sm text-headline-sm">Timeline Reservasi</h3>
+</div>
+<div class="relative space-y-8 ml-2">
+<div class="timeline-line"></div>
+<!-- Item 1 -->
+<div class="relative flex items-start gap-4">
+<div class="z-10 bg-primary text-white rounded-full p-1 h-6 w-6 flex items-center justify-center">
+<span class="material-symbols-outlined text-[16px]">check</span>
+</div>
+<div>
+<p class="font-label-md text-on-surface">Reservasi Dibuat</p>
+<p class="text-[12px] text-on-surface-variant">20 Juni 2026 - 09:20</p>
+</div>
+</div>
+<!-- Item 2 -->
+<div class="relative flex items-start gap-4">
+<div class="z-10 bg-primary text-white rounded-full p-1 h-6 w-6 flex items-center justify-center">
+<span class="material-symbols-outlined text-[16px]">check</span>
+</div>
+<div>
+<p class="font-label-md text-on-surface">Menunggu Konfirmasi</p>
+<p class="text-[12px] text-on-surface-variant">Sedang dalam antrean</p>
+</div>
+</div>
+<!-- Item 3 -->
+<div class="relative flex items-start gap-4 opacity-50">
+<div class="z-10 bg-surface-container-high text-outline rounded-full p-1 h-6 w-6 flex items-center justify-center border-2 border-outline-variant"></div>
+<div>
+<p class="font-label-md text-on-surface">Menunggu Pembayaran</p>
+</div>
+</div>
+<!-- Item 4 -->
+<div class="relative flex items-start gap-4 opacity-50">
+<div class="z-10 bg-surface-container-high text-outline rounded-full p-1 h-6 w-6 flex items-center justify-center border-2 border-outline-variant"></div>
+<div>
+<p class="font-label-md text-on-surface">Menunggu Verifikasi</p>
+</div>
+</div>
+<!-- Item 5 -->
+<div class="relative flex items-start gap-4 opacity-50">
+<div class="z-10 bg-surface-container-high text-outline rounded-full p-1 h-6 w-6 flex items-center justify-center border-2 border-outline-variant"></div>
+<div>
+<p class="font-label-md text-on-surface">Terkonfirmasi</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Section 7: Action Card -->
+<section class="bg-surface-container-highest rounded-2xl p-8 shadow-lg border border-primary/10 flex flex-col md:flex-row items-center gap-8 text-center md:text-left" style="transition: 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);">
+<div class="flex-1 space-y-2">
+<h3 class="font-headline-sm text-headline-sm text-on-primary-container">Butuh Bantuan?</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">Perubahan jadwal atau pembatalan reservasi harus dilakukan melalui admin Mahakam Jet Ski.</p>
+</div>
+<div class="flex flex-col sm:flex-row gap-4 w-full md:w-auto">
+<button onclick="window.open('https://wa.me/6281234567890', '_blank')" class="bg-primary-container hover:bg-primary text-on-primary-container hover:text-white px-8 py-4 rounded-xl font-bold transition-all shadow-md active:scale-95 flex items-center justify-center gap-3"><span class="material-symbols-outlined">message</span> Hubungi Admin</button>
+<button class="bg-white hover:bg-surface-container-low text-primary border-2 border-primary/20 px-8 py-4 rounded-xl font-bold transition-all active:scale-95 flex items-center justify-center gap-3" onclick="copyToken()">
+<span class="material-symbols-outlined">content_copy</span>
+                    Salin Token
+                </button>
+</div>
+</section>
+</main>
+<!-- Bottom Navigation Mobile -->
+<nav class="fixed bottom-0 left-0 w-full z-50 flex justify-around items-center px-4 py-3 md:hidden bg-surface-container-lowest dark:bg-surface-dim border-t border-outline-variant shadow-[0_-4px_12px_rgba(0,0,0,0.04)] rounded-t-xl">
+<div class="flex flex-col items-center justify-center text-on-surface-variant dark:text-secondary-fixed-dim hover:text-primary transition-colors cursor-pointer active:scale-90 transition-transform">
+<span class="material-symbols-outlined" data-icon="home">home</span>
+<span class="font-label-md text-label-md">Home</span>
+</div>
+<div class="flex flex-col items-center justify-center bg-primary-container dark:bg-primary text-on-primary-container dark:text-on-primary rounded-xl px-4 py-1 active:scale-90 transition-transform">
+<span class="material-symbols-outlined fill-icon" data-icon="calendar_today">calendar_today</span>
+<span class="font-label-md text-label-md">Bookings</span>
+</div>
+<div class="flex flex-col items-center justify-center text-on-surface-variant dark:text-secondary-fixed-dim hover:text-primary transition-colors cursor-pointer active:scale-90 transition-transform">
+<span class="material-symbols-outlined" data-icon="verified_user">verified_user</span>
+<span class="font-label-md text-label-md">Safety</span>
+</div>
+<div class="flex flex-col items-center justify-center text-on-surface-variant dark:text-secondary-fixed-dim hover:text-primary transition-colors cursor-pointer active:scale-90 transition-transform">
+<span class="material-symbols-outlined" data-icon="person">person</span>
+<span class="font-label-md text-label-md">Profile</span>
+</div>
+</nav>
+<script>
+        function copyToken() {
+            const token = "JM-20260620-001";
+            navigator.clipboard.writeText(token).then(() => {
+                const icon = document.getElementById('copy-icon');
+                const originalIcon = icon.innerText;
+                icon.innerText = 'check';
+                setTimeout(() => {
+                    icon.innerText = originalIcon;
+                }, 2000);
+                alert('Token Reservasi berhasil disalin: ' + token);
+            });
+        }
+
+        // Add interaction effects to cards
+        document.querySelectorAll('section').forEach(card => {
+            card.addEventListener('mouseenter', () => {
+                if(!card.classList.contains('bg-surface-container-highest')) {
+                    card.style.transform = 'translateY(-4px)';
+                    card.style.boxShadow = '0 12px 40px rgba(0,0,0,0.08)';
+                }
+            });
+            card.addEventListener('mouseleave', () => {
+                card.style.transform = 'translateY(0)';
+                card.style.boxShadow = '0 4px 30px rgba(0,0,0,0.04)';
+            });
+            card.style.transition = 'all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1)';
+        });
+    </script>
+
+
+</body></html>

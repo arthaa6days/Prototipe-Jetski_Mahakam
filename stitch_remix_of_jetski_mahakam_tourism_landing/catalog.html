@@ -1,0 +1,583 @@
+<!DOCTYPE html>
+<html class="scroll-smooth" lang="id">
+
+<head>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <title>Paket Petualangan - JetSki Mahakam Wave Riding</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700;800&amp;family=Inter:wght@400;500;600&amp;display=swap"
+        rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet">
+    <script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "on-primary-fixed-variant": "#6f3900",
+                        "on-primary": "#ffffff",
+                        "inverse-surface": "#3a2e25",
+                        "surface-tint": "#914c00",
+                        "surface-container-lowest": "#ffffff",
+                        "on-secondary": "#ffffff",
+                        "surface-variant": "#f3dfd1",
+                        "on-secondary-fixed": "#131b2e",
+                        "background": "#fff8f5",
+                        "outline": "#8a7362",
+                        "tertiary-fixed": "#c8e6ff",
+                        "on-error-container": "#93000a",
+                        "inverse-primary": "#ffb77f",
+                        "tertiary-fixed-dim": "#88ceff",
+                        "on-tertiary-fixed": "#001e2e",
+                        "secondary-container": "#dae2fd",
+                        "on-tertiary-fixed-variant": "#004c6d",
+                        "on-surface": "#241912",
+                        "on-primary-container": "#613100",
+                        "error-container": "#ffdad6",
+                        "surface-container": "#ffeadd",
+                        "surface-container-high": "#f9e4d7",
+                        "tertiary-container": "#00b3fc",
+                        "inverse-on-surface": "#ffede3",
+                        "surface-bright": "#fff8f5",
+                        "primary-fixed": "#ffdcc4",
+                        "primary-fixed-dim": "#ffb77f",
+                        "secondary-fixed": "#dae2fd",
+                        "surface-container-low": "#fff1e9",
+                        "primary": "#914c00",
+                        "on-surface-variant": "#564334",
+                        "on-primary-fixed": "#2f1500",
+                        "tertiary": "#006590",
+                        "on-secondary-fixed-variant": "#3f465c",
+                        "on-secondary-container": "#5c647a",
+                        "on-error": "#ffffff",
+                        "surface-dim": "#ebd6c9",
+                        "surface-container-highest": "#f3dfd1",
+                        "secondary": "#565e74",
+                        "primary-container": "#ff8a00",
+                        "on-tertiary-container": "#004260",
+                        "on-background": "#241912",
+                        "surface": "#fff8f5",
+                        "outline-variant": "#ddc1ae",
+                        "secondary-fixed-dim": "#bec6e0",
+                        "error": "#ba1a1a",
+                        "on-tertiary": "#ffffff"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "container-max": "1280px",
+                        "stack-unit": "8px",
+                        "margin-desktop": "64px",
+                        "gutter": "24px",
+                        "margin-mobile": "20px"
+                    },
+                    "fontFamily": {
+                        "headline-lg-mobile": ["Montserrat"],
+                        "body-md": ["Inter"],
+                        "label-md": ["Inter"],
+                        "headline-sm": ["Montserrat"],
+                        "body-lg": ["Inter"],
+                        "headline-md": ["Montserrat"],
+                        "display-lg": ["Montserrat"],
+                        "headline-lg": ["Montserrat"]
+                    },
+                    "fontSize": {
+                        "headline-lg-mobile": ["32px", { "lineHeight": "1.2", "fontWeight": "700" }],
+                        "body-md": ["16px", { "lineHeight": "1.5", "fontWeight": "400" }],
+                        "label-md": ["14px", { "lineHeight": "1", "letterSpacing": "0.05em", "fontWeight": "600" }],
+                        "headline-sm": ["24px", { "lineHeight": "1.4", "fontWeight": "600" }],
+                        "body-lg": ["18px", { "lineHeight": "1.6", "fontWeight": "400" }],
+                        "headline-md": ["32px", { "lineHeight": "1.3", "fontWeight": "600" }],
+                        "display-lg": ["64px", { "lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "700" }],
+                        "headline-lg": ["48px", { "lineHeight": "1.2", "fontWeight": "700" }]
+                    }
+                },
+            },
+        }
+    </script>
+    <style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+
+        .package-card:hover .package-image {
+            transform: scale(1.05);
+        }
+
+        .accordion-content {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease-out;
+        }
+
+        .accordion-item.active .accordion-content {
+            max-height: 200px;
+        }
+
+        .accordion-item.active .chevron {
+            transform: rotate(180deg);
+        }
+    </style>
+</head>
+
+<body class="bg-surface font-body-md text-on-surface">
+    <!-- 1. Sticky Navbar -->
+    <header
+        class="bg-surface/90 dark:bg-surface-container/90 backdrop-blur-md shadow-sm fixed top-0 w-full z-50 border-b border-outline-variant/30">
+        <nav class="flex justify-between items-center px-margin-desktop py-4 max-w-container-max mx-auto">
+            <div class="font-headline-sm text-headline-sm font-bold text-primary dark:text-primary-fixed-dim">
+                Mahakam Wave Riding
+            </div>
+            <!-- Desktop Links -->
+            <div class="hidden md:flex items-center gap-8">
+                <a class="text-on-surface-variant dark:text-on-secondary-container font-label-md text-label-md hover:text-primary transition-colors"
+                    href="index.html">Beranda</a>
+                <a class="text-primary dark:text-primary-fixed-dim border-b-2 border-primary pb-1 font-label-md text-label-md"
+                    href="catalog.html">Paket</a>
+                <a class="text-on-surface-variant dark:text-on-secondary-container font-label-md text-label-md hover:text-primary transition-colors"
+                    href="gallery.html">Galeri</a>
+            </div>
+            <div class="flex items-center gap-4">
+                <button onclick="window.location.href='login.html'"
+                    class="hidden md:block text-primary font-label-md text-label-md px-4 py-2">Login</button>
+                <button
+                    class="bg-primary-container text-on-primary-container font-label-md text-label-md px-6 py-2.5 rounded-xl hover:shadow-lg transition-all active:scale-95 flex items-center gap-2"
+                    onclick="window.open('https://wa.me/6281234567890', '_blank')"><span
+                        class="material-symbols-outlined text-[20px]">chat</span> WhatsApp CTA</button>
+            </div>
+        </nav>
+    </header>
+    <main class="pt-[72px]">
+        <!-- 2. Page Header -->
+        <section class="relative h-[480px] flex items-center overflow-hidden">
+            <div class="absolute inset-0 z-0">
+                <div class="w-full h-full bg-cover bg-center transition-transform duration-700 scale-105"
+                    data-alt="A dynamic action shot of two premium jet skis racing across the wide Mahakam River at high speed, creating dramatic white water sprays. The scene is bathed in bright, warm afternoon sunlight, highlighting the orange and navy blue colors of the watercraft. In the background, the iconic Mahakam Bridge and Samarinda city skyline are visible under a clear blue sky. The visual style is professional, high-energy sports photography with a premium adventure feel."
+                    style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuACNs69VX5dYjIf1q1EtkXLuDgJgAdqlXFk_lvKXu0ZlBiNmkRJDgAQHnaB0F9VtXgte0vsll4GL4YsCOYa8_uiXhe299BOCuq28yejL6c-EQvF8GTPtLmEgUPdyOnubQQEoqDwIog2nhVNHfNpr_9nM_Vrp4VtSU2XVcMCMNlm_hjnfhQJ6P-cTa2Puj844sJrGAmzte78ADRh5FmG234MGvOvRcg4-CPm5VQPfYqQPkQX2LAQdrePVyl6G8PlpJhNDak_1Sc7ZqXF')">
+                </div>
+                <div class="absolute inset-0 bg-gradient-to-r from-black/70 to-transparent"></div>
+            </div>
+            <div class="relative z-10 px-margin-desktop max-w-container-max mx-auto w-full text-white">
+                <div
+                    class="inline-flex items-center gap-2 bg-primary-container text-on-primary-container px-3 py-1 rounded-full mb-6">
+                    <span class="material-symbols-outlined text-[18px]">verified</span>
+                    <span class="font-label-md text-label-md uppercase tracking-wider">4 Paket Tersedia</span>
+                </div>
+                <h1 class="font-headline-lg text-headline-lg mb-4 max-w-2xl leading-tight">Pilih Paket Petualangan Anda
+                </h1>
+                <p class="font-body-lg text-body-lg text-white/90 max-w-xl">Temukan pengalaman terbaik menjelajahi
+                    Sungai Mahakam bersama JetSki Mahakam Wave Riding dengan layanan premium dan keamanan terjamin.</p>
+            </div>
+        </section>
+        <!-- 3. Filter Section -->
+        <section class="bg-surface py-8 border-b border-outline-variant/20 sticky top-[72px] z-40">
+            <div class="px-margin-desktop max-w-container-max mx-auto">
+                <div class="flex items-center gap-4 overflow-x-auto no-scrollbar pb-2">
+                    <button
+                        class="flex-shrink-0 px-6 py-2 rounded-full bg-primary-container text-on-primary-container font-label-md text-label-md whitespace-nowrap">Semua
+                        Paket</button>
+                    <button
+                        class="flex-shrink-0 px-6 py-2 rounded-full border border-outline-variant text-on-surface-variant font-label-md text-label-md whitespace-nowrap hover:bg-surface-container-low transition-colors">Single
+                        Rider</button>
+                    <button
+                        class="flex-shrink-0 px-6 py-2 rounded-full border border-outline-variant text-on-surface-variant font-label-md text-label-md whitespace-nowrap hover:bg-surface-container-low transition-colors">Couple
+                        Rider</button>
+                    <button
+                        class="flex-shrink-0 px-6 py-2 rounded-full border border-outline-variant text-on-surface-variant font-label-md text-label-md whitespace-nowrap hover:bg-surface-container-low transition-colors">Trip
+                        Pendek</button>
+                    <button
+                        class="flex-shrink-0 px-6 py-2 rounded-full border border-outline-variant text-on-surface-variant font-label-md text-label-md whitespace-nowrap hover:bg-surface-container-low transition-colors">Trip
+                        Panjang</button>
+                </div>
+            </div>
+        </section>
+        <!-- 4. Package Grid -->
+        <section class="py-20 px-margin-desktop">
+            <div class="max-w-[1200px] mx-auto grid grid-cols-1 md:grid-cols-2 gap-gutter">
+                <!-- Package 1 -->
+                <div
+                    class="group bg-white rounded-xl overflow-hidden shadow-[0_10px_30px_rgba(0,0,0,0.04)] hover:shadow-[0_20px_40px_rgba(0,0,0,0.08)] transition-all flex flex-col h-full">
+                    <div class="relative h-64 overflow-hidden">
+                        <div class="w-full h-full bg-cover bg-center transition-transform duration-500 group-hover:scale-110"
+                            data-alt="A close-up action photograph of a single jet ski rider navigating through calm river waters near the Samarinda Waterfront. The rider wears high-end safety gear including a bright orange life jacket. The lighting is crisp morning sun, creating sharp reflections on the water's surface. In the background, the modern architectural elements of the waterfront are softly blurred. The overall aesthetic is clean, safe, and exhilarating adventure."
+                            style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuAEYFAeNrknJqaA9iAeQcBkG4ceFQB9hwAXDXxSeLMXXSdcvk4M0q3Vx7YN4BEM-7fLcq8AOWtMioKtOp1HaAK_UAw5QbxCHXYUJ5w3_lMjNdUUiFihWaSigi6Q_E9l5bLUKoW9dqN4ViN1wXX7NCvF7-tlHNxarlB4RI90t82MeV9ZdollK8Ez8l6z4vA_cM7IzYpV5Lb6009q1SphYLgdlnnZutai-ymeYP-MBolQS-dGrLjuEK9JkVrn7qRnUXY6MpFHr09Qdt9A')">
+                        </div>
+                        <div
+                            class="absolute top-4 left-4 bg-white/90 backdrop-blur text-primary px-3 py-1.5 rounded-lg font-label-md text-label-md flex items-center gap-1 shadow-sm">
+                            <span class="material-symbols-outlined text-[18px]">schedule</span> 15 Minutes
+                        </div>
+                    </div>
+                    <div class="p-8 flex flex-col flex-grow">
+                        <div class="flex justify-between items-start mb-4">
+                            <div>
+                                <h3 class="font-headline-sm text-headline-sm text-on-surface mb-2">Iconic Ride 01</h3>
+                                <p class="text-on-surface-variant flex items-center gap-2">
+                                    <span class="material-symbols-outlined text-primary text-[20px]">near_me</span>
+                                    Samarinda Waterfront &amp; Mahakam Bridge
+                                </p>
+                            </div>
+                        </div>
+                        <div class="grid grid-cols-2 gap-4 mb-8 bg-surface-container-low p-4 rounded-xl">
+                            <div>
+                                <p class="text-[12px] font-label-md text-on-surface-variant mb-1">SINGLE</p>
+                                <p class="font-headline-sm text-[20px] text-primary">Rp 650.000</p>
+                            </div>
+                            <div class="border-l border-outline-variant/30 pl-4">
+                                <p class="text-[12px] font-label-md text-on-surface-variant mb-1">COUPLE</p>
+                                <p class="font-headline-sm text-[20px] text-secondary">Rp 775.000</p>
+                            </div>
+                        </div>
+                        <button onclick="window.location.href='package-detail.html'"
+                            class="mt-auto w-full py-4 bg-on-secondary-fixed text-white font-label-md text-label-md rounded-xl hover:bg-primary-container hover:text-on-primary-container transition-all flex items-center justify-center gap-2 group/btn">
+                            Lihat Detail
+                            <span
+                                class="material-symbols-outlined text-[18px] group-hover/btn:translate-x-1 transition-transform">arrow_forward</span>
+                        </button>
+                    </div>
+                </div>
+                <!-- Package 2 -->
+                <div
+                    class="group bg-white rounded-xl overflow-hidden shadow-[0_10px_30px_rgba(0,0,0,0.04)] hover:shadow-[0_20px_40px_rgba(0,0,0,0.08)] transition-all flex flex-col h-full">
+                    <div class="relative h-64 overflow-hidden">
+                        <div class="w-full h-full bg-cover bg-center transition-transform duration-500 group-hover:scale-110"
+                            data-alt="A wide-angle landscape photograph featuring two people on a jet ski cruising directly underneath the massive structure of the Mahakam Bridge. The orange jet ski contrasts beautifully with the blue water. The camera angle is low to the water, emphasizing the scale of the bridge. The lighting is golden hour, casting long, warm shadows. The feel is premium tourism and urban exploration from a unique perspective."
+                            style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBNoPXfnW22wVuuWC1SCoQGqUXfOC33_BOllwwQeii-10liDFJDLdSpj8pUZ2ELzqSgzCQgi4NlV71aimp6AMmm0tBzWK-HXyu2lom9m2fwzYdKig_KNI0Mfo33pXVFrZmCK2KDHryNBNZ2-iT18u9Y3oPXlMp62pT7dumiGnSrnlZuCOFXXPb9hx2RinoA9Wy1kVVyAQjyiSv4LeN3D7rmcm_0IXNG994LWzIfG9ByEvW2YnmQ30ius6tte5GJIa3gqN2DP02VYf3X')">
+                        </div>
+                        <div
+                            class="absolute top-4 left-4 bg-white/90 backdrop-blur text-primary px-3 py-1.5 rounded-lg font-label-md text-label-md flex items-center gap-1 shadow-sm">
+                            <span class="material-symbols-outlined text-[18px]">schedule</span> 30 Minutes
+                        </div>
+                    </div>
+                    <div class="p-8 flex flex-col flex-grow">
+                        <div class="flex justify-between items-start mb-4">
+                            <div>
+                                <h3 class="font-headline-sm text-headline-sm text-on-surface mb-2">Iconic Ride 02</h3>
+                                <p class="text-on-surface-variant flex items-center gap-2">
+                                    <span class="material-symbols-outlined text-primary text-[20px]">near_me</span>
+                                    Extended Bridge &amp; City View
+                                </p>
+                            </div>
+                        </div>
+                        <div class="grid grid-cols-2 gap-4 mb-8 bg-surface-container-low p-4 rounded-xl">
+                            <div>
+                                <p class="text-[12px] font-label-md text-on-surface-variant mb-1">SINGLE</p>
+                                <p class="font-headline-sm text-[20px] text-primary">Rp 810.000</p>
+                            </div>
+                            <div class="border-l border-outline-variant/30 pl-4">
+                                <p class="text-[12px] font-label-md text-on-surface-variant mb-1">COUPLE</p>
+                                <p class="font-headline-sm text-[20px] text-secondary">Rp 925.000</p>
+                            </div>
+                        </div>
+                        <button onclick="window.location.href='package-detail.html'"
+                            class="mt-auto w-full py-4 bg-on-secondary-fixed text-white font-label-md text-label-md rounded-xl hover:bg-primary-container hover:text-on-primary-container transition-all flex items-center justify-center gap-2 group/btn">
+                            Lihat Detail
+                            <span
+                                class="material-symbols-outlined text-[18px] group-hover/btn:translate-x-1 transition-transform">arrow_forward</span>
+                        </button>
+                    </div>
+                </div>
+                <!-- Package 3 -->
+                <div
+                    class="group bg-white rounded-xl overflow-hidden shadow-[0_10px_30px_rgba(0,0,0,0.04)] hover:shadow-[0_20px_40px_rgba(0,0,0,0.08)] transition-all flex flex-col h-full">
+                    <div class="relative h-64 overflow-hidden">
+                        <div class="w-full h-full bg-cover bg-center transition-transform duration-500 group-hover:scale-110"
+                            data-alt="A luxurious lifestyle photograph of a sleek jet ski gliding towards the architectural Mahkota Bridge at sunset. The sky is a gradient of deep orange and soft purple. The water reflects the vibrant colors of the sky. The image focuses on the premium, exclusive nature of the tour, with the bridge acting as a majestic gateway. High-end equipment and calm, confident riding style are evident."
+                            style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuAAmhu1CSQaYzQUUGQT2QYOSCC-72a5N_2VCeZFJJER0unDE6L7Xm8jIzk-brPgiGKDoDQAE9rGjNRXJfkGwcjUSAZPhAZfeTUgB6h7yuKo_uhfnOmS6zOCo7eINhuW1ytUDUiMb3F5TTZPZNeg1mkNPi6DzHIHuQeuNAlbIHW9y_BUPnPhdLt-L8B5_9pCU6gdtiXlk__sOZKbuDXrzHsqzGt5gD3EpzhTIvk3oCpGc5iezPQSP_i6CLabSX0Xx6FL14iKRJ1mAdMi')">
+                        </div>
+                        <div
+                            class="absolute top-4 left-4 bg-white/90 backdrop-blur text-primary px-3 py-1.5 rounded-lg font-label-md text-label-md flex items-center gap-1 shadow-sm">
+                            <span class="material-symbols-outlined text-[18px]">schedule</span> 30 Minutes
+                        </div>
+                    </div>
+                    <div class="p-8 flex flex-col flex-grow">
+                        <div class="flex justify-between items-start mb-4">
+                            <div>
+                                <h3 class="font-headline-sm text-headline-sm text-on-surface mb-2">Mahkota</h3>
+                                <p class="text-on-surface-variant flex items-center gap-2">
+                                    <span class="material-symbols-outlined text-primary text-[20px]">near_me</span>
+                                    Premium Mahkota Bridge Tour
+                                </p>
+                            </div>
+                        </div>
+                        <div class="grid grid-cols-2 gap-4 mb-8 bg-surface-container-low p-4 rounded-xl">
+                            <div>
+                                <p class="text-[12px] font-label-md text-on-surface-variant mb-1">SINGLE</p>
+                                <p class="font-headline-sm text-[20px] text-primary">Rp 1.050.000</p>
+                            </div>
+                            <div class="border-l border-outline-variant/30 pl-4">
+                                <p class="text-[12px] font-label-md text-on-surface-variant mb-1">COUPLE</p>
+                                <p class="font-headline-sm text-[20px] text-secondary">Rp 1.290.000</p>
+                            </div>
+                        </div>
+                        <button onclick="window.location.href='package-detail.html'"
+                            class="mt-auto w-full py-4 bg-on-secondary-fixed text-white font-label-md text-label-md rounded-xl hover:bg-primary-container hover:text-on-primary-container transition-all flex items-center justify-center gap-2 group/btn">
+                            Lihat Detail
+                            <span
+                                class="material-symbols-outlined text-[18px] group-hover/btn:translate-x-1 transition-transform">arrow_forward</span>
+                        </button>
+                    </div>
+                </div>
+                <!-- Package 4 -->
+                <div
+                    class="group bg-white rounded-xl overflow-hidden shadow-[0_10px_30px_rgba(0,0,0,0.04)] hover:shadow-[0_20px_40px_rgba(0,0,0,0.08)] transition-all flex flex-col h-full">
+                    <div class="relative h-64 overflow-hidden">
+                        <div class="w-full h-full bg-cover bg-center transition-transform duration-500 group-hover:scale-110"
+                            data-alt="An expansive long-distance adventure shot of multiple jet skis in formation traveling along the lush, jungle-lined banks of the Mahakam River heading towards Tenggarong. The lighting is bright midday sun, showcasing the vibrant green of the tropical vegetation and the brownish-blue of the river. The mood is one of discovery and endurance. This is high-speed exploration photography at its finest, emphasizing distance and journey."
+                            style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuD9S7oOzJ_B_k_2yNohfzyEh7x-9YnGmYIcf2z4ZdL0cjtJjCQQF0MuWR4LxAelF9ibqmw6wsqmKQuEDNTZegDPPlhZdCNcEG7vEydyKZMses80JcpFJbuUABDCKZ5-TY9ChhcJZ5nKG4fpEY5mEA2u_GOxs5jHoarDAN0QZMpYIfo8dd_azoWiuJxp6ydDDjdKmIvD-dCL5KDoGlqLzAaL9xtQETzHhhTi_Ub2I8utyJY9aNN5ZUUBB2qrU8ERFwx7gEqtoblsefAg')">
+                        </div>
+                        <div
+                            class="absolute top-4 left-4 bg-white/90 backdrop-blur text-primary px-3 py-1.5 rounded-lg font-label-md text-label-md flex items-center gap-1 shadow-sm">
+                            <span class="material-symbols-outlined text-[18px]">schedule</span> 90 Minutes
+                        </div>
+                    </div>
+                    <div class="p-8 flex flex-col flex-grow">
+                        <div class="flex justify-between items-start mb-4">
+                            <div>
+                                <h3 class="font-headline-sm text-headline-sm text-on-surface mb-2">Kota Raja</h3>
+                                <p class="text-on-surface-variant flex items-center gap-2">
+                                    <span class="material-symbols-outlined text-primary text-[20px]">near_me</span>
+                                    Long Distance Adventure to Tenggarong
+                                </p>
+                            </div>
+                        </div>
+                        <div class="grid grid-cols-2 gap-4 mb-8 bg-surface-container-low p-4 rounded-xl">
+                            <div>
+                                <p class="text-[12px] font-label-md text-on-surface-variant mb-1">SINGLE</p>
+                                <p class="font-headline-sm text-[20px] text-primary">Rp 2.160.000</p>
+                            </div>
+                            <div class="border-l border-outline-variant/30 pl-4">
+                                <p class="text-[12px] font-label-md text-on-surface-variant mb-1">COUPLE</p>
+                                <p class="font-headline-sm text-[20px] text-secondary">Rp 2.575.000</p>
+                            </div>
+                        </div>
+                        <button onclick="window.location.href='package-detail.html'"
+                            class="mt-auto w-full py-4 bg-on-secondary-fixed text-white font-label-md text-label-md rounded-xl hover:bg-primary-container hover:text-on-primary-container transition-all flex items-center justify-center gap-2 group/btn">
+                            Lihat Detail
+                            <span
+                                class="material-symbols-outlined text-[18px] group-hover/btn:translate-x-1 transition-transform">arrow_forward</span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- 5. Mini FAQ Section -->
+        <section class="py-24 bg-surface-container-low" id="faq">
+            <div class="max-w-[800px] mx-auto px-margin-mobile md:px-0">
+                <div class="text-center mb-12">
+                    <h2 class="font-headline-md text-headline-md text-on-surface mb-4">Pertanyaan Umum</h2>
+                    <p class="text-on-surface-variant">Segala hal yang perlu Anda ketahui sebelum memulai petualangan.
+                    </p>
+                </div>
+                <div class="space-y-4">
+                    <!-- FAQ 1 -->
+                    <div class="accordion-item bg-white rounded-xl border border-outline-variant/30 p-1">
+                        <button class="w-full text-left px-6 py-5 flex items-center justify-between focus:outline-none"
+                            onclick="toggleAccordion(this)">
+                            <span class="font-headline-sm text-[18px]">Apakah pemula bisa ikut?</span>
+                            <span
+                                class="material-symbols-outlined chevron transition-transform text-primary">expand_more</span>
+                        </button>
+                        <div class="accordion-content px-6">
+                            <p class="pb-6 text-on-surface-variant leading-relaxed">Tentu saja! Pemandu profesional kami
+                                akan memberikan instruksi keselamatan dan cara mengoperasikan jet ski sebelum Anda
+                                memulai. Anda akan didampingi hingga merasa percaya diri.</p>
+                        </div>
+                    </div>
+                    <!-- FAQ 2 -->
+                    <div class="accordion-item bg-white rounded-xl border border-outline-variant/30 p-1">
+                        <button class="w-full text-left px-6 py-5 flex items-center justify-between focus:outline-none"
+                            onclick="toggleAccordion(this)">
+                            <span class="font-headline-sm text-[18px]">Apakah sudah termasuk guide?</span>
+                            <span
+                                class="material-symbols-outlined chevron transition-transform text-primary">expand_more</span>
+                        </button>
+                        <div class="accordion-content px-6">
+                            <p class="pb-6 text-on-surface-variant leading-relaxed">Ya, semua paket sudah termasuk
+                                pendampingan instruktur/guide profesional yang akan memastikan keamanan dan kenyamanan
+                                Anda selama di air.</p>
+                        </div>
+                    </div>
+                    <!-- FAQ 3 -->
+                    <div class="accordion-item bg-white rounded-xl border border-outline-variant/30 p-1">
+                        <button class="w-full text-left px-6 py-5 flex items-center justify-between focus:outline-none"
+                            onclick="toggleAccordion(this)">
+                            <span class="font-headline-sm text-[18px]">Apakah sudah termasuk dokumentasi?</span>
+                            <span
+                                class="material-symbols-outlined chevron transition-transform text-primary">expand_more</span>
+                        </button>
+                        <div class="accordion-content px-6">
+                            <p class="pb-6 text-on-surface-variant leading-relaxed">Betul! Kami menyediakan layanan
+                                dokumentasi berupa foto dan video pendek agar momen petualangan Anda di Sungai Mahakam
+                                tetap abadi.</p>
+                        </div>
+                    </div>
+                    <!-- FAQ 4 -->
+                    <div class="accordion-item bg-white rounded-xl border border-outline-variant/30 p-1">
+                        <button class="w-full text-left px-6 py-5 flex items-center justify-between focus:outline-none"
+                            onclick="toggleAccordion(this)">
+                            <span class="font-headline-sm text-[18px]">Berapa usia minimal rider?</span>
+                            <span
+                                class="material-symbols-outlined chevron transition-transform text-primary">expand_more</span>
+                        </button>
+                        <div class="accordion-content px-6">
+                            <p class="pb-6 text-on-surface-variant leading-relaxed">Usia minimal untuk mengemudi sendiri
+                                adalah 17 tahun. Anak-anak di atas usia 6 tahun diperbolehkan ikut sebagai penumpang
+                                (couple rider) dengan pendampingan orang dewasa.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- 6. CTA Banner -->
+        <section class="relative h-[400px] overflow-hidden">
+            <div class="absolute inset-0 z-0">
+                <div class="w-full h-full bg-cover bg-center"
+                    data-alt="A beautiful wide-shot photograph of several jet skis silhouetted against a spectacular fiery sunset on the Mahakam River. The sky is filled with rich oranges, pinks, and purples. The riders are moving slowly, creating gentle ripples on the glowing water. The mood is peaceful yet evocative of a successful day of adventure. The style is cinematic and emotional, perfect for a closing call to action."
+                    style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuAL6qv02frjamdlj_t1Ra55Co-PWvMYi719H11z5bMH4oHcHtHnnAsUozt7MvyQvE77n_iE-hosJ7Wa4cCZiXpGfok4HfmVkJpkOR966D0ONZ2TGpc3xaoQe6V8LA9L9AixI-A5YGoMWiS2MAkbvjAPk8nlUApmgcwAPccA-_Jeg31c6QgdRS2CJ-AFu1SkmJdmSHZaTugdQbfgrhFT88rbgbkbYRmGdRAixFnLf3xPwf2tSGAvqMexIp1ZngHiZs9FS9L5Qo-iXqPo')">
+                </div>
+                <div class="absolute inset-0 bg-black/50 backdrop-blur-[2px]"></div>
+            </div>
+            <div class="relative z-10 h-full flex flex-col items-center justify-center text-center px-margin-mobile">
+                <h2 class="font-headline-lg text-headline-lg-mobile md:text-headline-lg text-white mb-8">Masih Bingung
+                    Memilih Paket?</h2>
+                <div class="flex flex-col md:flex-row gap-4">
+                    <button
+                        class="bg-white/10 backdrop-blur-md border-2 border-white text-white px-8 py-4 rounded-xl font-headline-sm text-[18px] font-bold hover:bg-white hover:text-primary transition-all"
+                        onclick="window.open('https://wa.me/6281234567890', '_blank')">Hubungi Kami</button>
+                    <button
+                        class="border-2 border-white text-white font-label-md text-label-md px-10 py-4 rounded-xl hover:bg-white hover:text-black transition-all">
+                        <a href="gallery.html">Lihat Galeri</a>
+                    </button>
+                </div>
+            </div>
+        </section>
+    </main>
+    <!-- 7. Footer -->
+    <footer class="bg-inverse-surface dark:bg-surface-container-lowest text-surface-variant/80 py-16">
+        <div class="max-w-container-max mx-auto px-margin-desktop grid grid-cols-1 md:grid-cols-4 gap-gutter">
+            <div class="md:col-span-1">
+                <div class="font-headline-sm text-headline-sm text-surface-bright mb-6">
+                    JetSki Mahakam
+                </div>
+                <p class="font-body-md text-body-md mb-6">
+                    Pusat penyewaan Jet Ski premium pertama dan terbaik di Kalimantan Timur. Rasakan sensasi menaklukkan
+                    arus Sungai Mahakam.
+                </p>
+            </div>
+            <div>
+                <h4 class="font-label-md text-label-md text-primary-fixed mb-6 uppercase tracking-wider">Navigasi</h4>
+                <ul class="space-y-4">
+                    <li><a class="hover:text-primary-fixed transition-colors" href="index.html#tentang-kami">Tentang
+                            Kami</a></li>
+                    <li><a class="hover:text-primary-fixed transition-colors font-bold text-primary-fixed-dim"
+                            href="catalog.html">Paket Petualangan</a></li>
+                    <li><a class="hover:text-primary-fixed transition-colors" href="gallery.html">Galeri Dokumentasi</a>
+                    </li>
+                    <li><a class="hover:text-primary-fixed transition-colors" href="#">Syarat &amp; Ketentuan</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4 class="font-label-md text-label-md text-primary-fixed mb-6 uppercase tracking-wider">Kontak</h4>
+                <ul class="space-y-4">
+                    <li class="flex items-center gap-3">
+                        <span class="material-symbols-outlined text-primary-fixed text-[20px]">location_on</span>
+                        Samarinda Waterfront, Kaltim
+                    </li>
+                    <li class="flex items-center gap-3">
+                        <span class="material-symbols-outlined text-primary-fixed text-[20px]">call</span>
+                        +62 812-3456-7890
+                    </li>
+                    <li class="flex items-center gap-3">
+                        <span class="material-symbols-outlined text-primary-fixed text-[20px]">mail</span>
+                        info@mahakamwave.com
+                    </li>
+                </ul>
+            </div>
+            <div>
+                <h4 class="font-label-md text-label-md text-primary-fixed mb-6 uppercase tracking-wider">Social Media
+                </h4>
+                <div class="flex gap-4">
+                    <a class="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-primary-container transition-colors group"
+                        href="#">
+                        <span
+                            class="material-symbols-outlined text-white group-hover:text-on-primary-container">camera</span>
+                    </a>
+                    <a class="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-primary-container transition-colors group"
+                        href="#">
+                        <span
+                            class="material-symbols-outlined text-white group-hover:text-on-primary-container">play_circle</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div
+            class="max-w-container-max mx-auto px-margin-desktop mt-16 pt-8 border-t border-white/10 text-center text-[14px]">
+            © 2024 JetSki Mahakam Wave Riding. All rights reserved.
+        </div>
+    </footer>
+    <script>
+        function toggleAccordion(button) {
+            const item = button.parentElement;
+            const isOpen = item.classList.contains('active');
+
+            // Close all items
+            document.querySelectorAll('.accordion-item').forEach(el => el.classList.remove('active'));
+
+            // Open clicked item if it was closed
+            if (!isOpen) {
+                item.classList.add('active');
+            }
+        }
+
+        // Dynamic session check for customer
+        document.addEventListener('DOMContentLoaded', () => {
+            const user = JSON.parse(localStorage.getItem('loggedInUser'));
+            if (user && user.role === 'pelanggan') {
+                // Change Beranda href to dashboard.html
+                const berandaLink = document.querySelector('nav a[href="index.html"]');
+                if (berandaLink) {
+                    berandaLink.href = 'dashboard.html';
+                }
+                const brandLogo = document.querySelector('header div.font-headline-sm');
+                if (brandLogo) {
+                    brandLogo.classList.add('cursor-pointer');
+                    brandLogo.addEventListener('click', () => {
+                        window.location.href = 'dashboard.html';
+                    });
+                }
+
+                // Replace Login button with user profile widget
+                const loginBtn = document.querySelector('button[onclick*="login.html"]');
+                if (loginBtn) {
+                    const profileContainer = document.createElement('div');
+                    profileContainer.className = 'flex items-center gap-4';
+                    profileContainer.innerHTML = `
+                        <button class="p-2 text-on-surface-variant hover:text-primary transition-all active:scale-95">
+                            <span class="material-symbols-outlined">notifications</span>
+                        </button>
+                        <div class="h-10 w-10 rounded-full bg-primary-fixed overflow-hidden border-2 border-primary cursor-pointer" onclick="window.location.href='profile.html'">
+                            <img class="w-full h-full object-cover" src="${user.avatar || 'https://lh3.googleusercontent.com/aida-public/AB6AXuDaaQ0e89Lzbi1fnocVWutRs8xxirv_beAkpdvpZq5RuL7wwTn5nDvXf9nUdKRP6_V3w6H8X3FC6idh8YTFNExcDcc5MeBHBIQ22aBc-hIfQzjrnSXCwyLBW8snAtekBDYZdVWI5harP5oNr9C7ZUXyn7ozw8t015X31WZpW-7c0CvmxsqlMJhGx7iHBCeiGdVn1WS2KcJi14116CMr0WtAUubEb--3nXTxSNp24nFApq_MC-J5geWrqyfCwXzrXJWdQGLxeav9-gBk'}" alt="Profile">
+                        </div>
+                        <a class="hidden md:block bg-primary text-on-primary px-6 py-2 rounded-full font-label-md hover:bg-primary-container hover:text-on-primary-container transition-all active:scale-95" href="my-reservations.html">
+                            Reservasi Saya
+                        </a>
+                    `;
+                    loginBtn.parentNode.replaceChild(profileContainer, loginBtn);
+                }
+            }
+        });
+    </script>
+</body>
+
+</html>
